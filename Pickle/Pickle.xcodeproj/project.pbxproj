@@ -17,7 +17,6 @@
 		2137D58D2AC1475800AFE225 /* UpdateTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D58C2AC1475800AFE225 /* UpdateTodoView.swift */; };
 		2137D58F2AC1476000AFE225 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D58E2AC1476000AFE225 /* TimerView.swift */; };
 		2137D5912AC1476700AFE225 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5902AC1476700AFE225 /* MissionView.swift */; };
-		2137D5932AC1478C00AFE225 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5922AC1478C00AFE225 /* CalendarView.swift */; };
 		2137D5952AC1479700AFE225 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5942AC1479700AFE225 /* SettingView.swift */; };
 		2137D5A42AC14C6A00AFE225 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A32AC14C6A00AFE225 /* CGFloat.swift */; };
 		2137D5A62AC14C7500AFE225 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A52AC14C7500AFE225 /* Color.swift */; };
@@ -77,6 +76,8 @@
 		965C9B9A2ADA866E0015ABBE /* PizzaSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9B992ADA866E0015ABBE /* PizzaSelectedView.swift */; };
 		965C9BA22ADAB2380015ABBE /* PickleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9BA12ADAB2380015ABBE /* PickleTests.swift */; };
 		965C9BEB2ADBAF7E0015ABBE /* PizzaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9BEA2ADBAF7E0015ABBE /* PizzaAlert.swift */; };
+		965E6A292BE8DC0600E03356 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E6A282BE8DC0600E03356 /* TaskRowView.swift */; };
+		965E6A2B2BE8DC2100E03356 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E6A2A2BE8DC2100E03356 /* CalendarViewModel.swift */; };
 		9661107C2AF800AD008A80DE /* Realm+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661107B2AF800AD008A80DE /* Realm+Combine.swift */; };
 		9661107E2AF8E92B008A80DE /* RealmStore+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661107D2AF8E92B008A80DE /* RealmStore+Combine.swift */; };
 		966110802AF907EE008A80DE /* ClearBackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661107F2AF907EE008A80DE /* ClearBackgroundViewModifier.swift */; };
@@ -97,6 +98,7 @@
 		966CD9EF2B0A6B59003AE885 /* DifferentTypeAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD9EE2B0A6B59003AE885 /* DifferentTypeAlerts.swift */; };
 		966CD9F12B0A6BA2003AE885 /* Register-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD9F02B0A6BA2003AE885 /* Register-extension.swift */; };
 		966CD9F32B0A6D09003AE885 /* TimeUnitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD9F22B0A6D09003AE885 /* TimeUnitPickerView.swift */; };
+		9670FF762BE8DD0400AF5E4D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670FF752BE8DD0400AF5E4D /* CalendarView.swift */; };
 		967575BF2B0AB9A0004957AD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967575BE2B0AB9A0004957AD /* Const.swift */; };
 		967575C12B0AB9AF004957AD /* SuccessUpdateKey-PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967575C02B0AB9AF004957AD /* SuccessUpdateKey-PreferenceKey.swift */; };
 		967575CC2B0CDCA4004957AD /* BehaviorMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB8C1B2B0251F10011B973 /* BehaviorMission.swift */; };
@@ -118,7 +120,6 @@
 		967575DC2B0CDCA4004957AD /* RealmMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963AFF8E2AC3319D00835FD8 /* RealmMigrator.swift */; };
 		967575DD2B0CDCA4004957AD /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C41832ACDA42B009A0093 /* BaseRepository.swift */; };
 		967575DE2B0CDCA4004957AD /* MissionStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C158D92AC1647D003B00E6 /* MissionStyleView.swift */; };
-		967575DF2B0CDCA4004957AD /* MySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB77652AE57FB70022491A /* MySceneDelegate.swift */; };
 		967575E02B0CDCA4004957AD /* TimeMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB8C192B0251EA0011B973 /* TimeMission.swift */; };
 		967575E12B0CDCA4004957AD /* SettingNotiicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E7118A2AD48DE9002B8069 /* SettingNotiicationView.swift */; };
 		967575E22B0CDCA4004957AD /* Object+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C41912ACE41E1009A0093 /* Object+Extensions.swift */; };
@@ -131,7 +132,6 @@
 		967575E92B0CDCA4004957AD /* TimeMission-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96635F5D2ADF9EEF0072F21E /* TimeMission-extension.swift */; };
 		967575EA2B0CDCA4004957AD /* ClearBackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661107F2AF907EE008A80DE /* ClearBackgroundViewModifier.swift */; };
 		967575EB2B0CDCA4004957AD /* HomeView-Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961488762AFD221200B87A37 /* HomeView-Routing.swift */; };
-		967575EC2B0CDCA4004957AD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5922AC1478C00AFE225 /* CalendarView.swift */; };
 		967575ED2B0CDCA4004957AD /* ScrollEnableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619E93B2B0594210028348C /* ScrollEnableKey.swift */; };
 		967575EE2B0CDCA4004957AD /* BehaviorMission-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96635F662ADFA0960072F21E /* BehaviorMission-extension.swift */; };
 		967575EF2B0CDCA4004957AD /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A32AC14C6A00AFE225 /* CGFloat.swift */; };
@@ -151,12 +151,10 @@
 		967575FD2B0CDCA4004957AD /* ScrollAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961488722AFD21D800B87A37 /* ScrollAnchor.swift */; };
 		967575FE2B0CDCA4004957AD /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA267A2AC2ADFB00877122 /* Mission.swift */; };
 		967575FF2B0CDCA4004957AD /* HealthKitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063F5CD2ADD02DB008EF304 /* HealthKitStore.swift */; };
-		967576002B0CDCA4004957AD /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B729A2482AC3FEB2008FF7C5 /* TaskRowView.swift */; };
 		967576012B0CDCA4004957AD /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96943B252ADFFDED0026D54F /* BackgroundModifier.swift */; };
 		967576022B0CDCA4004957AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A52AC14C7500AFE225 /* Color.swift */; };
 		967576032B0CDCA4004957AD /* PrimaryButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2113158F2AE1602500FA6492 /* PrimaryButtonModifier.swift */; };
 		967576042B0CDCA4004957AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D57A2AC1459C00AFE225 /* ContentView.swift */; };
-		967576052B0CDCA4004957AD /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C341AE2AC1684400744EB7 /* CalendarViewModel.swift */; };
 		967576062B0CDCA4004957AD /* PickleTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962FFD7E2AF64A5B00AE4963 /* PickleTestApp.swift */; };
 		967576072B0CDCA4004957AD /* BehaviorMissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4A22ACFD97A003BC207 /* BehaviorMissionRepository.swift */; };
 		967576082B0CDCA4004957AD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A72AC14C7A00AFE225 /* Font.swift */; };
@@ -185,7 +183,6 @@
 		9675761F2B0CDCA4004957AD /* TodoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963AFF912AC33A1800835FD8 /* TodoObject.swift */; };
 		967576202B0CDCA4004957AD /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE29C82ADED0CA0070EF92 /* Collection.swift */; };
 		967576212B0CDCA4004957AD /* DatePickerUIkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FEE2AA2AE51CA200BC0CCD /* DatePickerUIkit.swift */; };
-		967576222B0CDCA4004957AD /* Midiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4AB2AD17829003BC207 /* Midiator.swift */; };
 		967576232B0CDCA4004957AD /* CornerButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C417E2ACD41CD009A0093 /* CornerButtonModifier.swift */; };
 		967576242B0CDCA4004957AD /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9637AB9A2B07846100D64F46 /* UINavigationController.swift */; };
 		967576252B0CDCA4004957AD /* CurrentPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB8C172B0251D10011B973 /* CurrentPizza.swift */; };
@@ -244,7 +241,6 @@
 		96A1D4A32ACFD97A003BC207 /* BehaviorMissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4A22ACFD97A003BC207 /* BehaviorMissionRepository.swift */; };
 		96A1D4A72ACFE384003BC207 /* MissionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4A62ACFE384003BC207 /* MissionStore.swift */; };
 		96A1D4AA2AD176B6003BC207 /* Injection+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4A92AD176B6003BC207 /* Injection+Key.swift */; };
-		96A1D4AC2AD17829003BC207 /* Midiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4AB2AD17829003BC207 /* Midiator.swift */; };
 		96A1E4A92AD403BB001B2960 /* MissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1E4A82AD403BB001B2960 /* MissionType.swift */; };
 		96A1E4AB2AD4DD0A001B2960 /* FaildAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1E4AA2AD4DD0A001B2960 /* FaildAlert.swift */; };
 		96A1E4AD2AD5277E001B2960 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1E4AC2AD5277E001B2960 /* UserRepository.swift */; };
@@ -252,6 +248,14 @@
 		96A1E4B12AD52919001B2960 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1E4B02AD52919001B2960 /* UserStore.swift */; };
 		96A1E4B42AD5384B001B2960 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1E4B32AD5384B001B2960 /* RealmError.swift */; };
 		96A1E4B62AD53866001B2960 /* PersistentedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1E4B52AD53866001B2960 /* PersistentedError.swift */; };
+		96A401032BE8C192004C30EC /* Midiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401022BE8C192004C30EC /* Midiator.swift */; };
+		96A4010A2BE8CF52004C30EC /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401092BE8CF52004C30EC /* CalendarHeaderView.swift */; };
+		96A4010C2BE8D016004C30EC /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4010B2BE8D016004C30EC /* MonthView.swift */; };
+		96A4010E2BE8D138004C30EC /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4010D2BE8D138004C30EC /* WeekView.swift */; };
+		96A401102BE8D1EB004C30EC /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4010F2BE8D1EB004C30EC /* WeekHeaderView.swift */; };
+		96A401122BE8D259004C30EC /* HeaderActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401112BE8D259004C30EC /* HeaderActionView.swift */; };
+		96A401142BE8D47B004C30EC /* TodayPizzaSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401132BE8D47B004C30EC /* TodayPizzaSummaryView.swift */; };
+		96A401162BE8D526004C30EC /* TodayPizzaSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401152BE8D526004C30EC /* TodayPizzaSheetView.swift */; };
 		96AAF8302AFD3A7B00410881 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF82F2AFD3A7B00410881 /* Dictionary.swift */; };
 		96AAF8322AFD509200410881 /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8312AFD509200410881 /* Mediator.swift */; };
 		96AAF8372AFD50F900410881 /* NotiMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8362AFD50F900410881 /* NotiMediator.swift */; };
@@ -289,12 +293,9 @@
 		B0C158DA2AC1647D003B00E6 /* MissionStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C158D92AC1647D003B00E6 /* MissionStyleView.swift */; };
 		B0C158DC2AC1759D003B00E6 /* MissionSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C158DB2AC1759D003B00E6 /* MissionSettingView.swift */; };
 		B0C74AE82ACFC7A100A14A8B /* RewardAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C74AE72ACFC7A100A14A8B /* RewardAlert.swift */; };
-		B0CB77662AE57FB70022491A /* MySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB77652AE57FB70022491A /* MySceneDelegate.swift */; };
 		B0CB776C2AE679DA0022491A /* CompleteAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB776B2AE679DA0022491A /* CompleteAlert.swift */; };
-		B729A2492AC3FEB2008FF7C5 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B729A2482AC3FEB2008FF7C5 /* TaskRowView.swift */; };
 		B77A29A82AE6955200BB8838 /* PizzaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A29A72AE6955200BB8838 /* PizzaCollectionView.swift */; };
 		B7908DC12AE01BFC004C5221 /* PizzaSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7908DC02AE01BFC004C5221 /* PizzaSummaryView.swift */; };
-		B7C341AF2AC1684400744EB7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C341AE2AC1684400744EB7 /* CalendarViewModel.swift */; };
 		B7C341B52AC2CA7400744EB7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C341B42AC2CA7400744EB7 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -320,7 +321,6 @@
 		2137D58C2AC1475800AFE225 /* UpdateTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTodoView.swift; sourceTree = "<group>"; };
 		2137D58E2AC1476000AFE225 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		2137D5902AC1476700AFE225 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
-		2137D5922AC1478C00AFE225 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		2137D5942AC1479700AFE225 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		2137D5A32AC14C6A00AFE225 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		2137D5A52AC14C7500AFE225 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -381,6 +381,8 @@
 		965C9B9F2ADAB2380015ABBE /* PickleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		965C9BA12ADAB2380015ABBE /* PickleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleTests.swift; sourceTree = "<group>"; };
 		965C9BEA2ADBAF7E0015ABBE /* PizzaAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaAlert.swift; sourceTree = "<group>"; };
+		965E6A282BE8DC0600E03356 /* TaskRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		965E6A2A2BE8DC2100E03356 /* CalendarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		9661107B2AF800AD008A80DE /* Realm+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Combine.swift"; sourceTree = "<group>"; };
 		9661107D2AF8E92B008A80DE /* RealmStore+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmStore+Combine.swift"; sourceTree = "<group>"; };
 		9661107F2AF907EE008A80DE /* ClearBackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundViewModifier.swift; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 		966CD9EE2B0A6B59003AE885 /* DifferentTypeAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentTypeAlerts.swift; sourceTree = "<group>"; };
 		966CD9F02B0A6BA2003AE885 /* Register-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Register-extension.swift"; sourceTree = "<group>"; };
 		966CD9F22B0A6D09003AE885 /* TimeUnitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnitPickerView.swift; sourceTree = "<group>"; };
+		9670FF752BE8DD0400AF5E4D /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		967575BE2B0AB9A0004957AD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		967575C02B0AB9AF004957AD /* SuccessUpdateKey-PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuccessUpdateKey-PreferenceKey.swift"; sourceTree = "<group>"; };
 		9675765B2B0CDCA4004957AD /* Pickle-release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pickle-release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -412,7 +415,6 @@
 		96A1D4A22ACFD97A003BC207 /* BehaviorMissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorMissionRepository.swift; sourceTree = "<group>"; };
 		96A1D4A62ACFE384003BC207 /* MissionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStore.swift; sourceTree = "<group>"; };
 		96A1D4A92AD176B6003BC207 /* Injection+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Injection+Key.swift"; sourceTree = "<group>"; };
-		96A1D4AB2AD17829003BC207 /* Midiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Midiator.swift; sourceTree = "<group>"; };
 		96A1E4A82AD403BB001B2960 /* MissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionType.swift; sourceTree = "<group>"; };
 		96A1E4AA2AD4DD0A001B2960 /* FaildAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaildAlert.swift; sourceTree = "<group>"; };
 		96A1E4AC2AD5277E001B2960 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -420,6 +422,14 @@
 		96A1E4B02AD52919001B2960 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		96A1E4B32AD5384B001B2960 /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
 		96A1E4B52AD53866001B2960 /* PersistentedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentedError.swift; sourceTree = "<group>"; };
+		96A401022BE8C192004C30EC /* Midiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Midiator.swift; sourceTree = "<group>"; };
+		96A401092BE8CF52004C30EC /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		96A4010B2BE8D016004C30EC /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		96A4010D2BE8D138004C30EC /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		96A4010F2BE8D1EB004C30EC /* WeekHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
+		96A401112BE8D259004C30EC /* HeaderActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderActionView.swift; sourceTree = "<group>"; };
+		96A401132BE8D47B004C30EC /* TodayPizzaSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPizzaSummaryView.swift; sourceTree = "<group>"; };
+		96A401152BE8D526004C30EC /* TodayPizzaSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPizzaSheetView.swift; sourceTree = "<group>"; };
 		96AAF82F2AFD3A7B00410881 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		96AAF8312AFD509200410881 /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
 		96AAF8362AFD50F900410881 /* NotiMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiMediator.swift; sourceTree = "<group>"; };
@@ -457,12 +467,9 @@
 		B0C158D92AC1647D003B00E6 /* MissionStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStyleView.swift; sourceTree = "<group>"; };
 		B0C158DB2AC1759D003B00E6 /* MissionSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionSettingView.swift; sourceTree = "<group>"; };
 		B0C74AE72ACFC7A100A14A8B /* RewardAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAlert.swift; sourceTree = "<group>"; };
-		B0CB77652AE57FB70022491A /* MySceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySceneDelegate.swift; sourceTree = "<group>"; };
 		B0CB776B2AE679DA0022491A /* CompleteAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteAlert.swift; sourceTree = "<group>"; };
-		B729A2482AC3FEB2008FF7C5 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		B77A29A72AE6955200BB8838 /* PizzaCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaCollectionView.swift; sourceTree = "<group>"; };
 		B7908DC02AE01BFC004C5221 /* PizzaSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaSummaryView.swift; sourceTree = "<group>"; };
-		B7C341AE2AC1684400744EB7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		B7C341B42AC2CA7400744EB7 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "Pickle/Extension/Date+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -576,10 +583,11 @@
 		2137D5982AC148E200AFE225 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				2137D5922AC1478C00AFE225 /* CalendarView.swift */,
-				964D0A112AFCE81E00BA8FA2 /* CalendarView-extension.swift */,
-				B729A2482AC3FEB2008FF7C5 /* TaskRowView.swift */,
-				B7C341AE2AC1684400744EB7 /* CalendarViewModel.swift */,
+				9670FF752BE8DD0400AF5E4D /* CalendarView.swift */,
+				96A401082BE8CEAA004C30EC /* ViewModel */,
+				96A401052BE8CE76004C30EC /* View */,
+				96A401062BE8CE79004C30EC /* Component */,
+				96A401072BE8CE84004C30EC /* Helper */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -640,7 +648,6 @@
 				962FFD822AF6533900AE4963 /* EntryPoint.swift */,
 				962FFD802AF64F8B00AE4963 /* ProcessInfo.swift */,
 				2137D57A2AC1459C00AFE225 /* ContentView.swift */,
-				B0CB77652AE57FB70022491A /* MySceneDelegate.swift */,
 				2160F9762AE2B98900FC9469 /* LaunchScreen.storyboard */,
 			);
 			path = App;
@@ -686,13 +693,13 @@
 		960C41882ACE392A009A0093 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				96A401022BE8C192004C30EC /* Midiator.swift */,
 				960C41832ACDA42B009A0093 /* BaseRepository.swift */,
 				960C418D2ACE3FCA009A0093 /* TodoRepository.swift */,
 				96A1E4AC2AD5277E001B2960 /* UserRepository.swift */,
 				96CE29C42ADE66B50070EF92 /* PizzaRepository.swift */,
 				960C41952ACE4396009A0093 /* TimeMissionRepository.swift */,
 				96A1D4A22ACFD97A003BC207 /* BehaviorMissionRepository.swift */,
-				96A1D4AB2AD17829003BC207 /* Midiator.swift */,
 				960C41A52ACEF4F1009A0093 /* Repository+Extension.swift */,
 			);
 			path = Repositories;
@@ -863,6 +870,7 @@
 			isa = PBXGroup;
 			children = (
 				2137D5892AC1473C00AFE225 /* HomeView.swift */,
+				96A401042BE8CA7F004C30EC /* Subviews */,
 				9688ADDF2B517541000F2B3A /* Todo */,
 				9688ADDE2B51753A000F2B3A /* Pizza */,
 			);
@@ -975,6 +983,51 @@
 				96A1E4B52AD53866001B2960 /* PersistentedError.swift */,
 			);
 			path = Type;
+			sourceTree = "<group>";
+		};
+		96A401042BE8CA7F004C30EC /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		96A401052BE8CE76004C30EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				965E6A282BE8DC0600E03356 /* TaskRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		96A401062BE8CE79004C30EC /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				96A401092BE8CF52004C30EC /* CalendarHeaderView.swift */,
+				96A401112BE8D259004C30EC /* HeaderActionView.swift */,
+				96A4010F2BE8D1EB004C30EC /* WeekHeaderView.swift */,
+				96A4010D2BE8D138004C30EC /* WeekView.swift */,
+				96A4010B2BE8D016004C30EC /* MonthView.swift */,
+				96A401132BE8D47B004C30EC /* TodayPizzaSummaryView.swift */,
+				96A401152BE8D526004C30EC /* TodayPizzaSheetView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		96A401072BE8CE84004C30EC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				964D0A112AFCE81E00BA8FA2 /* CalendarView-extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		96A401082BE8CEAA004C30EC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				965E6A2A2BE8DC2100E03356 /* CalendarViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		96AAF8332AFD50B400410881 /* Protocol */ = {
@@ -1344,6 +1397,7 @@
 			files = (
 				96EB8C1C2B0251F10011B973 /* BehaviorMission.swift in Sources */,
 				9619E9392B05921E0028348C /* PizzaItemView.swift in Sources */,
+				9670FF762BE8DD0400AF5E4D /* CalendarView.swift in Sources */,
 				B0C74AE82ACFC7A100A14A8B /* RewardAlert.swift in Sources */,
 				B0CB776C2AE679DA0022491A /* CompleteAlert.swift in Sources */,
 				965C9BEB2ADBAF7E0015ABBE /* PizzaAlert.swift in Sources */,
@@ -1358,16 +1412,18 @@
 				966110852AFA7E15008A80DE /* View-extension.swift in Sources */,
 				964D0A142AFCE85F00BA8FA2 /* SettingView-extension.swift in Sources */,
 				966110872AFA7E42008A80DE /* HomeView-Modifier.swift in Sources */,
+				96A401142BE8D47B004C30EC /* TodayPizzaSummaryView.swift in Sources */,
 				963AFF8F2AC3319D00835FD8 /* RealmMigrator.swift in Sources */,
 				960C41842ACDA42B009A0093 /* BaseRepository.swift in Sources */,
 				B0C158DA2AC1647D003B00E6 /* MissionStyleView.swift in Sources */,
-				B0CB77662AE57FB70022491A /* MySceneDelegate.swift in Sources */,
+				96A401102BE8D1EB004C30EC /* WeekHeaderView.swift in Sources */,
 				96EB8C1A2B0251EA0011B973 /* TimeMission.swift in Sources */,
 				21E7118B2AD48DE9002B8069 /* SettingNotiicationView.swift in Sources */,
 				960C41922ACE41E1009A0093 /* Object+Extensions.swift in Sources */,
 				968EB22D2AEE63110025BEF8 /* NavigationStore.swift in Sources */,
 				2137D58F2AC1476000AFE225 /* TimerView.swift in Sources */,
 				96C83B942B5598F300262F19 /* TimerCompleteButton.swift in Sources */,
+				96A401032BE8C192004C30EC /* Midiator.swift in Sources */,
 				962FFD8F2AF7979C00AE4963 /* Realm+Async.swift in Sources */,
 				96CF08EE2AD933A400648B59 /* DotCircleView.swift in Sources */,
 				96635F652ADF9F380072F21E /* Status.swift in Sources */,
@@ -1375,7 +1431,6 @@
 				96635F5E2ADF9EEF0072F21E /* TimeMission-extension.swift in Sources */,
 				966110802AF907EE008A80DE /* ClearBackgroundViewModifier.swift in Sources */,
 				961488772AFD221200B87A37 /* HomeView-Routing.swift in Sources */,
-				2137D5932AC1478C00AFE225 /* CalendarView.swift in Sources */,
 				9619E93C2B0594210028348C /* ScrollEnableKey.swift in Sources */,
 				9688ADDD2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift in Sources */,
 				96635F672ADFA0960072F21E /* BehaviorMission-extension.swift in Sources */,
@@ -1385,6 +1440,7 @@
 				2137D58A2AC1473C00AFE225 /* HomeView.swift in Sources */,
 				2137D5AD2AC14F1100AFE225 /* NavigationBar.swift in Sources */,
 				960C41A02ACEF0DA009A0093 /* Container.swift in Sources */,
+				96A401122BE8D259004C30EC /* HeaderActionView.swift in Sources */,
 				966B03202B07DEE7009B6293 /* PizzaPagingView.swift in Sources */,
 				9661108B2AFA84CA008A80DE /* PreferenceKey.swift in Sources */,
 				9661107C2AF800AD008A80DE /* Realm+Combine.swift in Sources */,
@@ -1397,12 +1453,12 @@
 				21FA267B2AC2ADFB00877122 /* Mission.swift in Sources */,
 				9688ADDB2B516D3B000F2B3A /* TodoEmptyView.swift in Sources */,
 				B063F5CE2ADD02DB008EF304 /* HealthKitStore.swift in Sources */,
-				B729A2492AC3FEB2008FF7C5 /* TaskRowView.swift in Sources */,
+				96A4010C2BE8D016004C30EC /* MonthView.swift in Sources */,
 				96943B262ADFFDED0026D54F /* BackgroundModifier.swift in Sources */,
+				96A401162BE8D526004C30EC /* TodayPizzaSheetView.swift in Sources */,
 				2137D5A62AC14C7500AFE225 /* Color.swift in Sources */,
 				211315902AE1602500FA6492 /* PrimaryButtonModifier.swift in Sources */,
 				2137D57B2AC1459C00AFE225 /* ContentView.swift in Sources */,
-				B7C341AF2AC1684400744EB7 /* CalendarViewModel.swift in Sources */,
 				962FFD842AF6537D00AE4963 /* PickleTestApp.swift in Sources */,
 				96A1D4A32ACFD97A003BC207 /* BehaviorMissionRepository.swift in Sources */,
 				2137D5A82AC14C7A00AFE225 /* Font.swift in Sources */,
@@ -1419,6 +1475,7 @@
 				B0C158DC2AC1759D003B00E6 /* MissionSettingView.swift in Sources */,
 				A08EF5412AE265C900349A58 /* GiveupAlert.swift in Sources */,
 				960C419D2ACE8276009A0093 /* TodoStore.swift in Sources */,
+				965E6A292BE8DC0600E03356 /* TaskRowView.swift in Sources */,
 				960C418C2ACE3969009A0093 /* RealmStore.swift in Sources */,
 				96A1E4AB2AD4DD0A001B2960 /* FaildAlert.swift in Sources */,
 				960C41862ACE390A009A0093 /* URL.swift in Sources */,
@@ -1432,7 +1489,6 @@
 				963AFF922AC33A1800835FD8 /* TodoObject.swift in Sources */,
 				96CE29C92ADED0CA0070EF92 /* Collection.swift in Sources */,
 				96FEE2AB2AE51CA200BC0CCD /* DatePickerUIkit.swift in Sources */,
-				96A1D4AC2AD17829003BC207 /* Midiator.swift in Sources */,
 				960C417F2ACD41CD009A0093 /* CornerButtonModifier.swift in Sources */,
 				9637AB9B2B07846100D64F46 /* UINavigationController.swift in Sources */,
 				96EB8C182B0251D10011B973 /* CurrentPizza.swift in Sources */,
@@ -1443,8 +1499,10 @@
 				B7C341B52AC2CA7400744EB7 /* Date+Extensions.swift in Sources */,
 				967575BF2B0AB9A0004957AD /* Const.swift in Sources */,
 				961296962AC16FBE009A9815 /* BackColorModifier.swift in Sources */,
+				96A4010E2BE8D138004C30EC /* WeekView.swift in Sources */,
 				21FA26772AC2A10800877122 /* Todo.swift in Sources */,
 				96AAF8302AFD3A7B00410881 /* Dictionary.swift in Sources */,
+				96A4010A2BE8CF52004C30EC /* CalendarHeaderView.swift in Sources */,
 				96C83B922B5591BC00262F19 /* CircleTimerView.swift in Sources */,
 				96A1D4AA2AD176B6003BC207 /* Injection+Key.swift in Sources */,
 				96B7AE6D2B023DFC001A3987 /* CurrentPizzaObject.swift in Sources */,
@@ -1456,6 +1514,7 @@
 				21E7118F2AD53862002B8069 /* LocalNotification.swift in Sources */,
 				960C41942ACE4236009A0093 /* BehaviorMissionObject.swift in Sources */,
 				96FEE2AE2AE5219E00BC0CCD /* PickerView.swift in Sources */,
+				965E6A2B2BE8DC2100E03356 /* CalendarViewModel.swift in Sources */,
 				96A1E4B62AD53866001B2960 /* PersistentedError.swift in Sources */,
 				96A1D4A72ACFE384003BC207 /* MissionStore.swift in Sources */,
 				96CE29C52ADE66B50070EF92 /* PizzaRepository.swift in Sources */,
@@ -1514,7 +1573,6 @@
 				967575DC2B0CDCA4004957AD /* RealmMigrator.swift in Sources */,
 				967575DD2B0CDCA4004957AD /* BaseRepository.swift in Sources */,
 				967575DE2B0CDCA4004957AD /* MissionStyleView.swift in Sources */,
-				967575DF2B0CDCA4004957AD /* MySceneDelegate.swift in Sources */,
 				967575E02B0CDCA4004957AD /* TimeMission.swift in Sources */,
 				967575E12B0CDCA4004957AD /* SettingNotiicationView.swift in Sources */,
 				967575E22B0CDCA4004957AD /* Object+Extensions.swift in Sources */,
@@ -1527,7 +1585,6 @@
 				967575E92B0CDCA4004957AD /* TimeMission-extension.swift in Sources */,
 				967575EA2B0CDCA4004957AD /* ClearBackgroundViewModifier.swift in Sources */,
 				967575EB2B0CDCA4004957AD /* HomeView-Routing.swift in Sources */,
-				967575EC2B0CDCA4004957AD /* CalendarView.swift in Sources */,
 				967575ED2B0CDCA4004957AD /* ScrollEnableKey.swift in Sources */,
 				967575EE2B0CDCA4004957AD /* BehaviorMission-extension.swift in Sources */,
 				967575EF2B0CDCA4004957AD /* CGFloat.swift in Sources */,
@@ -1547,12 +1604,10 @@
 				967575FD2B0CDCA4004957AD /* ScrollAnchor.swift in Sources */,
 				967575FE2B0CDCA4004957AD /* Mission.swift in Sources */,
 				967575FF2B0CDCA4004957AD /* HealthKitStore.swift in Sources */,
-				967576002B0CDCA4004957AD /* TaskRowView.swift in Sources */,
 				967576012B0CDCA4004957AD /* BackgroundModifier.swift in Sources */,
 				967576022B0CDCA4004957AD /* Color.swift in Sources */,
 				967576032B0CDCA4004957AD /* PrimaryButtonModifier.swift in Sources */,
 				967576042B0CDCA4004957AD /* ContentView.swift in Sources */,
-				967576052B0CDCA4004957AD /* CalendarViewModel.swift in Sources */,
 				967576062B0CDCA4004957AD /* PickleTestApp.swift in Sources */,
 				967576072B0CDCA4004957AD /* BehaviorMissionRepository.swift in Sources */,
 				967576082B0CDCA4004957AD /* Font.swift in Sources */,
@@ -1581,7 +1636,6 @@
 				9675761F2B0CDCA4004957AD /* TodoObject.swift in Sources */,
 				967576202B0CDCA4004957AD /* Collection.swift in Sources */,
 				967576212B0CDCA4004957AD /* DatePickerUIkit.swift in Sources */,
-				967576222B0CDCA4004957AD /* Midiator.swift in Sources */,
 				967576232B0CDCA4004957AD /* CornerButtonModifier.swift in Sources */,
 				967576242B0CDCA4004957AD /* UINavigationController.swift in Sources */,
 				967576252B0CDCA4004957AD /* CurrentPizza.swift in Sources */,

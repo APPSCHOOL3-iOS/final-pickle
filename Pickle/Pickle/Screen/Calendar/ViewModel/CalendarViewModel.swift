@@ -22,7 +22,6 @@ class CalendarViewModel: ObservableObject {
     @Published var currentMonthIndex: Int = 0
     @Published var currentWeekIndex: Int = 0
     
-    // MARK: -초기화
     init() {
         fetchCurrentWeek(date: currentDay)
     }
@@ -75,7 +74,6 @@ class CalendarViewModel: ObservableObject {
             resultMonth.insert(Date.MonthDate(day: -1, date: Date()), at: 0)
         }
         return resultMonth
-        
     }
     
     // MARK: - checking if current date is today or not
