@@ -7,12 +7,10 @@
 
 import Foundation
 
-
 protocol PizzaRepositoryProtocol: Dependency {
     func fetch(sorted: Sorted, _ completion: @escaping ([Pizza]) -> Void)
     func create(pizza: Pizza) async throws -> Pizza
     func save(pizza: Pizza) throws
-    func delete(pizza: Pizza) throws
     func deleteAll() throws
     func update(pizza: Pizza) throws
 }
@@ -32,7 +30,7 @@ final class PizzaRepository: BaseRepository<PizzaObject>, PizzaRepositoryProtoco
         try await withCheckedThrowingContinuation { continuation in
             do {
                 let data = try JSONEncoder().encode(pizza)
-                try super.create(PizzaObject.self,data: data, completion: { pizzaObject in
+                try super.create(PizzaObject.self, data: data, completion: { pizzaObject in
                     let model = Pizza.mapFromPersistenceObject(pizzaObject)
                     continuation.resume(returning: model)
                 })
@@ -48,18 +46,6 @@ final class PizzaRepository: BaseRepository<PizzaObject>, PizzaRepositoryProtoco
             try super.save(object: object)
         } catch {
             throw PersistentedError.saveFailed
-        }
-    }
-    
-    func delete(pizza: Pizza) throws {
-        let object = pizza.mapToPersistenceObject()
-        do {
-//            let fitler: RFilter = .filter({value in value == object.name })
-
-//            try super.delete(object: object, id: object.id.stringValue)
-        } catch {
-            Log.error("\(error)")
-            throw PersistentedError.deleteFailed
         }
     }
 

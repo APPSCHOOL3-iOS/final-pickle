@@ -53,7 +53,6 @@ extension CurrentPizza: Equatable {
     /// 피자 조각을 추가하고 , 8조각 이상일시 슬라이스를 0으로 만들고 피자카운트를 (1 = defaut) 증가 시키는 메서드
     /// - Parameter count: 피자 조각갯수
     mutating func addPizzaSliceValidation(count: Int = 1) {
-        // TODO: 변경 필요 Pizza adding logic
         currentPizzaSlice += count
     }
     
@@ -66,14 +65,4 @@ extension CurrentPizza: Equatable {
         }
         return count
     }
-    
-    /// 피자 한개의 잠금해제 메소드
-    /// - Parameter pizza: 잠금 해제할 피자
-//    mutating func unlockPizza(pizza: Pizza) {
-//        // TODO: 변경 필요 Pizza Unlock 로직
-//        var pizza = pizza
-//        pizza.lockToggle()
-//        self.pizza = pizza
-//    }
 }
-
