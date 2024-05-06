@@ -58,7 +58,6 @@ struct LocalNotification {
     var type: NotiType
 }
 
-
 extension LocalNotification {
     static let notiType: String = "notificationType"
     static let status: String = "status"

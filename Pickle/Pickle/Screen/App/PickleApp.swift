@@ -14,35 +14,29 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        
         if ProcessInfo.processInfo.isRunningTests { return true }
-        
         PickleApp.setUpDependency()
-        let _ = RealmMigrator()
-        
+        _ = RealmMigrator()
         return true
     }
 }
 
 struct PickleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
     @StateObject private var todoStore = TodoStore()
     @StateObject private var missionStore = MissionStore()
     @StateObject private var userStore = UserStore()
     @StateObject private var pizzaStore = PizzaStore()
     @StateObject private var healthKitStore: HealthKitStore = HealthKitStore()
-    
     @StateObject private var navigationStore = NavigationStore(mediator: NotiMediator.shared)
     @StateObject private var notificationManager = NotificationManager(mediator: NotiMediator.shared)
-    
     @StateObject private var timerVM = TimerViewModel()
     
     init() {
         Thread.sleep(forTimeInterval: 2)
         if debugDelete {
-            // let _ = UserDefaults.standard.set(false, forKey: "__UIConstraintBasedLayoutLogUnsatisfiable")
-            // let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
+             // let _ = UserDefaults.standard.set(false, forKey: "__UIConstraintBasedLayoutLogUnsatisfiable")
+             // let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
         }
     }
     
@@ -55,28 +49,23 @@ struct PickleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if ProcessInfo.processInfo.isRunningTests {
-                Text("value ")
-            } else {
-                ContentView()
-                    .onAppear {  debugDelete.toggle() }    // 내부의 contentView onApper 보다 늦게 실행됨 Debug Delete
-                    .environmentObject(todoStore)
-                    .environmentObject(missionStore)
-                    .environmentObject(userStore)
-                    .environmentObject(notificationManager)
-                    .environmentObject(pizzaStore)
-                    .environmentObject(timerVM)
-                    .environmentObject(healthKitStore)
-                    .environmentObject(navigationStore)
-                    .onChange(of: scenePhase) { newScene in
-                        backgroundEvent(newScene: newScene)
-                    }
-            }
+            ContentView()
+                .onAppear {  debugDelete.toggle() }    // 내부의 contentView onApper 보다 늦게 실행됨 Debug Delete
+                .environmentObject(todoStore)
+                .environmentObject(missionStore)
+                .environmentObject(userStore)
+                .environmentObject(notificationManager)
+                .environmentObject(pizzaStore)
+                .environmentObject(timerVM)
+                .environmentObject(healthKitStore)
+                .environmentObject(navigationStore)
+                .onChange(of: scenePhase) { newScene in
+                    backgroundEvent(newScene: newScene)
+                }
         }
     }
     
     private func backgroundEvent(newScene: ScenePhase) {
-
         if newScene == .background {
             backgroundNumber += 1
             
@@ -106,7 +95,7 @@ struct PickleApp: App {
                 
                 if timerVM.fromBackground {
                     timerVM.makeRandomSaying()
-                    var currentTime: Date = Date()
+                    let currentTime: Date = Date()
                     var diff = currentTime.timeIntervalSince(timerVM.backgroundTimeStemp)
                     timerVM.timeRemaining = timerVM.backgroundTimeRemain
                     timerVM.spendTime = timerVM.backgroundSpendTime

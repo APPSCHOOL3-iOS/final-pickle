@@ -68,8 +68,8 @@ struct AlertContent {
     let primaryButtonTitle: String
     let secondaryButtonTitle: String
     let primaryAction: () -> Void
-    var secondaryAction: (() -> Void)? = nil
-    var externalTapAction: (() -> Void)? = nil
+    var secondaryAction: () -> Void = {}
+    var externalTapAction: () -> Void = {}
 }
 
 struct FaildAlertModifier: ViewModifier {

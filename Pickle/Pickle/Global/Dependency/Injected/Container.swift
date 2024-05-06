@@ -8,7 +8,6 @@
 import Foundation
 
 struct Container {
-    
     private static var factories: [String: () -> Any] = [:]
     private static var cache: [String: Any] = [:]
     

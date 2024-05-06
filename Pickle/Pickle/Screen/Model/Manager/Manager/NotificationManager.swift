@@ -60,8 +60,6 @@ final class NotificationManager: NSObject,
         }
     }
     
-    
-    
     // 현재 알림 설정 확인
     func getCurrentSetting() async {
         let currentSetting = await notificationCenter.notificationSettings()

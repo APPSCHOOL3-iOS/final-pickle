@@ -10,11 +10,9 @@ import RealmSwift
 import Combine
 import Realm
 
-// TODO: 트러블 슈팅 정리......
 typealias RealmFilter<T: Storable> = (Query<T>) -> Query<Bool>
 
 typealias RObjectBase = ObjectBase
-//typealias RObjectChange = ObjectChange
 typealias ObjectCompletion<T> = (ObjectChange<T>) -> Void
 typealias RNotificationToken = NotificationToken
 typealias RObject = RealmSwiftObject
@@ -85,7 +83,6 @@ final class RealmStore: DBStore {
         }
     }
     
-    // TODO: Udpate - Ursert로 할지 KVC 로 할지,,, 어떻게 해야하누
     func update<T>(_ model: T.Type,
                    item: T,
                    query: ((Query<T>) -> Query<Bool>)?) throws -> T where T: Storable, T: RObject {

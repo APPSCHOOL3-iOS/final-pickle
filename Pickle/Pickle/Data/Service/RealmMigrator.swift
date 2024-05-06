@@ -23,21 +23,16 @@ class RealmMigrator {
     func updateSchema() {
         let config = Realm.Configuration(fileURL: URL.inDocumentsFolder("main.realm"), 
                                          schemaVersion: 3, migrationBlock: { migration, oldSchemaVersion in
-            
-            Log.info("migration: \(migration)")
-            Log.info("oldSchemaVersion : \(oldSchemaVersion)")
-
             if oldSchemaVersion < 2 { migrationFromV1ToV2(migration: migration) }
             if oldSchemaVersion < 3 { migrationFromV2ToV3(migration: migration) }
         }, deleteRealmIfMigrationNeeded: true)
         
         func migrationFromV1ToV2(migration: Migration) {
             migration.enumerateObjects(ofType: UserObject.className()) { oldObject, newObject in
-                guard let oldObject = oldObject else { return }
+                guard oldObject != nil else { return }
                 let userObjectPizzaList = newObject?.dynamicList("pizza")
-                
                 migration.enumerateObjects(ofType: PizzaObject.className()) { pizzaObject, newPizzaObject in
-                    guard let object = pizzaObject else { return }
+                    guard pizzaObject != nil else { return }
                     if let newPizzaObject {
                         userObjectPizzaList?.append(newPizzaObject)
                     }
@@ -47,7 +42,7 @@ class RealmMigrator {
         
         func migrationFromV2ToV3(migration: Migration) {
             migration.enumerateObjects(ofType: TimeMissionObject.className(), { oldObject, newObject in
-                guard let oldObject else { return }
+                guard oldObject != nil else { return }
                 newObject!["changeWakeupTime"] = Date()
             })
         }

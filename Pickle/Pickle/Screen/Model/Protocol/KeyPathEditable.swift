@@ -40,7 +40,6 @@ extension KeyPathEditable {
     }
 }
 
-
 extension Todo: KeyPathEditable {}
 extension BehaviorMission: KeyPathEditable {}
 extension TimeMission: KeyPathEditable {}

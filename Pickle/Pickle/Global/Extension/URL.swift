@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK: - appending file Path
+// MARK: - appending file Path
 extension URL {
     static func inDocumentsFolder(_ name: String) -> URL {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

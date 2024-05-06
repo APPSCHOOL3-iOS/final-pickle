@@ -25,7 +25,6 @@ enum PreviewsContainer {
         
         if let pizza { Task { await pizzaSetting(pizza) } }
         if let user { userSetting(user) }
-        // if let todo { missionSetting(todo) }
         if let mission { missionSetting(mission) }
     }
     
@@ -72,7 +71,7 @@ enum PreviewsContainer {
         }
     }
     
-    @MainActor private static func errorHandler(_ error: Error,_ store: UserStore?) {
+    @MainActor private static func errorHandler(_ error: Error, _ store: UserStore?) {
         guard let error = error as? PersistentedError else { return }
         if error == .fetchUserError {
             store?.addUser()

@@ -54,12 +54,12 @@ struct CustomSheetView<Content: View>: View {
                         .offset(y: yOffset_height)
                         .offset(y: calaculate(height: yOffset_height))
                         .gesture(
-                            DragGesture().updating($gestureOffset)
-                            { value, state, _ in
-                                state = dragGestureBody(value)
-                            }
-                             .onChanged { value in onChangedOffset(value) }
-                             .onEnded { _ in onEndedOffset(yOffset_height) }
+                            DragGesture()
+                                .updating($gestureOffset) { value, state, _ in
+                                    state = dragGestureBody(value)
+                                }
+                                .onChanged { value in onChangedOffset(value) }
+                                .onEnded { _ in onEndedOffset(yOffset_height) }
                         )
                 )
             }

@@ -14,27 +14,30 @@ struct TestStoreKey: InjectionKey {
 }
 
 struct TestStore: DBStore {
-    func update<T>(_ model: T.Type, item: T, query: Pickle.RealmFilter<T>?) throws -> T where T : Pickle.Storable {
+    func update<T>(_ model: T.Type, item: T, query: Pickle.RealmFilter<T>?) throws -> T where T: Pickle.Storable {
         fatalError()
     }
     
-    func update<T>(_ model: T.Type, id: String, item: T, query: Pickle.RealmFilter<T>?) throws -> T where T : RObject, T : Pickle.Storable {
+    func update<T>(_ model: T.Type, id: String, item: T, query: Pickle.RealmFilter<T>?) throws -> T where T: RObject, T: Pickle.Storable {
         fatalError()
     }
     
-    func create<T>(_ model: T.Type, item: T, completion: @escaping (T) -> Void) throws where T : Pickle.Storable {
+    func create<T>(_ model: T.Type, item: T, completion: @escaping (T) -> Void) throws where T: Pickle.Storable {
         fatalError()
     }
     
-    func create<T>(_ model: T.Type, data: Data, completion: @escaping (T) -> Void) throws where T : Pickle.Storable {
+    func create<T>(_ model: T.Type, data: Data, completion: @escaping (T) -> Void) throws where T: Pickle.Storable {
         fatalError()
     }
     
-    func fetch<T>(_ model: T.Type, predicate: NSPredicate?, sorted: Pickle.Sorted?) throws -> [T] where T : Pickle.Storable {
+    func fetch<T>(_ model: T.Type, predicate: NSPredicate?, sorted: Pickle.Sorted?) throws -> [T] where T: Pickle.Storable {
         fatalError()
     }
     
-    func notificationToken<T>(_ model: T.Type, id: String, keyPaths: [PartialKeyPath<T>], _ completion: @escaping Pickle.ObjectCompletion<T>) throws -> Pickle.RNotificationToken where T : Pickle.Storable {
+    func notificationToken<T>(_ model: T.Type, 
+                              id: String,
+                              keyPaths: [PartialKeyPath<T>],
+                              _ completion: @escaping Pickle.ObjectCompletion<T>) throws -> Pickle.RNotificationToken where T: Pickle.Storable {
         fatalError()
     }
     
@@ -54,15 +57,15 @@ struct TestStore: DBStore {
         fatalError()
     }
     
-    func delete<T>(model: T.Type, id: String) throws where T : Pickle.Storable {
+    func delete<T>(model: T.Type, id: String) throws where T: Pickle.Storable {
         fatalError()
     }
     
-    func deleteAll<T>(_ model: T.Type) throws where T : Pickle.Storable {
+    func deleteAll<T>(_ model: T.Type) throws where T: Pickle.Storable {
         fatalError()
     }
     
-    func fetch<T>(_ model: T.Type, predicate: NSPredicate?, sorted: Pickle.Sorted?, complection: ([T]) -> Void) throws where T : Pickle.Storable {
+    func fetch<T>(_ model: T.Type, predicate: NSPredicate?, sorted: Pickle.Sorted?, complection: ([T]) -> Void) throws where T: Pickle.Storable {
         fatalError()
     }
 }

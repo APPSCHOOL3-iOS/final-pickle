@@ -44,7 +44,7 @@ struct CircleTimerView: View {
                     Text("시작")
                         .foregroundColor(.pickle)
                         .font(.pizzaTimerNum)
-                        .onReceive(timer) { value in
+                        .onReceive(timer) { _ in
                             calcRemain()
                         }
                 }
@@ -128,8 +128,6 @@ struct CircleTimerView: View {
         timerVM.timeRemaining = state.settingTime
         timerVM.spendTime = 0
     }
-    
-    
     
     /// 지정해놓은 시간 이 지났을때 decreasing mode 에서 -> increasing mode로 변경
     private func turnMode() {

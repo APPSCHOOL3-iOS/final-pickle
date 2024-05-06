@@ -1,4 +1,3 @@
-
 //
 //  TimerView.swift
 //  Pickle
@@ -29,10 +28,8 @@ struct TimerView: View {
     }
     
     @State private var state: TimerState = TimerState()
-    
     @Binding var isShowingTimerView: Bool
     @State private var wiseSaying: String = ""
-    
     @AppStorage("isRunTimer") var isRunTimer: Bool = false
     @AppStorage("backgroundNumber") var backgroundNumber: Int = 0
     @AppStorage("todoId") var todoId: String = ""
@@ -60,7 +57,6 @@ struct TimerView: View {
             
             VStack {
                 Spacer()
-                
                 if state.isDisabled && !state.isStart {
                     completeDiscription
                 } else if !state.isDisabled && !state.isStart {

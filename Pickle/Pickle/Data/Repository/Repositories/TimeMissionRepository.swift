@@ -102,11 +102,9 @@ final class TimeMissionRepository: BaseRepository<TimeMissionObject>, TimeReposi
                       _ completion: @escaping (TimeMission) -> Void)
     throws -> RNotificationToken {
         
-        let objectCompletion: ObjectCompletion<TimeMissionObject> = {
-            change in
+        let objectCompletion: ObjectCompletion<TimeMissionObject> = { change in
             switch change {
             case .change(let object, let properties):
-                // Log.error(object)
                 Log.error("timeMIssion Properties : \(properties)")
                 let timeMission = TimeMission.mapFromPersistenceObject(object)
                 completion(timeMission)

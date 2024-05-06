@@ -42,7 +42,7 @@ final class RealmStoreCombineTest: XCTestCase {
         
             publisher
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { _ in
             }, receiveValue: { value in
                 XCTAssertEqual(value.count, 1) // 이 컨텍스트에서 ongoing은 한개
             }).store(in: &subscriptions)

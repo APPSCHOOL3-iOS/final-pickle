@@ -79,7 +79,7 @@ struct PizzaAlertModifier: ViewModifier {
                                puchaseButtonTitle: puchaseButtonTitle,
                                primaryButtonTitle: primaryButtonTitle,
                                puchaseAction: primaryAction,
-                               pizzaMakeNavAction: pizzaMakeNavAction ?? { } )
+                               pizzaMakeNavAction: pizzaMakeNavAction ?? {})
                     .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
             }
@@ -208,5 +208,5 @@ struct PizzaAlert: View {
                                      puchaseButtonTitle: "안녕하세요",
                                      primaryButtonTitle: "안녕하세요", 
                                      primaryAction: { },
-                                     pizzaMakeNavAction: { } ))
+                                     pizzaMakeNavAction: { }))
 }

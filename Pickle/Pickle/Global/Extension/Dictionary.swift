@@ -8,7 +8,7 @@
 import Foundation
 
 extension Dictionary where Key == AnyHashable, Value: Any {
-    func mapToStringKey() -> Dictionary<String, Any> {
+    func mapToStringKey() -> [String: Any] {
         self.reduce(into: [String: Any]()) { original, dic in
             guard let key = dic.key as? String else { return }
             original[key] = dic.value

@@ -31,10 +31,10 @@ final class BehaviorMissionRepository: BaseRepository<BehaviorMissionObject>, Be
         return []
     }
     
-    func create(item: BehaviorMission,_ completion: @escaping (BehaviorMissionObject) -> Void) {
+    func create(item: BehaviorMission, _ completion: @escaping (BehaviorMissionObject) -> Void) {
         let object = item.mapToPersistenceObject()
         do {
-            try super.create(BehaviorMissionObject.self, item: object ,completion: completion)
+            try super.create(BehaviorMissionObject.self, item: object, completion: completion)
         } catch {
             Log.error("error occur : \(error)")
         }
@@ -83,7 +83,7 @@ final class BehaviorMissionRepository: BaseRepository<BehaviorMissionObject>, Be
         
         let objectCompletion: ObjectCompletion<BehaviorMissionObject> = { change in
             switch change {
-            case .change(let object, let properties):
+            case .change(let object, _):
                 let behavior = BehaviorMission.mapFromPersistenceObject(object)
                 completion(behavior)
             case .error(let error):

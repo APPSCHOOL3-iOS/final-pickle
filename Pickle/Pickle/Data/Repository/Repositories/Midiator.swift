@@ -22,12 +22,14 @@ struct MissionMediator {
     
     typealias DTO = Mission
     typealias Persisted = MissionObject
-    typealias A = Adpater
     
     private func setRepository(mission: MissionType) {
         let missionType = mission.type
-        if Adpater.type == missionType { return }
-        else { Adpater.type = missionType }
+        if Adpater.type == missionType {
+            return
+        } else {
+            Adpater.type = missionType
+        }
         
         switch missionType {
         case .time:
@@ -41,14 +43,13 @@ struct MissionMediator {
     
     func fetch<T: Persisted>(sorted: Sorted, type: MissionType) async throws -> T {
         setRepository(mission: type)
-        let value = await A.repository?.fetch(sorted: sorted)
+        let value = await Adpater.repository?.fetch(sorted: sorted)
         guard let value = value as? T
         else { throw MissionError.castingError }
         return value
     }
     
     func create<T: Persisted>(type: MissionType, _ completion: @escaping (T) -> Void) {
-        // TODO: 추후 수정
 //        A.repository?.create(item: .init()) { value in
 //            Log.debug("create: \(value)")
 //        }
@@ -56,12 +57,12 @@ struct MissionMediator {
     
     func add(type: MissionType, value: some Mission) {
         setRepository(mission: type)
-        A.repository?.save(model: value)
+        Adpater.repository?.save(model: value)
     }
     
     func delete<T: DTO>(type: MissionType, value: T) where T: MappableProtocol {
         setRepository(mission: type)
-        if let repo = A.repository {
-        }
+        // if let repo = Adpater.repository {
+        // }
     }
 }

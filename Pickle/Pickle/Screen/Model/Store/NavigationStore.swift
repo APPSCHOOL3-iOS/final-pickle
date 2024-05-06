@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// TODO: 정리
-// Update Navigation Request Observer tried to update multiple times per frame.
 @MainActor
 final class NavigationStore: ObservableObject, NotificationService {
     
