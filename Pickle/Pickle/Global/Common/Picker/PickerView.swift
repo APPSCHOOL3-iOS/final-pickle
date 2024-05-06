@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PickerView: View {
     
-    @Binding var isTimeMissionSettingModalPresented: Bool
+    @Binding var showTimeMissionModal: Bool
     @Binding var changedWakeupTime: Date
     var title: String
     var action: () -> Void
@@ -20,7 +20,7 @@ struct PickerView: View {
             Spacer()
             HStack {
                 Button {
-                    isTimeMissionSettingModalPresented.toggle()
+                    showTimeMissionModal.toggle()
                 } label: {
                     Text("취소")
                         .font(.pizzaBody)
