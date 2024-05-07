@@ -8,9 +8,10 @@
 import SwiftUI
 
 @main
-final class Application {
+struct AppLauncher {
+    @MainActor
     static func main() {
-        if ProcessInfo.processInfo.isRunningTests {
+        if NSClassFromString("XCTestCase") != nil {
             PickleAppTest.main()
         } else {
             PickleApp.main()
