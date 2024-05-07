@@ -99,6 +99,8 @@
 		966CD9F12B0A6BA2003AE885 /* Register-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD9F02B0A6BA2003AE885 /* Register-extension.swift */; };
 		966CD9F32B0A6D09003AE885 /* TimeUnitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD9F22B0A6D09003AE885 /* TimeUnitPickerView.swift */; };
 		9670FF782BE8E19100AF5E4D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670FF772BE8E19100AF5E4D /* CalendarView.swift */; };
+		9670FF7D2BEA26DF00AF5E4D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */; };
+		9670FF7E2BEA26DF00AF5E4D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */; };
 		967575BF2B0AB9A0004957AD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967575BE2B0AB9A0004957AD /* Const.swift */; };
 		967575C12B0AB9AF004957AD /* SuccessUpdateKey-PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967575C02B0AB9AF004957AD /* SuccessUpdateKey-PreferenceKey.swift */; };
 		967575CC2B0CDCA4004957AD /* BehaviorMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB8C1B2B0251F10011B973 /* BehaviorMission.swift */; };
@@ -404,6 +406,7 @@
 		966CD9F02B0A6BA2003AE885 /* Register-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Register-extension.swift"; sourceTree = "<group>"; };
 		966CD9F22B0A6D09003AE885 /* TimeUnitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnitPickerView.swift; sourceTree = "<group>"; };
 		9670FF772BE8E19100AF5E4D /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		967575BE2B0AB9A0004957AD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		967575C02B0AB9AF004957AD /* SuccessUpdateKey-PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuccessUpdateKey-PreferenceKey.swift"; sourceTree = "<group>"; };
 		9675765B2B0CDCA4004957AD /* Pickle-release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pickle-release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1114,6 +1117,7 @@
 				2137D57C2AC1459D00AFE225 /* Assets.xcassets */,
 				96CF08DF2AD9096B00648B59 /* font */,
 				2137D57E2AC1459D00AFE225 /* Preview Content */,
+				9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1311,6 +1315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2137D5882AC1460F00AFE225 /* .swiftlint.yml in Resources */,
+				9670FF7E2BEA26DF00AF5E4D /* PrivacyInfo.xcprivacy in Resources */,
 				2137D5802AC1459D00AFE225 /* Preview Assets.xcassets in Resources */,
 				96CF08E62AD9098400648B59 /* NanumSquareNeoOTF-Eb.otf in Resources */,
 				2160F9772AE2B98900FC9469 /* LaunchScreen.storyboard in Resources */,
@@ -1335,6 +1340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9675764E2B0CDCA4004957AD /* .swiftlint.yml in Resources */,
+				9670FF7D2BEA26DF00AF5E4D /* PrivacyInfo.xcprivacy in Resources */,
 				9675764F2B0CDCA4004957AD /* Preview Assets.xcassets in Resources */,
 				967576502B0CDCA4004957AD /* NanumSquareNeoOTF-Eb.otf in Resources */,
 				967576512B0CDCA4004957AD /* LaunchScreen.storyboard in Resources */,
