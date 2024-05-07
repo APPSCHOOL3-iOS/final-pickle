@@ -14,7 +14,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        if ProcessInfo.processInfo.isRunningTests { return true }
         PickleApp.setUpDependency()
         _ = RealmMigrator()
         return true
@@ -33,11 +32,7 @@ struct PickleApp: App {
     @StateObject private var timerVM = TimerViewModel()
     
     init() {
-        Thread.sleep(forTimeInterval: 2)
-        if debugDelete {
-             // let _ = UserDefaults.standard.set(false, forKey: "__UIConstraintBasedLayoutLogUnsatisfiable")
-             // let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
-        }
+        Thread.sleep(forTimeInterval: 1)
     }
     
     @Environment(\.scenePhase) var scenePhase
