@@ -263,7 +263,6 @@
 		96AAF8372AFD50F900410881 /* NotiMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8362AFD50F900410881 /* NotiMediator.swift */; };
 		96AAF8392AFD511200410881 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8382AFD511200410881 /* NotificationService.swift */; };
 		96B7AE6D2B023DFC001A3987 /* CurrentPizzaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7AE6C2B023DFC001A3987 /* CurrentPizzaObject.swift */; };
-		96BF92912AC27EAC00277131 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 96BF92902AC27EAC00277131 /* Realm */; };
 		96BF92932AC27EAC00277131 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 96BF92922AC27EAC00277131 /* RealmSwift */; settings = {ATTRIBUTES = (Required, ); }; };
 		96C64FE32ADC2C450042204A /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C64FE22ADC2C450042204A /* CustomSheetView.swift */; };
 		96C716DB2AC1614F00B4B8E0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C716DA2AC1614F00B4B8E0 /* RegisterView.swift */; };
@@ -482,7 +481,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96BF92932AC27EAC00277131 /* RealmSwift in Frameworks */,
-				96BF92912AC27EAC00277131 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1220,7 +1218,6 @@
 			);
 			name = Pickle;
 			packageProductDependencies = (
-				96BF92902AC27EAC00277131 /* Realm */,
 				96BF92922AC27EAC00277131 /* RealmSwift */,
 			);
 			productName = Pickle;
@@ -2114,11 +2111,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 967575C82B0CDCA4004957AD /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
-		};
-		96BF92902AC27EAC00277131 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96BF928F2AC27EAC00277131 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
 		};
 		96BF92922AC27EAC00277131 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
