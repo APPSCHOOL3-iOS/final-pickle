@@ -8,7 +8,6 @@
 import SwiftUI
 
 class TestAppDelegate: NSObject, UIApplicationDelegate {
-    
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         return true
@@ -18,13 +17,8 @@ class TestAppDelegate: NSObject, UIApplicationDelegate {
 struct PickleAppTest: App {
     var body: some Scene {
         WindowGroup {
-            if ProcessInfo.processInfo.isRunningTests {
-                VStack {
-                    Text("isTest")
-                    Text("isTest")
-                    Text("isTest")
-                    Text("isTest")
-                }
+            VStack {
+                Text("TEST")
             }
         }
     }
