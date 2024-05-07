@@ -77,6 +77,16 @@ extension Todo: Hashable {
 extension Todo: Codable { }
 
 extension Todo {
+    
+    static var mock: Todo {
+        .init(id: UUID().uuidString,
+              content: "Sample",
+              startTime: Date(),
+              targetTime: 0,
+              spendTime: 10,
+              status: .ready)
+    }
+    
     static var sample: Todo {
         .init(id: "SamPleTodoTestView",
               content: "Sample",
