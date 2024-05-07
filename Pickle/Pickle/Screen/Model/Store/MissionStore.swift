@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TODO: Mission Notification Observer 달기
 @MainActor
 final class MissionStore: ObservableObject {
     
@@ -22,7 +21,6 @@ final class MissionStore: ObservableObject {
     
     init() {
         self.missionSetting()
-        //self.fetch()
     }
     
     func fetch() -> ([TimeMission], [BehaviorMission]) {
@@ -42,7 +40,7 @@ final class MissionStore: ObservableObject {
         case .behavior(let behaviorMission):
             behaviorMissionRepository.save(model: behaviorMission)
         }
-        self.fetch()
+        _ = self.fetch()
     }
     
     func delete(mission: MissionType) {
@@ -82,26 +80,28 @@ final class MissionStore: ObservableObject {
         do {
             switch mission {
             case .time(let timeMission):
-                timeMissionToken = try timeMissionRepository.notification(id: timeMission.id,
-                                                                   keyPaths: timeMissionKeypaths) {
-                    [weak self] tiemMission in
-                    Task.detached {
+                timeMissionToken 
+                =
+                try timeMissionRepository
+                    .notification(id: timeMission.id,
+                                  keyPaths: timeMissionKeypaths) { [weak self] _tiemMission in
+                        Task.detached {
                             await MainActor.run {
-                                self?.updateTimeMission(timeMission)
+                                self?.updateTimeMission(_tiemMission)
                             }
                         }
                 }
             case .behavior(let behaviorMission):
                 behaviorMissionToken
-                = try behaviorMissionRepository.notification(id: behaviorMission.id,
-                                                             keyPaths: behaviorMissionKeypaths) {
-                    [weak self] behaviorMission in
-                    Task.detached {
-                        await MainActor.run {
-                            self?.updateBehaviorMission(behaviorMission)
+                = try behaviorMissionRepository
+                    .notification(id: behaviorMission.id,
+                                  keyPaths: behaviorMissionKeypaths) { [weak self] _behaviorMission in
+                        Task.detached {
+                            await MainActor.run {
+                                self?.updateBehaviorMission(_behaviorMission)
+                            }
                         }
                     }
-                }
             }
         } catch {
             assert(false)
@@ -122,11 +122,11 @@ final class MissionStore: ObservableObject {
     }
     
     func missionSetting() {
-        let (t, b) = self.fetch()
-       //        if t.isEmpty {
-//            let time = TimeMission(title: "기상 미션", status: .ready, date: Date(), wakeupTime: Date())
-//            self.add(mission: .time(time))
-//        }
+        self.fetch()
+        //        if t.isEmpty {
+        //            let time = TimeMission(title: "기상 미션", status: .ready, date: Date(), wakeupTime: Date())
+        //            self.add(mission: .time(time))
+        //        }
         var hasTodaysData = false
         
         if behaviorMissions.isEmpty {
@@ -134,19 +134,14 @@ final class MissionStore: ObservableObject {
             self.add(mission: .behavior(behavior))
         }
             
-        for i in behaviorMissions {
-            if i.date.isToday {
-                hasTodaysData = true
-                break
-            }
+        for mission in behaviorMissions where mission.date.isToday {
+            hasTodaysData = true
+            break
         }
-        
         
         if hasTodaysData == false {
             let behavior = BehaviorMission()
             self.add(mission: .behavior(behavior))
         }
-
-
     }
 }

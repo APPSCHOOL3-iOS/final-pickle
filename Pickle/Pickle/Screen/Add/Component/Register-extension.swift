@@ -31,7 +31,7 @@ extension RegisterView {
     }
     
     func datePickerGenerator(startTimes: Binding<Date>, show: Binding<Bool>) -> some View {
-        PickerView(isTimeMissionSettingModalPresented: show,
+        PickerView(showTimeMissionModal: show,
                    changedWakeupTime: startTimes,
                    title: "오늘 할일 시간",
                    action: { show.wrappedValue.toggle() },

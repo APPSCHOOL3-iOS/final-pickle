@@ -10,41 +10,41 @@ import Foundation
 protocol InjectionKey {
     associatedtype Value
     static var currentValue: Self.Value { get }
-    static var type: DependencyType { get }
+    static var type: InstanceType { get }
 }
 
 extension InjectionKey {
     static var currentValue: Value {
-        return DependencyContainer.resolve(type, Self.self)!
+        return Container.resolve(type, Self.self)!
     }
 }
 
 struct TodoRepoKey: InjectionKey {
     typealias Value = TodoRepositoryProtocol
-    static var type: DependencyType = .singleton
+    static var type: InstanceType = .singleton
 }
 
 struct DBStoreKey: InjectionKey {
     typealias Value = DBStore
-    static var type: DependencyType = .singleton
+    static var type: InstanceType = .singleton
 }
 
 struct TimeRepoKey: InjectionKey {
     typealias Value = TimeRepositoryProtocol
-    static var type: DependencyType = .singleton
+    static var type: InstanceType = .singleton
 }
 
 struct BehaviorRepoKey: InjectionKey {
     typealias Value = BehaviorRepositoryProtocol
-    static var type: DependencyType = .singleton
+    static var type: InstanceType = .singleton
 }
 
 struct UserRepoKey: InjectionKey {
     typealias Value = UserRepositoryProtocol
-    static var type: DependencyType = .singleton
+    static var type: InstanceType = .singleton
 }
 
 struct PizzaRepoKey: InjectionKey {
     typealias Value = PizzaRepositoryProtocol
-    static var type: DependencyType = .singleton
+    static var type: InstanceType = .singleton
 }

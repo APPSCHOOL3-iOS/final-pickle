@@ -15,9 +15,9 @@ class TimerViewModel: ObservableObject {
     @Published var spendTime: TimeInterval = 0
     @Published var isDecresing: Bool = true // 목표시간 줄어드는거 관련 변수
     @Published var isPuase: Bool = false
-    
     @Published var backgroundTimeStemp: Date = Date()
     @Published var fromBackground: Bool = false
+    
     var backgroundTimeRemain: TimeInterval = 0
     var backgroundSpendTime: TimeInterval = 0
     var backgroundTimeExtra: TimeInterval = 0

@@ -46,14 +46,6 @@ class PizzaStore: ObservableObject {
         }
     }
     
-    func delete(pizza: Pizza) {
-        do {
-            try pizzaRepository.delete(pizza: pizza)
-        } catch {
-            Log.error("delete Failed : \(error)")
-        }
-    }
-    
     func deleteAll() {
         do {
             try pizzaRepository.deleteAll()

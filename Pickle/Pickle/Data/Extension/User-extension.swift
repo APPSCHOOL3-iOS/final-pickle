@@ -22,9 +22,6 @@ extension User: MappableProtocol {
     }
     
     static func mapFromPersistenceObject(_ object: PersistenceType) -> Self {
-        let list = object.currentPizzaList
-        // 
-        let pizzas = list.map { value in CurrentPizza.mapFromPersistenceObject(value) }
         return User(id: object.id,
                     nickName: object.nickName,
                     currentPizzaCount: object.currentPizzaCount,

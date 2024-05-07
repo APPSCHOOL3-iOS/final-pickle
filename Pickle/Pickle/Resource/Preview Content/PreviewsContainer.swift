@@ -9,12 +9,12 @@ import Foundation
 
 enum PreviewsContainer {
     static func setUpDependency() {
-        DependencyContainer.register(DBStoreKey.self, RealmStore.previews)
-        DependencyContainer.register(TodoRepoKey.self, TodoRepository())
-        DependencyContainer.register(BehaviorRepoKey.self, BehaviorMissionRepository())
-        DependencyContainer.register(TimeRepoKey.self, TimeMissionRepository())
-        DependencyContainer.register(UserRepoKey.self, UserRepository())
-        DependencyContainer.register(PizzaRepoKey.self, PizzaRepository())
+        Container.register(DBStoreKey.self, RealmStore.previews)
+        Container.register(TodoRepoKey.self, TodoRepository())
+        Container.register(BehaviorRepoKey.self, BehaviorMissionRepository())
+        Container.register(TimeRepoKey.self, TimeMissionRepository())
+        Container.register(UserRepoKey.self, UserRepository())
+        Container.register(PizzaRepoKey.self, PizzaRepository())
     }
     
     @MainActor 
@@ -25,7 +25,6 @@ enum PreviewsContainer {
         
         if let pizza { Task { await pizzaSetting(pizza) } }
         if let user { userSetting(user) }
-        // if let todo { missionSetting(todo) }
         if let mission { missionSetting(mission) }
     }
     
@@ -72,7 +71,7 @@ enum PreviewsContainer {
         }
     }
     
-    @MainActor private static func errorHandler(_ error: Error,_ store: UserStore?) {
+    @MainActor private static func errorHandler(_ error: Error, _ store: UserStore?) {
         guard let error = error as? PersistentedError else { return }
         if error == .fetchUserError {
             store?.addUser()

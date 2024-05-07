@@ -13,7 +13,7 @@ struct Injected<Dependency> {
     var service: Dependency
     
     // MARK: After
-    init<T>(_ key: T.Type, _ type: DependencyType = .automatic) where T: InjectionKey, Dependency == T.Value {
+    init<T>(_ key: T.Type, _ type: InstanceType = .automatic) where T: InjectionKey, Dependency == T.Value {
         let service: Dependency = key.currentValue
         self.service = service
     }

@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>BGTaskSchedulerPermittedIdentifiers</key>
-	<array>
-		<string>com.ddudios.realpizza.refresh_badge</string>
-		<string>com.ddudios.realpizza.refresh_process</string>
-	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>NanumSquareNeoOTF-Bd.otf</string>
@@ -15,11 +10,6 @@
 		<string>NanumSquareNeoOTF-Lt.otf</string>
 		<string>NanumSquareNeoOTF-Rg.otf</string>
 		<string>Chab.otf</string>
-	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-		<string>processing</string>
 	</array>
 </dict>
 </plist>

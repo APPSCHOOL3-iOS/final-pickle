@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DependencyType {
+enum InstanceType {
     case singleton
     case newSingleton
     case new

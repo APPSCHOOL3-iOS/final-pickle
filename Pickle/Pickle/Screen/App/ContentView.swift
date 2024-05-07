@@ -18,8 +18,7 @@ struct ContentView: View {
     @EnvironmentObject var navigationStore: NavigationStore
     
     @State private var rootScrollEnable: Bool = false
-    @State private var rootScrollEnableKey = ScrollEnableKey(root: false,
-                                                             calendar: false)
+    @State private var rootScrollEnableKey = ScrollEnableKey(root: false, calendar: false)
     
     var selectedScheme: ColorScheme? {
         guard let theme = SchemeType(rawValue: systemTheme) else { return nil }
@@ -64,9 +63,8 @@ struct ContentView: View {
                     .environment(\.symbolVariants, .fill)
             }.tag(TabItem.setting)
         }
-        .task { /*await pizzaSetting()*/ } // 피자 첫 실행시 로컬에 저장
         .onAppear {
-            initUserSetting()        // initUserSetting
+            initUserSetting()
         }
         .fullScreenCover(isPresented: $isOnboardingViewActive) {
             SettingNotiicationView(isShowingOnboarding: $isOnboardingViewActive)

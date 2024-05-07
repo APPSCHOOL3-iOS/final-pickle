@@ -178,7 +178,6 @@ extension HomeView {
     }
 }
 
-
 // MARK: Home View Routing
 extension HomeView {
     private func routing(stack route: HomeView.Routing) -> some View {
@@ -223,18 +222,14 @@ extension HomeView {
 }
 
 struct HomeView_Previews: PreviewProvider {
+    static let todo = TodoStore()
+    static let pizza = PizzaStore()
+    static let user = UserStore()
+    static let mission = MissionStore()
+    
     static var previews: some View {
         NavigationStack {
-#if DEBUG 
-            let _ = PreviewsContainer.setUpDependency()
-            let todo = TodoStore()
-            let pizza = PizzaStore()
-            let user = UserStore()
-            let mission = MissionStore()
-            let _ = PreviewsContainer.dependencySetting(pizza: pizza,
-                                                        user: user,
-                                                        todo: todo,
-                                                        mission: mission)
+#if DEBUG
             HomeView()
                 .environmentObject(TimerViewModel())
                 .environmentObject(todo)
@@ -247,6 +242,9 @@ struct HomeView_Previews: PreviewProvider {
 #else
             Text("value")
 #endif
+        }.onAppear {
+            PreviewsContainer.setUpDependency()
+            PreviewsContainer.dependencySetting(pizza: pizza, user: user, todo: todo, mission: mission)
         }
     }
 }

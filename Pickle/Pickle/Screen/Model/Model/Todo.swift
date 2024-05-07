@@ -56,8 +56,9 @@ extension Todo: Hashable {
         self.targetTime == todo.targetTime
     }
     
-    func isNotPersisted() -> Bool {
-        self.id == ""
+    var isNotPersisted: Bool {
+        self.id == "" ||
+        self.id == Todo.sample.id
     }
     
     var asDictionary: [String: Any] {
@@ -76,8 +77,18 @@ extension Todo: Hashable {
 extension Todo: Codable { }
 
 extension Todo {
-    static var sample: Todo {
+    
+    static var mock: Todo {
         .init(id: UUID().uuidString,
+              content: "Sample",
+              startTime: Date(),
+              targetTime: 0,
+              spendTime: 10,
+              status: .ready)
+    }
+    
+    static var sample: Todo {
+        .init(id: "SamPleTodoTestView",
               content: "Sample",
               startTime: Date(),
               targetTime: 0,

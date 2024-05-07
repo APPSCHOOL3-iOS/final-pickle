@@ -22,9 +22,9 @@ enum MissionType {
     
     var type: MissionRepositoryType {
         switch self {
-        case .time(_):
+        case .time:
             return .time
-        case .behavior(_):
+        case .behavior:
             return .behavior
         }
     }

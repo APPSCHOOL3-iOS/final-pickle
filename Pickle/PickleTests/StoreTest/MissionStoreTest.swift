@@ -19,7 +19,7 @@ final class MissionStoreTest: XCTestCase {
     }
     
     override func tearDown() async throws {
-        DependencyContainer.removeCache()
+        Container.removeCache()
         sut = nil
     }
     
@@ -163,8 +163,8 @@ extension MissionStoreTest {
     }
     
     static func setUpTodoDependency() {
-        DependencyContainer.register(DBStoreKey.self, RealmStore(type: .inmemory))
-        DependencyContainer.register(BehaviorRepoKey.self, BehaviorMissionRepository())
-        DependencyContainer.register(TimeRepoKey.self, TimeMissionRepository())
+        Container.register(DBStoreKey.self, RealmStore(type: .inmemory))
+        Container.register(BehaviorRepoKey.self, BehaviorMissionRepository())
+        Container.register(TimeRepoKey.self, TimeMissionRepository())
     }
 }

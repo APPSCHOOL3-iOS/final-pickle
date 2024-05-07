@@ -15,7 +15,7 @@ extension Todo: MappableProtocol {
         TodoObject(id: self.id,
                    content: self.content,
                    startTime: self.startTime,
-                   targetTime: self.targetTime, //self.targetTime,
+                   targetTime: self.targetTime,
                    spendTime: self.spendTime,
                    status: TodoStatusPersisted(rawValue: self.status.value) ?? .ready)
         

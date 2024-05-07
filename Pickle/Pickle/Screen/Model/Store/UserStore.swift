@@ -148,26 +148,4 @@ final class UserStore: ObservableObject {
         }
         return false
     }
-    
-    @MainActor
-    private func observeUser() {
-        // TODO: 변경 필요
-        // 필요가 있나?
-//        self.token = userRepository.observeUser(id: self.user.id,
-//                                                keyPaths: [\.currentPizzaSlice, \.pizza]) {
-//            change in
-//            switch change {
-//            case .change(let userObject, let propertys):
-//                let user = User.mapFromPersistenceObject(userObject)
-//                if self.user == user {
-//                    Log.error("self.user == user")
-//                } else {
-//                    Log.error("self.user != user")
-//                }
-//                return
-//            default:
-//                break
-//            }
-//        }
-    }
 }

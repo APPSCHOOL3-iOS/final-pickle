@@ -52,7 +52,6 @@ extension User: Equatable {
     /// 피자 조각을 추가하고 , 8조각 이상일시 슬라이스를 0으로 만들고 피자카운트를 (1 = defaut) 증가 시키는 메서드
     /// - Parameter count: 피자 조각갯수
     mutating func addPizzaSliceValidation(count: Int = 1) -> Self {
-        // TODO: 변경 필요 Pizza adding logic
         currentPizzaSlice += count
         if currentPizzaSlice >= 8 {
             currentPizzaSlice = 0

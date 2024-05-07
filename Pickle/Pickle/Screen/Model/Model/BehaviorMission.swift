@@ -28,8 +28,5 @@ struct BehaviorMission: Mission, Identifiable {
         self.status2 = status2
         self.date = date
     }
-    
-    
-    
 }
 extension BehaviorMission: Equatable { }

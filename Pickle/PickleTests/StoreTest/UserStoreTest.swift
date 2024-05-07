@@ -262,7 +262,7 @@ final class UserStoreTest: XCTestCase {
 
 extension UserStoreTest {
     static func setUpTodoDependency() {
-        DependencyContainer.register(DBStoreKey.self, RealmStore(type: .inmemory))
-        DependencyContainer.register(UserRepoKey.self, UserRepository())
+        Container.register(DBStoreKey.self, RealmStore(type: .inmemory))
+        Container.register(UserRepoKey.self, UserRepository())
     }
 }

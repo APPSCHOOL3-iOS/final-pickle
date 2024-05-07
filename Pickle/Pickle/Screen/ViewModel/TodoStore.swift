@@ -79,8 +79,8 @@ final class TodoStore: ObservableObject {
         }
     }
     
-    func delete(todo: Todo) {                               // TODO: Delete가 실패 했을때 처리 해야함
-        repository.deleteTodo(model: todo)                  // repository.deleteTodo(todo: todo)
+    func delete(todo: Todo) {
+        repository.deleteTodo(model: todo)
         self.todos.removeAll(where: { $0.id == todo.id })
     }
     
@@ -108,7 +108,7 @@ final class TodoStore: ObservableObject {
     
     func fixNotification(computedTodo: Todo,
                          notificationManager: NotificationManager) {
-        //할일의 시작시간 -3분에 알람을 알려줄 시간 변수
+        // 할일의 시작시간 -3분에 알람을 알려줄 시간 변수
         let fixedNotificationTime = Calendar.current.dateComponents([.hour, .minute], from: computedTodo.startTime.adding(minutes: -3))
         Log.error("computedTodo.id: \(computedTodo.id)")
         // 2번 만약 처음 등록한 할일의 시작시간과 수정한 할일의 시작시간이 다를 경우, 처음 등록된 Notificatio Identifier을 찾아서 삭제하는 메서드
@@ -161,6 +161,5 @@ final class TodoStore: ObservableObject {
     func deleteNotification(todo: Todo,
                             notificationManager: NotificationManager) {
         notificationManager.removeSpecificNotification(id: [todo.id])
-        print("삭제됐기를..^^")
     }
 }

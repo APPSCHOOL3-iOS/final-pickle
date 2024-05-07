@@ -55,7 +55,6 @@ struct PizzaCollectionView: View {
     }
 }
 
-
 #Preview {
     NavigationStack {
         PizzaSummaryView()

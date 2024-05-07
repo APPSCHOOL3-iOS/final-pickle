@@ -71,7 +71,7 @@ struct RegisterView: View {
     private var computedTodo: Todo {
         let resultTime = todoTimeResult.adding(minutes: 0)
         let startTime = startTimes.adding(minutes: 0)
-        let isPersisted = willUpdateTodo.isNotPersisted()
+        let isPersisted = willUpdateTodo.isNotPersisted
         return Todo(id: isPersisted ? UUID().uuidString : willUpdateTodo.id,
                     content: content,
                     startTime: startTime,
@@ -92,8 +92,6 @@ struct RegisterView: View {
         GeometryReader { geometry in
             ScrollView(showsIndicators: false) {
                 VStack {
-                    // TODO: 현재 할일내용, 시작시간, 목표시간 3가지 타입의 데이터만 입력받음
-                    // 추후 다른 input 타입 생각
                     todoTitleInputField
                         .padding(.top, 40)
                     
@@ -144,7 +142,6 @@ struct RegisterView: View {
     }
     
     private func deleteAction() {
-        Log.debug("deleteAction")
         todoStore.delete(todo: willUpdateTodo)
         todoStore.deleteNotificaton(todo: willUpdateTodo, noti: notificationManager)
     }

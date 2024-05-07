@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct DependencyContainer {
-    
+struct Container {
     private static var factories: [String: () -> Any] = [:]
     private static var cache: [String: Any] = [:]
     
@@ -29,7 +28,7 @@ struct DependencyContainer {
         factories[String(describing: name.self)] = factory
     }
     
-    static func resolve<Dependency>(_ resolveType: DependencyType = .automatic,
+    static func resolve<Dependency>(_ resolveType: InstanceType = .automatic,
                                     _ type: Any.Type?) -> Dependency? {
         let serviceName = type.map { String(describing: $0) } ?? String(describing: Dependency.self)
         

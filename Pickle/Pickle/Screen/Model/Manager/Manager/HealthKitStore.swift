@@ -10,8 +10,7 @@ import HealthKit
 
 class HealthKitStore: ObservableObject {
 
-
-    @Published var stepCount: Int? = nil
+    @Published var stepCount: Int?
     private let healthStore: HKHealthStore? = HKHealthStore()
 
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
@@ -20,7 +19,7 @@ class HealthKitStore: ObservableObject {
             return
         }
 
-        healthStore?.requestAuthorization(toShare: [], read: [stepType]) { success, error in
+        healthStore?.requestAuthorization(toShare: nil, read: [stepType]) { success, _ in
             completion(success)
         }
     }
@@ -44,7 +43,9 @@ class HealthKitStore: ObservableObject {
 
         let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
 
-        let query = HKStatisticsQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum) { query, result, error in
+        let query = HKStatisticsQuery(quantityType: stepType,
+                                      quantitySamplePredicate: predicate,
+                                      options: .cumulativeSum) { _, result, error in
             if let result = result, let sum = result.sumQuantity() {
                 let stepCount = Int(sum.doubleValue(for: HKUnit.count()))
                 DispatchQueue.main.async {
@@ -53,13 +54,16 @@ class HealthKitStore: ObservableObject {
                 }
             } else if let error = error {
                 // 그냥 self.stepCount = 0 으로 넣어주면
-                //Publishing changes from background threads is not allowed; make sure to publish values from the main thread (via operators like receive(on:)) on model updates.
+                // Publishing changes from background threads is not allowed
+                // make sure to publish values from the main thread
+                // (via operators like receive(on:)) on model updates.
                 // 위의 에러가 발생함 -> DispatchQue.main.async를 사용해서 넣어주면서 해결
-                DispatchQueue.main.async { self.stepCount = 0 }
+                DispatchQueue.main.async {
+                    self.stepCount = 0
+                }
                 Log.error("걸음 수 가져오기 실패: \(error.localizedDescription)")
             } else {
                 DispatchQueue.main.async {
-                    
                     self.stepCount = 0
                 }
                 Log.warning("fetchStepCount 에서 예상치 못한 error 발생 ")

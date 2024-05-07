@@ -63,7 +63,6 @@ final class HomeViewModel: ObservableObject {
             if let unlock = error as? User.UnlockError {
                 if case let .notMeet(count) = unlock {
                     Log.debug("이만큼 부족함 : \(count)")
-                    
                     return .unlockFail(count)
                 }
             }

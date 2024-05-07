@@ -9,7 +9,6 @@ import XCTest
 import Combine
 @testable import Pickle
 
-@MainActor
 final class TodoStoreTest: XCTestCase {
     
     var sut: TodoStore!
@@ -20,18 +19,21 @@ final class TodoStoreTest: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         Self.setUpTodoDependency()
         sut = TodoStore()
+        print("setup")
         
     }
 
+    @MainActor
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         sut.deleteAll(todo: .sample)
-        DependencyContainer.removeCache()
+        Container.removeCache()
         subscriptions.removeAll()
         sut = nil
     }
     
     /// 정확한 객체들이 프로토콜타입으로 추가되었는지 확인
+    @MainActor
     func test_check_correct_Instance() async {
         let todoReposiotry = sut.repository
         let userRepo = sut.userRepository
@@ -59,19 +61,22 @@ final class TodoStoreTest: XCTestCase {
     }
     
     /// 여러개의 Todo를 DB에 추가하는 케이스
+    @MainActor
     func test_multiple_adding_test() async throws {
         // Given
-        let todos = (0...10).map { _ in Todo.sample }
-        var results: [Todo] = []
-        var originalChangedIDTodo: [Todo] = []
-        // When
+        let todos = (0...10).map { _ in Todo.mock }
         
-        // TODO: Signal Error
-//        await adding_todos(todos: todos, results: &results, &originalChangedIDTodo)
+        // When
+        for todo in todos {
+            _ = sut.add(todo: todo)
+        }
+        let fetched = await sut.fetch()
+        
         // Then
-//        XCTAssertEqual(results, originalChangedIDTodo, "todos가 일치하지 않습니다.")
+         XCTAssertEqual(fetched, todos, "todos가 일치하지 않습니다.")
     }
     
+    @MainActor
     func test_AddFaildValue_TodoStore() async throws {
         // Given
         let todo = Todo.sample
@@ -87,17 +92,18 @@ final class TodoStoreTest: XCTestCase {
         XCTAssertEqual([addedMemoryTodo], publishedTodo)
         XCTAssertEqual(fetchedTodo, publishedTodo)
         XCTAssertEqual([sampleTodo], fetchedTodo)
-//        XCTAssertNotEqual([todo], fetchedTodo)
+        // XCTAssertNotEqual([todo], fetchedTodo)
     }
     
     /// Todo 아이템 10개를 추가후
     /// 개별 삭제 메서드로 한개씩 전체 삭제
+    @MainActor
     func test_adding_delete_oneByone() async throws {
         // Given
-        let originalTodo = (0...10).map { _ in Todo.sample }
+        _ = (0...10).map { _ in Todo.sample }
         // var results: [Todo] = []
         // var changedIdTodos: [Todo] = []
-//        await adding_todos(todos: originalTodo, results: &results, &changedIdTodos)
+        // await adding_todos(todos: originalTodo, results: &results, &changedIdTodos)
         
         // When
         let deletedTodos = await sut.fetch()
@@ -113,10 +119,17 @@ final class TodoStoreTest: XCTestCase {
     
     /// Todo 아이템 10개를 추가후
     /// deleteAll 메서드 전체삭제
+    @MainActor
     func test_add_delete() async throws {
+        
         // Given
-        let originalTodo = (0...10).map { _ in Todo.sample }
-        originalTodo.forEach { todo in
+        let originalTodo = sampleTodoList
+        
+        let expectation = XCTestExpectation()
+        try await Task.sleep(seconds: 1)
+        expectation.fulfill()
+        await fulfillment(of: [expectation])
+        for todo in originalTodo {
             _ = sut.add(todo: todo)
         }
         
@@ -136,6 +149,7 @@ final class TodoStoreTest: XCTestCase {
     
     /// Todo를 1개 추가
     /// Update  -> fetch 하는 테스트
+    @MainActor
     func test_update() async throws {
         // Given
         let todo = Todo.sample
@@ -154,14 +168,15 @@ final class TodoStoreTest: XCTestCase {
         XCTAssertEqual(fetchedTodo, memoryUpdatedTodo)
     }
     
-    /// 선택한  TODO  값을 가져오는지 테스트
+    /// 선택한  투두  값을 가져오는지 테스트
+    @MainActor
     func test_getSeleted_todo() async throws {
         // Given
-        let ready = sut.add(todo: Todo.sample)
-        let ongoing = try! Todo.sample.update(path: \.status, to: TodoStatus.ongoing)
-        let complete = try! Todo.sample.update(path: \.status, to: TodoStatus.complete)
-        let done = try! Todo.sample.update(path: \.status, to: TodoStatus.done)
-        let fail = try! Todo.sample.update(path: \.status, to: TodoStatus.fail)
+        let ready = sut.add(todo: Todo.mock)
+        let ongoing = try! Todo.mock.update(path: \.status, to: TodoStatus.ongoing)
+        let complete = try! Todo.mock.update(path: \.status, to: TodoStatus.complete)
+        let done = try! Todo.mock.update(path: \.status, to: TodoStatus.done)
+        let fail = try! Todo.mock.update(path: \.status, to: TodoStatus.fail)
         _ = sut.add(todo: ongoing)
         _ = sut.add(todo: complete)
         _ = sut.add(todo: done)
@@ -170,7 +185,6 @@ final class TodoStoreTest: XCTestCase {
         // When
         _ = await sut.fetch()
         let readyTodo = sut.readyTodos.first!
-        
         let seletedTodo = sut.getSeletedTodo(id: readyTodo.id)
         
         // Then
@@ -179,6 +193,7 @@ final class TodoStoreTest: XCTestCase {
         XCTAssertTrue(seletedTodo.isEqualContent(todo: ready))
     }
     
+    @MainActor
     func test_Future_fetch() throws {
         // Given
         for i in 0...2 {
@@ -202,7 +217,6 @@ final class TodoStoreTest: XCTestCase {
         // When
         // Then
         wait(for: [expectation])
-        
     }
 }
 
@@ -219,8 +233,8 @@ extension Todo {
 
 extension TodoStoreTest {
     static func setUpTodoDependency() {
-        DependencyContainer.register(DBStoreKey.self, RealmStore(type: .inmemory))
-        DependencyContainer.register(TodoRepoKey.self, TodoRepository())
-        DependencyContainer.register(UserRepoKey.self, UserRepository())
+        Container.register(DBStoreKey.self, RealmStore(type: .inmemory))
+        Container.register(TodoRepoKey.self, TodoRepository())
+        Container.register(UserRepoKey.self, UserRepository())
     }
 }

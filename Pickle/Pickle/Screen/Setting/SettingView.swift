@@ -219,7 +219,6 @@ struct WKWebViewPractice: UIViewRepresentable {
     }
 }
 
-
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
