@@ -35,7 +35,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ~/Library/Developer/Xcode/DerivedData/${{env.PROJECT}}*/SourcePackages/
-        key: ${{ runner.os }}-spm-${{ hashFiles('AppName.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
+        key: ${{ runner.os }}-spm-${{ hashFiles('${{env.PROJECT}}.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
         restore-keys: | 
           ${{ runner.os }}-spm-
           
@@ -50,8 +50,8 @@ jobs:
     # shell 이용해서 하나의 command 수행
     - name: Start Test 🛠
       if: github.event_name == 'pull_request'
-      run: |
-        xcodebuild clean test \
+      run: | 
+        xcodebuild test \
         -project Pickle/Pickle.xcodeproj \
         -scheme Pickle \
         -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
