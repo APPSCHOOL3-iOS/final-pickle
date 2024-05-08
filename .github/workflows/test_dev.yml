@@ -14,7 +14,7 @@ jobs:
   # 이 workflow 는 "build" 라는 single job 으로 구성
   build:
     # job이 실행될 환경 - 최신 mac os
-    runs-on: macos-13
+    runs-on: macos-latest
 
     # Step은 job의 일부로 실행될 일련의 task들을 나타냄
     steps:
@@ -23,7 +23,7 @@ jobs:
     # xcode 15.0-beta 선택
     - uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: '15.0.1'
+        xcode-version: latest
     # shell 이용해서 하나의 command 수행
     - name: Start xcode build 🛠
       if: github.event_name == 'pull_request'
