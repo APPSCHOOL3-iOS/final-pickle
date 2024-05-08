@@ -41,6 +41,7 @@ struct HomeView: View {
             .task {
                 await todoStore.fetch()  // MARK: Persistent 저장소에서 Todo 데이터 가져오기
                 Log.debug("testFlight Test Log")
+                Log.debug("Github Action Test")
                 Log.debug("slack Github Action Test")
                 if isRunTimer { ongoingTodo = todoStore.getSeletedTodo(id: todoId) }
             }
