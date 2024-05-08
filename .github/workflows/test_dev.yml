@@ -1,6 +1,9 @@
 # workflow 의 이름
 name: Run Test
 
+env:
+  PROJECT: 'Pickle'
+  
 on:
   # dev 브랜치에 pull request 이벤트가 일어났을때 해당 workflow 를 trigger
   pull_request:
@@ -16,6 +19,9 @@ jobs:
     # job이 실행될 환경 - 최신 mac os
     runs-on: macos-latest
 
+    strategy:
+      matrix:
+        xcode: ["15.0.3"]
     # Step은 job의 일부로 실행될 일련의 task들을 나타냄
     steps:
     # uses 키워드를 통해 Github Actions에서 기본으로 제공하는 액션을 사용 가능. 아래 액션은 repository 에 체크아웃하는 것
@@ -23,21 +29,32 @@ jobs:
     # xcode 15.0-beta 선택
     - uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: latest
+        xcode-version: ${{ matrix.xcode }}
 
     - name: "Cache: SPM"
       uses: actions/cache@v3
       with:
-        path: ~/Library/Developer/Xcode/DerivedData/AppName*/SourcePackages/
+        path: ~/Library/Developer/Xcode/DerivedData/${{env.PROJECT}}*/SourcePackages/
         key: ${{ runner.os }}-spm-${{ hashFiles('AppName.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
         restore-keys: | 
           ${{ runner.os }}-spm-
           
+    - name: Cache DerivedData
+      uses: actions/cache@v3
+      with:
+        path: ~/Library/Developer/Xcode/DerivedData
+        key: ${{ runner.os }}-iOS_derived_data-xcode_${{ matrix.xcode }}
+        restore-keys: |
+          ${{ runner.os }}-iOS_derived_data-
+          
     # shell 이용해서 하나의 command 수행
-    - name: Start xcode build 🛠
+    - name: Start Test 🛠
       if: github.event_name == 'pull_request'
       run: | 
-        xcodebuild clean test -project Pickle/Pickle.xcodeproj -scheme Pickle -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
+        xcodebuild clean test 
+        -project Pickle/Pickle.xcodeproj 
+        -scheme Pickle 
+        -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
         
     # slack 에 알림 보내기
     - name: action-slack
