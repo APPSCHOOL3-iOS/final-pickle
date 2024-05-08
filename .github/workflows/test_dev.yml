@@ -24,6 +24,15 @@ jobs:
     - uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: latest
+
+    - name: "Cache: SPM"
+      uses: actions/cache@v3
+      with:
+        path: ~/Library/Developer/Xcode/DerivedData/AppName*/SourcePackages/
+        key: ${{ runner.os }}-spm-${{ hashFiles('AppName.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
+        restore-keys: | 
+          ${{ runner.os }}-spm-
+          
     # shell 이용해서 하나의 command 수행
     - name: Start xcode build 🛠
       if: github.event_name == 'pull_request'
@@ -41,26 +50,26 @@ jobs:
       if: always() # Pick up events even if the job fails or is canceled.
 
     # # DESCRIBE: 빌드 실패한 경우에만 실행되는 step
-    # - name: If build fail
-    #     # 이전 step이 실패한 경우에만 이 step을 실행시키는 syntax
-    #   if: ${{ failure() }}
-    #   uses: actions/github-script@v6
-    #   with:
-    #     github-token: ${{ github.token }}
-    #     script: |
-    #         const pull_number = ${{ github.event.pull_request.number }}
-    #         const updated_title = `[BUILD FAIL] ${{ github.event.pull_request.title }}`
-    #         await github.rest.pulls.createReview({
-    #           owner: context.repo.owner,
-    #           repo: context.repo.repo,
-    #           pull_number: pull_number,
-    #           body: '빌드에 실패했습니다.',
-    #           event: 'REQUEST_CHANGES'
-    #         })
-    #         await github.rest.pulls.update({
-    #           owner: context.repo.owner,
-    #           repo: context.repo.repo,
-    #           pull_number: pull_number,
-    #           title: updated_title,
-    #           state: 'closed'
-    #         })
+    - name: If build fail
+        # 이전 step이 실패한 경우에만 이 step을 실행시키는 syntax
+      if: ${{ failure() }}
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ github.token }}
+        script: |
+            const pull_number = ${{ github.event.pull_request.number }}
+            const updated_title = `[BUILD FAIL] ${{ github.event.pull_request.title }}`
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pull_number,
+              body: '빌드에 실패했습니다.',
+              event: 'REQUEST_CHANGES'
+            })
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pull_number,
+              title: updated_title,
+              state: 'closed'
+            })
