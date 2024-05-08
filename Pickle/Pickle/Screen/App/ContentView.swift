@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
-    @AppStorage("systemTheme") private var systemTheme: Int = SchemeType.allCases.first!.rawValue
+    @AppStorage(STORAGE.onboarding.id) var isOnboardingViewActive: Bool = true
+    @AppStorage(STORAGE.systemTheme.id) private var systemTheme: Int = SchemeType.allCases.first!.rawValue
     
     @EnvironmentObject var pizzaStore: PizzaStore
     @EnvironmentObject var userStore: UserStore

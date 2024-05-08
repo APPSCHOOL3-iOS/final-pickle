@@ -338,8 +338,8 @@ struct MissionStyle_Previews: PreviewProvider {
 //    @EnvironmentObject var userStore: UserStore
 //    @Binding var timeMission: TimeMission
 //
-//    @AppStorage("is24HourClock") var is24HourClock: Bool = true
-//    @AppStorage("timeFormat") var timeFormat: String = "HH:mm"
+//    @AppStorage(STORAGE.is24HourClock.id) var is24HourClock: Bool = true
+//    @AppStorage(STORAGE.timeFormat.id) var timeFormat: String = "HH:mm"
 //
 //    @State private var showTimeMissionModal = false
 //    @Binding var showsAlert: Bool

@@ -258,6 +258,7 @@
 		96A401122BE8D259004C30EC /* HeaderActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401112BE8D259004C30EC /* HeaderActionView.swift */; };
 		96A401142BE8D47B004C30EC /* TodayPizzaSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401132BE8D47B004C30EC /* TodayPizzaSummaryView.swift */; };
 		96A401162BE8D526004C30EC /* TodayPizzaSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401152BE8D526004C30EC /* TodayPizzaSheetView.swift */; };
+		96A9DBE02BEB73B700B40A2A /* STORAGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9DBDF2BEB73B700B40A2A /* STORAGE.swift */; };
 		96AAF8302AFD3A7B00410881 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF82F2AFD3A7B00410881 /* Dictionary.swift */; };
 		96AAF8322AFD509200410881 /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8312AFD509200410881 /* Mediator.swift */; };
 		96AAF8372AFD50F900410881 /* NotiMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8362AFD50F900410881 /* NotiMediator.swift */; };
@@ -445,6 +446,7 @@
 		96A401112BE8D259004C30EC /* HeaderActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderActionView.swift; sourceTree = "<group>"; };
 		96A401132BE8D47B004C30EC /* TodayPizzaSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPizzaSummaryView.swift; sourceTree = "<group>"; };
 		96A401152BE8D526004C30EC /* TodayPizzaSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPizzaSheetView.swift; sourceTree = "<group>"; };
+		96A9DBDF2BEB73B700B40A2A /* STORAGE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STORAGE.swift; sourceTree = "<group>"; };
 		96AAF82F2AFD3A7B00410881 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		96AAF8312AFD509200410881 /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
 		96AAF8362AFD50F900410881 /* NotiMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiMediator.swift; sourceTree = "<group>"; };
@@ -784,6 +786,7 @@
 			isa = PBXGroup;
 			children = (
 				9619E93B2B0594210028348C /* ScrollEnableKey.swift */,
+				96A9DBDF2BEB73B700B40A2A /* STORAGE.swift */,
 			);
 			path = EnvironmentValues;
 			sourceTree = "<group>";
@@ -1473,6 +1476,7 @@
 				9661108B2AFA84CA008A80DE /* PreferenceKey.swift in Sources */,
 				9661107C2AF800AD008A80DE /* Realm+Combine.swift in Sources */,
 				966B031E2B07B4CE009B6293 /* HomeViewModel.swift in Sources */,
+				96A9DBE02BEB73B700B40A2A /* STORAGE.swift in Sources */,
 				966CD9F12B0A6BA2003AE885 /* Register-extension.swift in Sources */,
 				96AAF8372AFD50F900410881 /* NotiMediator.swift in Sources */,
 				96EB8C1E2B029AF20011B973 /* CurrentPizza-extension.swift in Sources */,
