@@ -50,10 +50,10 @@ jobs:
     # shell 이용해서 하나의 command 수행
     - name: Start Test 🛠
       if: github.event_name == 'pull_request'
-      run: | 
-        xcodebuild clean test 
-        -project Pickle/Pickle.xcodeproj 
-        -scheme Pickle 
+      run: |
+        xcodebuild clean test \
+        -project Pickle/Pickle.xcodeproj \
+        -scheme Pickle \
         -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
         
     # slack 에 알림 보내기
