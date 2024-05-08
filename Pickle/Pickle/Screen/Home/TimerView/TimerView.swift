@@ -30,9 +30,9 @@ struct TimerView: View {
     @State private var state: TimerState = TimerState()
     @Binding var isShowingTimerView: Bool
     @State private var wiseSaying: String = ""
-    @AppStorage("isRunTimer") var isRunTimer: Bool = false
-    @AppStorage("backgroundNumber") var backgroundNumber: Int = 0
-    @AppStorage("todoId") var todoId: String = ""
+    @AppStorage(STORAGE.isRunTimer.id) var isRunTimer: Bool = false
+    @AppStorage(STORAGE.backgroundNumber.id) var backgroundNumber: Int = 0
+    @AppStorage(STORAGE.todoId.id) var todoId: String = ""
     
     var body: some View {
         ZStack {

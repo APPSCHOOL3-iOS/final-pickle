@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TodoCellView: View {
     
-    @AppStorage("is24HourClock") var is24HourClock: Bool = true
-    @AppStorage("timeFormat") var timeFormat: String = "HH:mm"
+    @AppStorage(STORAGE.is24HourClock.id) var is24HourClock: Bool = true
+    @AppStorage(STORAGE.timeFormat.id) var timeFormat: String = "HH:mm"
     
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var navigationStore: NavigationStore

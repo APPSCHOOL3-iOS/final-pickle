@@ -38,6 +38,7 @@ jobs:
       if: github.event_name == 'pull_request'
       run: | 
         xcodebuild clean test -project Pickle/Pickle.xcodeproj -scheme Pickle -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
+        
     # slack 에 알림 보내기
     - name: action-slack
       uses: 8398a7/action-slack@v3
@@ -48,8 +49,8 @@ jobs:
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
       if: always() # Pick up events even if the job fails or is canceled.
-
-    # # DESCRIBE: 빌드 실패한 경우에만 실행되는 step
+    
+    # DESCRIBE: 빌드 실패한 경우에만 실행되는 step
     - name: If build fail
         # 이전 step이 실패한 경우에만 이 step을 실행시키는 syntax
       if: ${{ failure() }}

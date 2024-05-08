@@ -18,8 +18,8 @@ struct TimerReportView: View {
     @Binding var isShowingReportSheet: Bool
     @Binding var isShowingTimerView: Bool
     
-    @AppStorage("is24HourClock") var is24HourClock: Bool = true
-    @AppStorage("timeFormat") var timeFormat: String = "HH:mm"
+    @AppStorage(STORAGE.is24HourClock.id) var is24HourClock: Bool = true
+    @AppStorage(STORAGE.timeFormat.id) var timeFormat: String = "HH:mm"
     
     var todo: Todo
     

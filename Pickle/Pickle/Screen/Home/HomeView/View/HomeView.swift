@@ -33,8 +33,8 @@ struct HomeView: View {
     @State private var description: String = ""
     
     @State private var ongoingTodo: Todo = Todo.onGoing
-    @AppStorage("isRunTimer") var isRunTimer: Bool = false
-    @AppStorage("todoId") var todoId: String = ""
+    @AppStorage(STORAGE.isRunTimer.id) var isRunTimer: Bool = false
+    @AppStorage(STORAGE.todoId.id) var todoId: String = ""
     
     var body: some View {
         content

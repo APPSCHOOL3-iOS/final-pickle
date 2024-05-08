@@ -31,16 +31,15 @@ struct PickleApp: App {
     @StateObject private var notificationManager = NotificationManager(mediator: NotiMediator.shared)
     @StateObject private var timerVM = TimerViewModel()
     
+    @Environment(\.scenePhase) var scenePhase
+    @State private var debugDelete: Bool = true
+    @AppStorage(STORAGE.backgroundNumber.id) var backgroundNumber: Int = 0
+    @AppStorage(STORAGE.isRunTimer.id) var isRunTimer: Bool = false
+    @AppStorage(STORAGE.todoId.id) var todoId: String = ""
+    
     init() {
         Thread.sleep(forTimeInterval: 1)
     }
-    
-    @Environment(\.scenePhase) var scenePhase
-    @State private var debugDelete: Bool = true
-    
-    @AppStorage("backgroundNumber") var backgroundNumber: Int = 0
-    @AppStorage("isRunTimer") var isRunTimer: Bool = false
-    @AppStorage("todoId") var todoId: String = ""
 
     var body: some Scene {
         WindowGroup {
