@@ -78,6 +78,7 @@ struct TaskRowView: View {
                 Text(task.startTime.format(timeFormat))
                     .font(.footnote)
                     .fontWeight(.light)
+                
                     
             }
             .padding(.horizontal)
@@ -92,9 +93,10 @@ struct TaskRowView: View {
         .padding(.trailing, 5)
         
         .sheet(isPresented: $isShowingReportSheet) {
-            TimerReportView(isShowingReportSheet: $isShowingReportSheet,
-                            isShowingTimerView: .constant(false),
-                            todo: task)
+            NewTaskRowView(task: task)
+//            TimerReportView(isShowingReportSheet: $isShowingReportSheet,
+//                            isShowingTimerView: .constant(false),
+//                            todo: task)
         }
         
     }

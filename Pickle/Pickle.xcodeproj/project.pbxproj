@@ -33,6 +33,7 @@
 		21FA267B2AC2ADFB00877122 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA267A2AC2ADFB00877122 /* Mission.swift */; };
 		21FA267D2AC2B50D00877122 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA267C2AC2B50D00877122 /* User.swift */; };
 		21FA267F2AC2BB3800877122 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA267E2AC2BB3800877122 /* Pizza.swift */; };
+		2A1CE2EB2BF10D7E00023A80 /* NewTaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CE2EA2BF10D7E00023A80 /* NewTaskRowView.swift */; };
 		960C417F2ACD41CD009A0093 /* CornerButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C417E2ACD41CD009A0093 /* CornerButtonModifier.swift */; };
 		960C41842ACDA42B009A0093 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C41832ACDA42B009A0093 /* BaseRepository.swift */; };
 		960C41862ACE390A009A0093 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C41852ACE390A009A0093 /* URL.swift */; };
@@ -353,6 +354,7 @@
 		21FA267A2AC2ADFB00877122 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		21FA267C2AC2B50D00877122 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		21FA267E2AC2BB3800877122 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		2A1CE2EA2BF10D7E00023A80 /* NewTaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskRowView.swift; sourceTree = "<group>"; };
 		960C417E2ACD41CD009A0093 /* CornerButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButtonModifier.swift; sourceTree = "<group>"; };
 		960C41832ACDA42B009A0093 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		960C41852ACE390A009A0093 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
@@ -1021,6 +1023,7 @@
 			children = (
 				9670FF772BE8E19100AF5E4D /* CalendarView.swift */,
 				965E6A282BE8DC0600E03356 /* TaskRowView.swift */,
+				2A1CE2EA2BF10D7E00023A80 /* NewTaskRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1461,6 +1464,7 @@
 				96A1E4AF2AD527B4001B2960 /* UserObject.swift in Sources */,
 				96635F5E2ADF9EEF0072F21E /* TimeMission-extension.swift in Sources */,
 				966110802AF907EE008A80DE /* ClearBackgroundViewModifier.swift in Sources */,
+				2A1CE2EB2BF10D7E00023A80 /* NewTaskRowView.swift in Sources */,
 				961488772AFD221200B87A37 /* HomeView-Routing.swift in Sources */,
 				9619E93C2B0594210028348C /* ScrollEnableKey.swift in Sources */,
 				9688ADDD2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift in Sources */,
@@ -1878,6 +1882,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1924,6 +1929,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
