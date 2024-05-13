@@ -34,6 +34,8 @@
 		21FA267D2AC2B50D00877122 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA267C2AC2B50D00877122 /* User.swift */; };
 		21FA267F2AC2BB3800877122 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA267E2AC2BB3800877122 /* Pizza.swift */; };
 		2A1CE2EB2BF10D7E00023A80 /* NewTaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CE2EA2BF10D7E00023A80 /* NewTaskRowView.swift */; };
+		2A94DC0B2BF2586C0096C908 /* SuccessTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94DC0A2BF2586C0096C908 /* SuccessTaskView.swift */; };
+		2A94DC0D2BF258ED0096C908 /* ReadyTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94DC0C2BF258ED0096C908 /* ReadyTaskView.swift */; };
 		960C417F2ACD41CD009A0093 /* CornerButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C417E2ACD41CD009A0093 /* CornerButtonModifier.swift */; };
 		960C41842ACDA42B009A0093 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C41832ACDA42B009A0093 /* BaseRepository.swift */; };
 		960C41862ACE390A009A0093 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C41852ACE390A009A0093 /* URL.swift */; };
@@ -355,6 +357,8 @@
 		21FA267C2AC2B50D00877122 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		21FA267E2AC2BB3800877122 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		2A1CE2EA2BF10D7E00023A80 /* NewTaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskRowView.swift; sourceTree = "<group>"; };
+		2A94DC0A2BF2586C0096C908 /* SuccessTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessTaskView.swift; sourceTree = "<group>"; };
+		2A94DC0C2BF258ED0096C908 /* ReadyTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyTaskView.swift; sourceTree = "<group>"; };
 		960C417E2ACD41CD009A0093 /* CornerButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButtonModifier.swift; sourceTree = "<group>"; };
 		960C41832ACDA42B009A0093 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		960C41852ACE390A009A0093 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
@@ -1024,6 +1028,8 @@
 				9670FF772BE8E19100AF5E4D /* CalendarView.swift */,
 				965E6A282BE8DC0600E03356 /* TaskRowView.swift */,
 				2A1CE2EA2BF10D7E00023A80 /* NewTaskRowView.swift */,
+				2A94DC0A2BF2586C0096C908 /* SuccessTaskView.swift */,
+				2A94DC0C2BF258ED0096C908 /* ReadyTaskView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1452,6 +1458,7 @@
 				B0C158DA2AC1647D003B00E6 /* MissionStyleView.swift in Sources */,
 				96A401102BE8D1EB004C30EC /* WeekHeaderView.swift in Sources */,
 				96EB8C1A2B0251EA0011B973 /* TimeMission.swift in Sources */,
+				2A94DC0B2BF2586C0096C908 /* SuccessTaskView.swift in Sources */,
 				21E7118B2AD48DE9002B8069 /* SettingNotiicationView.swift in Sources */,
 				960C41922ACE41E1009A0093 /* Object+Extensions.swift in Sources */,
 				968EB22D2AEE63110025BEF8 /* NavigationStore.swift in Sources */,
@@ -1469,6 +1476,7 @@
 				9619E93C2B0594210028348C /* ScrollEnableKey.swift in Sources */,
 				9688ADDD2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift in Sources */,
 				96635F672ADFA0960072F21E /* BehaviorMission-extension.swift in Sources */,
+				2A94DC0D2BF258ED0096C908 /* ReadyTaskView.swift in Sources */,
 				2137D5A42AC14C6A00AFE225 /* CGFloat.swift in Sources */,
 				B7908DC12AE01BFC004C5221 /* PizzaSummaryView.swift in Sources */,
 				21FA267D2AC2B50D00877122 /* User.swift in Sources */,

@@ -15,15 +15,20 @@ struct NewTaskRowView: View {
     var spendTimeFormatted: String {
         String(format: "%d분", Int(task.spendTime)/60)
     }
-    
+
     var body: some View {
         
-        HStack {
-            Text(task.startTime.format(timeFormat))
-            Text(spendTimeFormatted)
+        VStack {
+            switch task.status {
+            case .done:
+                SuccessTaskView(task: task)
+            default: ReadyTaskView(task: task)
+            }
         }
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
     }
+    
+
 }
 
 #Preview {

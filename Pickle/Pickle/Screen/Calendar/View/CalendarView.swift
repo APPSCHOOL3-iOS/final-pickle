@@ -26,6 +26,9 @@ struct CalendarView: View {
     @State private var wakeUpMission: Int = 0
     @State private var walkMission: Int = 0
     
+    
+    
+    private var statusTitle:[String]  = ["ready", "done", "fail"]
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .leading) {
@@ -35,9 +38,9 @@ struct CalendarView: View {
                 TodayPizzaSummaryView(todayPieceOfPizza: $todayPieceOfPizza,
                                       pizzaSummarySheet: $pizzaSummarySheet)
                 
-               taskView(tasks: filteredTasks ?? [])
-                .scrollIndicators(.hidden)
-                .frame(width: geometry.size.width)
+                taskView(tasks: filteredTasks ?? [])
+                    .scrollIndicators(.hidden)
+                    .frame(width: geometry.size.width)
             }
         }
         .task {
@@ -65,7 +68,7 @@ struct CalendarView: View {
                                 todayPieceOfPizza: todayPieceOfPizza,
                                 walkMission: walkMission,
                                 todayCompletedTasks: todayCompletedTasks)
-                .padding()
+            .padding()
             Spacer()
                 .presentationDetents([.height(300)])
         }
@@ -73,9 +76,17 @@ struct CalendarView: View {
     
     // MARK: - TaskView
     func taskView(tasks: [Todo]) -> some View {
-        ScrollView(.vertical) {
-            ForEach(tasks) { task in
-                TaskRowView(task: task)
+        
+        List{
+            ForEach(statusTitle, id:\.self) { title in
+                Section(title) {
+                    ForEach(tasks) { task in
+                        if task.status.rawValue == title {
+                            TaskRowView(task: task)
+                        }
+                    }
+                    
+                }
             }
         }
     }
