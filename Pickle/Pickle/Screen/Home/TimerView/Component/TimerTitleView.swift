@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
+import PickleCommon
 
-struct TimerTitleView: View {
+struct TimerTitleView: View, Equatable {
     
     @Binding var isStart: Bool
     var todo: Todo
     
     var body: some View {
         VStack {
-            // 멘트부분
+            /// 멘트부분
             if isStart {
                 Text("따라 읽어봐요!")
                     .font(.pizzaRegularTitle)
@@ -27,12 +28,17 @@ struct TimerTitleView: View {
                         .minimumScaleFactor(0.5)
                         .lineLimit(1)
                         .padding(.horizontal, 10)
-//                    Text("🍕가 구워지고 있어요")
-//                        .font(.pizzaBody)
-//                        .foregroundColor(.secondary)
+                    
+                    Text("🍕가 구워지고 있어요")
+                        .font(.pizzaBoldButtonTitle15)
+                        .foregroundColor(.secondary)
                 }
             }
         }
         .padding(.top, .screenHeight * 0.05)
+    }
+    
+    static func == (lhs: TimerTitleView, rhs: TimerTitleView) -> Bool {
+        lhs.isStart == rhs.isStart && lhs.todo.content == rhs.todo.content
     }
 }
