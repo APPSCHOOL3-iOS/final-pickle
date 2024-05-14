@@ -104,6 +104,20 @@ struct TimerView: View {
         state.isComplete = false
     }
     
+    private func endActivity(_ type: DoneType) {
+        if case .complete = type {
+            state.isComplete = true
+            updateDone(spendTime: timerViewModel.spendTime)
+            state.isShowingReportSheet = true
+        } else if case .giveUp = type {
+            state.isComplete = true
+            state.isGiveupSign = true
+            state.showingAlert = true
+        }
+        if #available(iOS 17.0, *) {
+            Task { await pizzaTaskActivity.stopTimerActivity() }
+        }
+    }
     
     /// 완료 + 피자겟챠
     private func updateDone(spendTime: TimeInterval) {

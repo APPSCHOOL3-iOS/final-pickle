@@ -12,6 +12,7 @@ struct CircleTimerView: View {
     @EnvironmentObject var notificationManager: NotificationManager
     @EnvironmentObject var todoStore: TodoStore
     @EnvironmentObject var timerViewModel: TimerViewModel
+    @EnvironmentObject var pizzaTaskActivity: PizzaLiveActivity
     
     var todo: Todo
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -120,6 +121,7 @@ struct CircleTimerView: View {
         timerViewModel.isDecresing = false
         
         let newDate = Date()
+        pizzaTaskActivity.updateActivity(range: newDate...Date(timeInterval: 60 * 180, since: newDate))
         
         Task {
             try await notificationManager.requestNotiAuthorization()
