@@ -6,22 +6,34 @@
 //
 
 import SwiftUI
+import Lottie
 import PickleCommon
 
 struct TodoEmptyView: View {
     
+    @Environment(\.colorScheme) var scheme
+    
     var body: some View {
         VStack(spacing: 16) {
-            Image("picklePizza")
+            if scheme == .light {
+                LottieView(
+                    animation: .named("PizzaPickle")
+                )
+                .playing(loopMode: .loop)
                 .resizable()
                 .scaledToFit()
                 .frame(width: .screenWidth - 200)
-            
+            } else {
+                Image("picklePizza")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: .screenWidth - 200)
+            }
+  
             Text("오늘 할일을 추가해 주세요!")
                 .frame(maxWidth: .infinity)
                 .font(.pizzaRegularSmallTitle)
         }
-        .padding(.bottom)
     }
 }
 
