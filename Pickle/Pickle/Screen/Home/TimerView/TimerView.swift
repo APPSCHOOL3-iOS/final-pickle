@@ -29,79 +29,115 @@ struct TimerView: View {
     }
     
     @State private var state: TimerState = TimerState()
-    @Binding var isShowingTimerView: Bool
     @State private var wiseSaying: String = ""
-    @AppStorage(STORAGE.isRunTimer.id) var isRunTimer: Bool = false
-    @AppStorage(STORAGE.backgroundNumber.id) var backgroundNumber: Int = 0
-    @AppStorage(STORAGE.todoId.id) var todoId: String = ""
+    @Binding var isShowingTimerView: Bool
+    
+    @AppStorage(STORAGE.isRunTimer.id, store: .group)
+    var isRunTimer: Bool = false
+    
+    @AppStorage(STORAGE.backgroundNumber.id, store: .group)
+    var backgroundNumber: Int = 0
+    
+    @AppStorage(STORAGE.todoId.id, store: .group)
+    var todoId: String = ""
     
     var body: some View {
         ZStack {
-            VStack {
-                TimerTitleView(isStart: $state.isStart, todo: todo)
-                    .offset(y: -(.screenWidth * 0.80))
-            }
+            TimerTitleView(
+                isStart: $state.isStart,
+                todo: receiveTodo
+            )
+            .equatable()
+            .offset(y: -(.screenWidth * 0.80))
             
             // MARK: 타이머 부분
-            CircleTimerView(todo: todo,
-                            state: $state,
-                            isRunTimer: $isRunTimer,
-                            backgroundNumber: $backgroundNumber)
-                .offset(y: -(.screenWidth * 0.18))
-        
+            CircleTimerView(
+                todo: receiveTodo,
+                state: $state,
+                isRunTimer: $isRunTimer,
+                backgroundNumber: $backgroundNumber
+            )
+            .offset(y: -(.screenWidth * 0.18))
+            
             // MARK: 완료, 포기 버튼
-            TimerCompleteButton(todo: todo,
-                                state: $state,
-                                isRunTimer: $isRunTimer,
-                                backgroundNumber: $backgroundNumber)
-                .offset(y: .screenWidth * 0.75 / 2 - 10 )
+            TimerCompleteButton(state: $state) { type in
+                endActivity(type)
+            }
+            .equatable()
+            .offset(y: .screenWidth * 0.75 / 2 - 10 )
             
             VStack {
                 Spacer()
-                if state.isDisabled && !state.isStart {
-                    completeDiscription
-                } else if !state.isDisabled && !state.isStart {
-                    wiseSayingView
-                }
+                BottomDescriptionView(
+                    isStart: state.isStart,
+                    isDisabled: state.isDisabled,
+                    wiseSaying: timerViewModel.wiseSaying
+                )
             }
             .offset(y: .screenWidth * 0.08 )
         }
         .onAppear { startTodo() }
         .navigationBarBackButtonHidden(true)
         .sheet(isPresented: $state.isShowingReportSheet) {
-            TimerReportView(isShowingReportSheet: $state.isShowingReportSheet,
-                            isShowingTimerView: $isShowingTimerView,
-                            todo: timerVM.todo)
-                .interactiveDismissDisabled()
+            TimerReportView(
+                isShowingReportSheet: $state.isShowingReportSheet,
+                isShowingTimerView: $isShowingTimerView,
+                todo: timerViewModel.todo
+            )
+            .interactiveDismissDisabled()
         }
-        .showGiveupAlert(isPresented: $state.showingAlert,
-                         title: "포기하시겠어요?",
-                         contents: "지금 포기하면 피자조각을 얻지 못해요",
-                         primaryButtonTitle: "포기하기",
-                         primaryAction: updateGiveup,
-                         primaryparameter: timerVM.spendTime,
-                         secondaryButton: "돌아가기",
-                         secondaryAction: giveupSecondary,
-                         externalTapAction: giveupSecondary)
+        .showGiveupAlert(
+            isPresented: $state.showingAlert,
+            title: "포기하시겠어요?",
+            contents: "지금 포기하면 피자조각을 얻지 못해요",
+            primaryButtonTitle: "포기하기",
+            primaryAction: updateGiveup,
+            primaryparameter: timerViewModel.spendTime,
+            secondaryButton: "돌아가기",
+            secondaryAction: giveupSecondary,
+            externalTapAction: giveupSecondary
+        )
     }
     
-    func giveupSecondary() {
+    private func giveupSecondary() {
         state.isGiveupSign = false
         state.isComplete = false
     }
     
-    // 포기시 업데이트, status giveup으로
-    func updateGiveup(spendTime: TimeInterval) {
-        let todo = Todo(id: todo.id,
-                        content: todo.content,
-                        startTime: state.realStartTime,
-                        targetTime: todo.targetTime,
-                        spendTime: spendTime,
-                        status: .giveUp)
+    
+    /// 완료 + 피자겟챠
+    private func updateDone(spendTime: TimeInterval) {
+        let todo = receiveTodo
+            .update(path: \.startTime, to: state.realStartTime)
+            .update(path: \.spendTime, to: spendTime)
+            .update(path: \.status, to: TodoStatus.done)
+        
         todoStore.update(todo: todo)
-        timerVM.updateTodo(spendTime: spendTime, status: .giveUp)
+        timerViewModel.updateTodo(spendTime: spendTime, status: .done)
         isRunTimer = false
-
+        backgroundNumber = 0
+        
+        do {
+            try userStore.addPizzaSlice(slice: 1)
+        } catch {
+            Log.error("❌피자 조각 추가 실패❌")
+        }
+        
+        if spendTime < todo.targetTime {
+            todoStore.deleteNotificaton(todo: todo, noti: notificationManager)
+        }
+    }
+    
+    /// 포기시 업데이트, status giveup으로
+    private func updateGiveup(spendTime: TimeInterval) {
+        let todo = receiveTodo
+            .update(path: \.startTime, to: state.realStartTime)
+            .update(path: \.spendTime, to: spendTime)
+            .update(path: \.status, to: TodoStatus.giveUp)
+        
+        todoStore.update(todo: todo)
+        timerViewModel.updateTodo(spendTime: spendTime, status: .giveUp)
+        isRunTimer = false
         backgroundNumber = 0
         
         if spendTime < todo.targetTime {
