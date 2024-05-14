@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PickleCommon
 
 class CalendarViewModel: ObservableObject {
 
@@ -56,14 +57,14 @@ class CalendarViewModel: ObservableObject {
     }
     
     // MARK: - Get current Month
-    func extractMonth() -> [Date.MonthDate] {
+    func extractMonth() -> [MonthDate] {
         let calendar = Calendar.autoupdatingCurrent
         
         let currentMonth = getCurrentMonth()
         
-        var resultMonth = currentMonth.fetchMonth().compactMap { date -> Date.MonthDate in
+        var resultMonth = currentMonth.fetchMonth().compactMap { date -> MonthDate in
             let day = calendar.component(.day, from: date)
-            let resultDay = Date.MonthDate(day: day, date: date)
+            let resultDay = MonthDate(day: day, date: date)
             return resultDay
             
         }
@@ -71,7 +72,7 @@ class CalendarViewModel: ObservableObject {
         let firstWeekDay = calendar.component(.weekday, from: resultMonth.first?.date ?? Date())
         
         for _ in 0..<firstWeekDay - 1 {
-            resultMonth.insert(Date.MonthDate(day: -1, date: Date()), at: 0)
+            resultMonth.insert(MonthDate(day: -1, date: Date()), at: 0)
         }
         return resultMonth
     }

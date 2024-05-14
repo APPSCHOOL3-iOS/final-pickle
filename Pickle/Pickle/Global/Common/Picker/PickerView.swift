@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PickleCommon
 
 struct PickerView: View {
     
@@ -26,10 +27,12 @@ struct PickerView: View {
                         .font(.pizzaBody)
                         .foregroundColor(.pickle)
                 }
+                
                 Spacer()
                 
                 Text("\(title) 설정")
                     .font(.nanumEbTitle)
+                
                 Spacer()
                 
                 Button {

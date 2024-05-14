@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PickleCommon
 
 struct RegisterView: View {
     

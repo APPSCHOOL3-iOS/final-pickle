@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PickleCommon
 
 struct ContentView: View {
     @AppStorage(STORAGE.onboarding.id, store: .group) var isOnboardingViewActive: Bool = true
