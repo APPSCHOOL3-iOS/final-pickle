@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-extension Date {
+public typealias MonthDate = Date.MonthDate
+
+public extension Date {
     
     static let formatter = DateFormatter()
     
@@ -21,9 +23,14 @@ extension Date {
     }
     
     struct MonthDate: Identifiable, Hashable {
-        var id = UUID().uuidString
-        var day: Int
-        var date: Date
+        public var id = UUID().uuidString
+        public var day: Int
+        public var date: Date
+        public init(id: String = UUID().uuidString, day: Int, date: Date) {
+            self.id = id
+            self.day = day
+            self.date = date
+        }
     }
     
     // MARK: - Checking whether the Date is Today
