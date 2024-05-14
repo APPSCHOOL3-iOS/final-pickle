@@ -12,14 +12,17 @@ struct TimerReportView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var todoStore: TodoStore
-    @EnvironmentObject var timerVM: TimerViewModel
+    @EnvironmentObject var timerViewModel: TimerViewModel
     @EnvironmentObject var userStore: UserStore
     
     @Binding var isShowingReportSheet: Bool
     @Binding var isShowingTimerView: Bool
     
-    @AppStorage(STORAGE.is24HourClock.id) var is24HourClock: Bool = true
-    @AppStorage(STORAGE.timeFormat.id) var timeFormat: String = "HH:mm"
+    @AppStorage(STORAGE.is24HourClock.id, store: .group)
+    var is24HourClock: Bool = true
+    
+    @AppStorage(STORAGE.timeFormat.id, store: .group)
+    var timeFormat: String = "HH:mm"
     
     var todo: Todo
     
@@ -100,7 +103,7 @@ struct TimerReportView: View {
             }
             
                 Button(action: {                    
-                    timerVM.timerVMreset()
+                    timerViewModel.reset()
                     dismiss()
                     isShowingTimerView.toggle()
                     
