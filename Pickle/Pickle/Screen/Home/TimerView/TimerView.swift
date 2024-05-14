@@ -10,10 +10,11 @@ import SwiftUI
 struct TimerView: View {
     @EnvironmentObject var todoStore: TodoStore
     @EnvironmentObject var userStore: UserStore
-    @EnvironmentObject var timerVM: TimerViewModel
+    @EnvironmentObject var timerViewModel: TimerViewModel
     @EnvironmentObject var notificationManager: NotificationManager
+    @EnvironmentObject var pizzaTaskActivity: PizzaLiveActivity
     
-    var todo: Todo
+    var receiveTodo: Todo
     
     struct TimerState: Equatable {
         var isStart: Bool = true
@@ -109,64 +110,33 @@ struct TimerView: View {
         state.isShowingReportSheet = true
     }
     
-    func convertSecondsToTime(timeInSecond: TimeInterval) -> String {
+    private func convertSecondsToTime(timeInSecond: TimeInterval) -> String {
         Date.convertSecondsToTime(timeInSecond: timeInSecond)
     }
     
     // 목표시간 초 -> H시간 M분으로 보여주기
-    func convertTargetTimeToString(timeInSecond: TimeInterval) -> String {
+    private func convertTargetTimeToString(timeInSecond: TimeInterval) -> String {
         Date.convertTargetTimeToString(timeInSecond: timeInSecond)
     }
     
-    func startTodo() {
+    private func startTodo() {
         state.settingTime = 3
-        timerVM.timeRemaining = state.settingTime
-        timerVM.makeRandomSaying()
-        timerVM.fetchTodo(todo: todo)
-        todoId = todo.id
-    }
-}
-
-extension TimerView {
-    private var completeDiscription: some View {
-        VStack(alignment: .center, spacing: 10) {
-            Text("최소 5분 할 일을 하면\n피자 조각을 얻을 수 있어요!")
-        }
-        .multilineTextAlignment(.center)
-        .lineSpacing(10)
-        .font(.pizzaBoldButtonTitle15)
-        .foregroundColor(.secondary)
-        .frame(width: .screenWidth - 50)
-        .lineLimit(2)
-        .padding(.top, 50)
-        .padding(.bottom, .screenHeight * 0.1)
-        .padding(.horizontal, 20)
-    }
-    
-    private var wiseSayingView: some View {
-        Text("\(timerVM.wiseSaying)")
-            .multilineTextAlignment(.center)
-            .lineSpacing(10)
-            .font(.pizzaBoldButtonTitle15)
-            .foregroundColor(.secondary)
-            .frame(width: .screenWidth - 50)
-            .lineLimit(4)
-            .minimumScaleFactor(0.7)
-            .padding(.top, 50)
-            .padding(.bottom, .screenHeight * 0.1)
-            .padding(.horizontal, 20)
+        timerViewModel.timeRemaining = state.settingTime
+        timerViewModel.makeRandomSaying()
+        timerViewModel.fetchTodo(todo: receiveTodo)
+        todoId = receiveTodo.id
     }
 }
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            TimerView(todo: Todo(id: UUID().uuidString,
-                                 content: "이력서 작성하기dfs",
-                                 startTime: Date(),
-                                 targetTime: 15,
-                                 spendTime: 5400,
-                                 status: .ready), isShowingTimerView: .constant(false))
+            TimerView(receiveTodo: Todo(id: UUID().uuidString,
+                                        content: "이력서 작성하기",
+                                        startTime: Date(),
+                                        targetTime: 15,
+                                        spendTime: 5400,
+                                        status: .ready), isShowingTimerView: .constant(false))
             .environmentObject(TodoStore())
             .environmentObject(TimerViewModel())
             .environmentObject(UserStore())
