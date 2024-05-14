@@ -51,20 +51,6 @@ struct CircleTimerView: View {
         }
     }
     
-    // 남은시간 줄어드는 타이머
-    private var decreasingView: some View {
-        Text(Date.convertSecondsToTime(timeInSecond: timerVM.timeRemaining))
-            .foregroundColor(.pickle)
-            .font(.pizzaTimerNum)
-            .onReceive(timer) { _ in
-                if !state.isComplete || timerVM.isPuase {
-                    timerVM.timeRemaining -= 1
-              
-                    timerVM.spendTime += 1
-                    
-                    if timerVM.spendTime > completeLimit { state.isDisabled = false }
-                    if timerVM.timeRemaining <= 0 { turnMode() }
-                }
     private func handleTimerEvent() {
         if 타이머_실행전 {
             timerViewModel.timeRemaining -= 1
@@ -100,57 +86,41 @@ struct CircleTimerView: View {
                 timerViewModel.timeExtra += 1
                 timerViewModel.spendTime += 1
             }
-    }
-    
-    // 추가시간 늘어나는 타이머
-    private var increasingView: some View {
-        HStack {
-            Text("+ \(Date.convertSecondsToTime(timeInSecond: timerVM.timeExtra))")
-                .foregroundColor(.pickle)
-                .font(.pizzaTimerNum)
-                .onReceive(timer) { _ in
-                    // disabled가 풀리기 전에 background 갔다가 오는 경우를 위해
-                    if timerVM.spendTime > completeLimit {
-                        state.isDisabled = false
-                    }
-                    if (!state.isStart && !state.isComplete) || timerVM.isPuase {
-                        timerVM.timeExtra += 1
-                        timerVM.spendTime += 1
-                    }
-                }
+            return
         }
     }
     
-    private func progress() -> CGFloat {
+    private func caclProgress() {
         if state.isStart {
-            return CGFloat(0)
+            progress = CGFloat(0)
+        } else if timerViewModel.isDecresing {
+            progress = (CGFloat(state.settingTime - timerViewModel.timeRemaining) / CGFloat(state.settingTime))
         } else {
-            if timerVM.isDecresing {
-                return (CGFloat(state.settingTime - timerVM.timeRemaining) / CGFloat(state.settingTime))
-            } else {
-                return 1
-            }
+            progress = 1
         }
     }
     
     // 남은 시간 계산하기
     // 시작 시 시간시간 업데이트, status ongoing으로
-    private func calcRemain() {
+    private func calcRemain(startTime: Date) {
         state.isStart = false
         
-        timerVM.onGoingStart(todoStore)
-        state.realStartTime = Date()
+        timerViewModel.onGoingStart(todoStore)
+        state.realStartTime = startTime
         backgroundNumber = 1
         isRunTimer = true
         
         state.settingTime = todo.targetTime
-        timerVM.timeRemaining = state.settingTime
-        timerVM.spendTime = 0
+        timerViewModel.timeRemaining = state.settingTime
+        timerViewModel.spendTime = 0
     }
     
     /// 지정해놓은 시간 이 지났을때 decreasing mode 에서 -> increasing mode로 변경
     private func turnMode() {
-        timerVM.isDecresing = false
+        timerViewModel.isDecresing = false
+        
+        let newDate = Date()
+        
         Task {
             try await notificationManager.requestNotiAuthorization()
             notificationManager.timerViewPushSetting(LocalNotification.timer)
