@@ -11,14 +11,20 @@ struct CircleTimerView: View {
     
     @EnvironmentObject var notificationManager: NotificationManager
     @EnvironmentObject var todoStore: TodoStore
-    @EnvironmentObject var timerVM: TimerViewModel
+    @EnvironmentObject var timerViewModel: TimerViewModel
     
     var todo: Todo
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    private let completeLimit: TimeInterval = 5 * 60 // 5분 이후
+    private let minimumSpendTime: TimeInterval = 5 * 60 // 5분 이후
+    
+    @State private var progress: CGFloat = 0
     @Binding var state: TimerView.TimerState
     @Binding var isRunTimer: Bool
     @Binding var backgroundNumber: Int
+    
+    var targetTime: String {
+        Date.convertTargetTimeToString(timeInSecond: todo.targetTime)
+    }
     
     var body: some View {
         ZStack {
@@ -26,42 +32,21 @@ struct CircleTimerView: View {
                 .fill(.clear)
                 .frame(width: .screenWidth * 0.75)
                 .overlay(Circle().stroke(.tertiary, lineWidth: 5))
+            
             Circle()
-                .trim(from: 0, to: progress())
+                .trim(from: 0, to: progress)
                 .stroke(Color.pickle, style: StrokeStyle(lineWidth: 5, lineCap: .round))
                 .frame(width: .screenWidth * 0.75)
                 .rotationEffect(.degrees(-90))
             
-            if state.isStart {
-                if timerVM.timeRemaining > 0 {
-                    Text(String(format: "%g", timerVM.timeRemaining))
-                        .foregroundColor(.pickle)
-                        .font(.pizzaTimerNum)
-                        .onReceive(timer) { _ in
-                            timerVM.timeRemaining -= 1
-                        }
-                } else {
-                    Text("시작")
-                        .foregroundColor(.pickle)
-                        .font(.pizzaTimerNum)
-                        .onReceive(timer) { _ in
-                            calcRemain()
-                        }
-                }
-            } else {
-                if timerVM.isDecresing {
-                    // 남은시간 줄어드는 타이머
-                    decreasingView
-                } else {
-                    // 추가시간 늘어나는 타이머
-                    increasingView
-                }
-                
-                // 목표시간 명시
-                Text(Date.convertTargetTimeToString(timeInSecond: todo.targetTime))
-                    .font(.pizzaRegularSmallTitle)
-                    .foregroundColor(.secondary)
-                    .offset(y: 40)
+            CircleTimeLabel(
+                timerViewModel: timerViewModel,
+                isStart: state.isStart,
+                targetTime: targetTime
+            )
+            .onReceive(timer) { _ in
+                withAnimation { caclProgress() }
+                handleTimerEvent()
             }
         }
     }
@@ -80,6 +65,40 @@ struct CircleTimerView: View {
                     if timerVM.spendTime > completeLimit { state.isDisabled = false }
                     if timerVM.timeRemaining <= 0 { turnMode() }
                 }
+    private func handleTimerEvent() {
+        if 타이머_실행전 {
+            timerViewModel.timeRemaining -= 1
+            return
+        }
+        
+        if 타이머_시작 {
+            let startTime = Date()
+            
+            pizzaTaskActivity.startTimerActivity(
+                taskID: todo.id,
+                content: todo.content,
+                closedRange: startTime...Date(timeInterval: todo.targetTime, since: startTime)
+            )
+            
+            calcRemain(startTime: startTime)
+            return
+        }
+        
+        if 타이머_진행중_시간_감소 {
+            timerViewModel.timeRemaining -= 1
+            timerViewModel.spendTime += 1
+            if timerViewModel.spendTime > minimumSpendTime { state.isDisabled = false }
+            if timerViewModel.timeRemaining <= 0 { turnMode() }
+            return
+        }
+        
+        if 타이머_진행중_시간_증가 {
+            
+            if timerViewModel.spendTime > minimumSpendTime { state.isDisabled = false }
+            
+            if (!state.isStart && !state.isComplete) || timerViewModel.isPuase {
+                timerViewModel.timeExtra += 1
+                timerViewModel.spendTime += 1
             }
     }
     
@@ -136,5 +155,22 @@ struct CircleTimerView: View {
             try await notificationManager.requestNotiAuthorization()
             notificationManager.timerViewPushSetting(LocalNotification.timer)
         }
+    }
+}
+extension CircleTimerView {
+    private var 타이머_실행전: Bool {
+        state.isStart && timerViewModel.timeRemaining > 0
+    }
+    
+    private var 타이머_시작: Bool {
+        state.isStart && timerViewModel.timeRemaining <= 0
+    }
+    
+    private var 타이머_진행중_시간_감소: Bool {
+        !state.isStart && timerViewModel.isDecresing && (!state.isComplete || timerViewModel.isPuase)
+    }
+    
+    private var 타이머_진행중_시간_증가: Bool {
+        !state.isStart && !timerViewModel.isDecresing
     }
 }
