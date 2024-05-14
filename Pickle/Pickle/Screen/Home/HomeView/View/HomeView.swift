@@ -19,7 +19,7 @@ struct HomeView: View {
     @EnvironmentObject var todoStore: TodoStore
     @EnvironmentObject var userStore: UserStore
     @EnvironmentObject var navigationStore: NavigationStore
-    @EnvironmentObject var timerVM: TimerViewModel
+    @EnvironmentObject var timerViewModel: TimerViewModel
     @StateObject private var viewModel: HomeViewModel = HomeViewModel()
     
     @Environment(\.scrollEnable) var scrollEnable
@@ -80,7 +80,7 @@ struct HomeView: View {
     }
     
     private func stopTodo() {
-        var todo = Todo(todo: timerVM.todo)
+        var todo = Todo(todo: timerViewModel.todo)
         todo.spendTime = 0
         todo.status = .giveUp
         todoStore.update(todo: todo)
@@ -115,7 +115,7 @@ extension HomeView {
     }
     
     private var stopAlertContent: AlertContent {
-        .init(isPresented: $timerVM.showOngoingAlert,
+        .init(isPresented: $timerViewModel.showOngoingAlert,
               title: "타이머 중단",
               alertContent: "앱이 종료되어 피자굽기를 실패하였습니다",
               primaryButtonTitle: "확인",

@@ -51,7 +51,7 @@ extension HomeView {
         func body(content: Content) -> some View {
             content
                 .fullScreenCover(isPresented: $selection.isShowingTimer) {
-                    TimerView(todo: selection.selectedTodo,
+                    TimerView(receiveTodo: selection.selectedTodo,
                               isShowingTimerView: $selection.isShowingTimer)
                 }
         }
