@@ -30,12 +30,20 @@ struct PickleApp: App {
     @StateObject private var navigationStore = NavigationStore(mediator: NotiMediator.shared)
     @StateObject private var notificationManager = NotificationManager(mediator: NotiMediator.shared)
     @StateObject private var timerVM = TimerViewModel()
+    @StateObject private var timerViewModel = TimerViewModel()
+    @StateObject private var pizzaTaskActivity = PizzaLiveActivity()
+    
+    @AppStorage(STORAGE.backgroundNumber.id, store: .group) 
+    var backgroundNumber: Int = 0
+    
+    @AppStorage(STORAGE.isRunTimer.id, store: .group)
+    var isRunTimer: Bool = false
+    
+    @AppStorage(STORAGE.todoId.id, store: .group)
+    var todoId: String = ""
     
     @Environment(\.scenePhase) var scenePhase
     @State private var debugDelete: Bool = true
-    @AppStorage(STORAGE.backgroundNumber.id) var backgroundNumber: Int = 0
-    @AppStorage(STORAGE.isRunTimer.id) var isRunTimer: Bool = false
-    @AppStorage(STORAGE.todoId.id) var todoId: String = ""
     
     init() {
         Thread.sleep(forTimeInterval: 1)
@@ -126,6 +134,21 @@ extension PickleApp {
         pizzaStore.deleteAll()
     }
     
+    /// Migrate App Group
+    static func migratorAppGroup() {
+        if UserDefaults.group.value(forKey: "pizza_pickle") is Data {
+           return
+        }
+        guard let image = UIImage(named: "pizza_pickle")?.pngData() else {
+            return
+        }
+        
+        UserDefaults.standard.dictionaryRepresentation().forEach { (key, value) in
+            UserDefaults.group.set(value, forKey: key)
+        }
+        
+        UserDefaults.group.setValue(image, forKey: "pizza_pickle")
+    }
     static func setUpDependency() {
         //        DependencyContainer.register(DBStoreKey.self, RealmStore.previews)
         Container.register(DBStoreKey.self, RealmStore())

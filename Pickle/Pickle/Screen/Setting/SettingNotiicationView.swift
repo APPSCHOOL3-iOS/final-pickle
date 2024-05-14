@@ -10,7 +10,8 @@ import SwiftUI
 struct SettingNotiicationView: View {
     @EnvironmentObject var notificationManager: NotificationManager
     
-    @AppStorage(STORAGE.onboarding.id) var isOnboardingViewActive: Bool = true
+    @AppStorage(STORAGE.onboarding.id, store: .group)
+    var isOnboardingViewActive: Bool = true
     
     @Binding var isShowingOnboarding: Bool
     

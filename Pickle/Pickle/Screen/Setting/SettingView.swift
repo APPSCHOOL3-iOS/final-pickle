@@ -34,8 +34,11 @@ struct SettingView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var notificationManager: NotificationManager
     
-    @AppStorage(STORAGE.systemTheme.id) private var systemTheme: Int = SchemeType.allCases.first!.rawValue
-    @AppStorage(STORAGE.is24HourClock.id) var is24HourClock: Bool = true
+    @AppStorage(STORAGE.systemTheme.id, store: .group)
+    private var systemTheme: Int = SchemeType.allCases.first!.rawValue
+    
+    @AppStorage(STORAGE.is24HourClock.id, store: .group)
+    var is24HourClock: Bool = true
     
     @State private var isShowingMoveToSettingAlert: Bool = false
     @State private var isShowingEmailAlert: Bool = false

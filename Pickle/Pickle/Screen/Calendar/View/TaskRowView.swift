@@ -10,8 +10,11 @@ import SwiftUI
 struct TaskRowView: View {
     
     @State private var isShowingReportSheet: Bool = false
-    @AppStorage(STORAGE.is24HourClock.id) private var is24HourClock: Bool = true
-    @AppStorage(STORAGE.timeFormat.id) private var timeFormat: String = "HH:mm"
+    @AppStorage(STORAGE.is24HourClock.id, store: .group)
+    private var is24HourClock: Bool = true
+    
+    @AppStorage(STORAGE.timeFormat.id, store: .group)
+    private var timeFormat: String = "HH:mm"
     
     var task: Todo
     var indicatorColor: Color {
