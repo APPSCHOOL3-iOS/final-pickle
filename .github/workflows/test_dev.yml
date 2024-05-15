@@ -2,7 +2,7 @@
 name: Run Test
 
 env:
-  PROJECT: 'Pickle'
+  PROJECT: 'PickleApp'
   
 on:
   # dev 브랜치에 pull request 이벤트가 일어났을때 해당 workflow 를 trigger
@@ -52,7 +52,7 @@ jobs:
       if: github.event_name == 'pull_request'
       run: | 
         xcodebuild test \
-        -workspace PickleApp.xcworkspace \
+        -workspace ${{env.PROJECT}}.xcworkspace \
         -scheme Pickle \
         -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
         
