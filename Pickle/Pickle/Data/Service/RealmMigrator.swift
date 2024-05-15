@@ -25,7 +25,7 @@ class RealmMigrator {
                                          schemaVersion: 3, migrationBlock: { migration, oldSchemaVersion in
             if oldSchemaVersion < 2 { migrationFromV1ToV2(migration: migration) }
             if oldSchemaVersion < 3 { migrationFromV2ToV3(migration: migration) }
-        }, deleteRealmIfMigrationNeeded: true)
+        }, deleteRealmIfMigrationNeeded: false)
         
         func migrationFromV1ToV2(migration: Migration) {
             migration.enumerateObjects(ofType: UserObject.className()) { oldObject, newObject in
