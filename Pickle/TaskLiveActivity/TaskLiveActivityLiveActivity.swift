@@ -48,7 +48,8 @@ struct TaskLiveActivityLiveActivity: Widget {
                 HStack {
                     LiveActivityCircleView(
                         width: UIScreen.main.bounds.width * 0.25,
-                        workoutDateRange: context.state.taskTime
+                        workoutDateRange: context.state.taskTime,
+                        mode: context.state.taskMode
                     )
                     .padding(.vertical, 10)
                     .padding(.leading, 15)
@@ -93,10 +94,7 @@ struct TaskLiveActivityLiveActivity: Widget {
                 }
                 
                 DynamicIslandExpandedRegion(.bottom) {
-                    HStack {
-                        Spacer(
-                            minLength: context.state.taskMode == .increasing ? 60 : 90
-                        )
+                    VStack(alignment: .center) {
                         ModeTimerText(
                             state: context.state,
                             font: .pizzaTimerNum
@@ -111,12 +109,14 @@ struct TaskLiveActivityLiveActivity: Widget {
                 
             } compactTrailing: {
                 TimerProgressView(
-                    workoutDateRange: context.state.taskTime
+                    workoutDateRange: context.state.taskTime,
+                    mode: context.state.taskMode
                 )
                 .frame(width: 25, height: 25) // 크기 조정.padding(.leading, 1)
             } minimal: {
                 TimerProgressView(
-                    workoutDateRange: context.state.taskTime
+                    workoutDateRange: context.state.taskTime,
+                    mode: context.state.taskMode
                 )
                 .frame(width: 25, height: 25) // 크기 조정
             }
@@ -137,20 +137,20 @@ extension TaskLiveActivityAttributes.ContentState {
     fileprivate static var decreasing: TaskLiveActivityAttributes.ContentState {
         TaskLiveActivityAttributes.ContentState(
             taskMode: .decreasing,
-            taskTime: Date.now...Date(timeInterval: 60, since: Date.now)
+            taskTime: Date.now...Date(timeInterval: 60 * 180, since: Date.now)
         )
     }
      
      fileprivate static var increasing: TaskLiveActivityAttributes.ContentState {
          TaskLiveActivityAttributes.ContentState(
             taskMode: .increasing,
-            taskTime: Date.now...Date(timeInterval: 60, since: Date.now)
+            taskTime: Date.now...Date(timeInterval: 60 * 180, since: Date.now)
          )
      }
 }
 
 @available(iOS 17.0, *)
-#Preview("Notification", as: .dynamicIsland(.minimal), using: TaskLiveActivityAttributes.preview) {
+#Preview("Notification", as: .content, using: TaskLiveActivityAttributes.preview) {
    TaskLiveActivityLiveActivity()
         
 } contentStates: {

@@ -48,11 +48,13 @@ public struct LiveActivityCircleView: View {
     
     let width: CGFloat
     let workoutDateRange: ClosedRange<Date>
+    let mode: TaskMode
     
     public var body: some View {
         ZStack {
             TimerProgressView(
-                workoutDateRange: workoutDateRange
+                workoutDateRange: workoutDateRange,
+                mode: mode
             )
             .frame(width: width + 25)
             
@@ -69,7 +71,7 @@ public struct LiveActivityCircleView: View {
                             .foregroundColor(.white)
                         
                         // 목표시간 명시
-                        Text("120 분")
+                        Text("\(Date.convertMinutesBetween(startDate: workoutDateRange.lowerBound, endDate: workoutDateRange.upperBound)) 분")
                             .font(.liveActivityTargetTime)
                             .foregroundColor(.secondary)
                             .offset(y: -10)

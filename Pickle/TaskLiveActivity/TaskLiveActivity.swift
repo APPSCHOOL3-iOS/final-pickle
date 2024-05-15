@@ -41,7 +41,7 @@ struct SimpleEntry: TimelineEntry {
 }
 
 @available(iOS 17.0, *)
-struct TaskLiveActivityEntryView : View {
+struct TaskLiveActivityEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {

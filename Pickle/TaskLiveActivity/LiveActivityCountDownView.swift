@@ -31,8 +31,7 @@ public struct LiveActivityCountDownView: View {
                 .padding(.top, 15)
                 .padding(.horizontal, 10)
             
-            HStack {
-                Spacer(minLength: 15)
+            VStack(alignment: .center) {
                 ModeTimerText(
                     state: state,
                     font: .pizzaTimerNum
@@ -54,25 +53,32 @@ struct ModeTimerText: View {
             Text.init(
                 timerInterval: state.taskTime
             )
+            .multilineTextAlignment(.center)
             .foregroundColor(.pickle)
             .font(font)
             .padding(.horizontal, 10)
             
         } else if state.taskMode == .increasing {
             HStack {
-                Text("+")
+                Group {
+                    Spacer()
+                    Text("+")
+                        .foregroundColor(.pickle)
+                        .font(font)
+                        .multilineTextAlignment(.trailing)
+                    
+                    Text.init(
+                        timerInterval: state.taskTime,
+                         countsDown: false
+                    )
                     .foregroundColor(.pickle)
                     .font(font)
-                    .padding(.horizontal, 10)
-                
-                Text.init(
-                    timerInterval: state.taskTime,
-                    countsDown: false
-                )
-                .foregroundColor(.pickle)
-                .font(font)
+                    .minimumScaleFactor(0.5)
+                    .frame(maxWidth: 200)
+                }
             }
-        } 
+            
+        }
     }
 }
 
@@ -80,15 +86,22 @@ struct ModeTimerText: View {
 struct TimerProgressView: View {
     
     let workoutDateRange: ClosedRange<Date>
+    let mode: TaskMode
     
     var body: some View {
-        ProgressView(
-            timerInterval: workoutDateRange,
-            countsDown: false,
-            label: { EmptyView() },
-            currentValueLabel: { EmptyView() }
-        )
-        .tint(.pickle)
-        .progressViewStyle(.circular)
+        if mode == .decreasing {
+            ProgressView(
+                timerInterval: workoutDateRange,
+                countsDown: false,
+                label: { EmptyView() },
+                currentValueLabel: { EmptyView() }
+            )
+            .tint(.pickle)
+            .progressViewStyle(.circular)
+        } else {
+            ProgressView(value: 1)
+                .tint(.pickle)
+                .progressViewStyle(.circular)
+        }
     }
 }

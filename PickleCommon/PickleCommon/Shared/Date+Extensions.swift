@@ -94,4 +94,11 @@ public extension Date {
             return String(format: "%i분", minutes)
         }
     }
+    
+    /// 지정된 두 날짜 사이의 시간을 분 단위로 변환하는 함수
+    static func convertMinutesBetween(startDate: Date, endDate: Date) -> Int {
+        let timeInterval = endDate.timeIntervalSince(startDate) // 초 단위의 시간 간격
+        let minutes = Int(timeInterval / 60) // 분 단위로 변환
+        return minutes
+    }
 }
