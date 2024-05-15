@@ -52,7 +52,7 @@ jobs:
       if: github.event_name == 'pull_request'
       run: | 
         xcodebuild test \
-        -project Pickle/Pickle.xcodeproj \
+        -workspace PickleApp.xcworkspace \
         -scheme Pickle \
         -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
         
