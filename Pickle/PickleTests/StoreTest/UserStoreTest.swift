@@ -8,7 +8,6 @@
 import XCTest
 @testable import Pickle
 
-
 final class UserStoreTest: XCTestCase {
     
     var sut: UserStore!
@@ -143,11 +142,10 @@ final class UserStoreTest: XCTestCase {
     func test_치즈피자_조건충족했을때_잠금해제할수있는지() async throws {
         // Given
         try await addingAndFetchUser()
-        try await 피자_카운트늘리는_함수()
-        try await 피자_카운트늘리는_함수()
         
         // When
-        try sut.fetchUser()
+        try await 피자_카운트늘리는_함수()
+        try await 피자_카운트늘리는_함수()
         
         let cheesPizza = sut.user.getCurrentPizza(match: .cheese)!.pizza!
         XCTAssertEqual(cheesPizza.lock, true)
