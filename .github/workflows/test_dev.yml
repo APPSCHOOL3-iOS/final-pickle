@@ -39,22 +39,19 @@ jobs:
         restore-keys: | 
           ${{ runner.os }}-spm-
           
-    # - name: Cache DerivedData
-    #   uses: actions/cache@v3
-    #   with:
-    #     path: ~/Library/Developer/Xcode/DerivedData
-    #     key: ${{ runner.os }}-iOS_derived_data-xcode_${{ matrix.xcode }}
-    #     restore-keys: |
-    #       ${{ runner.os }}-iOS_derived_data-
-    - name: Clean Derived Data
-      run: |
-         rm -rf ~/Library/Developer/Xcode/DerivedData/*
+    - name: Cache DerivedData
+      uses: actions/cache@v3
+      with:
+        path: ~/Library/Developer/Xcode/DerivedData
+        key: ${{ runner.os }}-iOS_derived_data-xcode_${{ matrix.xcode }}
+        restore-keys: |
+          ${{ runner.os }}-iOS_derived_data-
           
     # shell 이용해서 하나의 command 수행
     - name: Start Test 🛠
       if: github.event_name == 'pull_request'
       run: | 
-        xcodebuild clean test \
+        xcodebuild test \
         -workspace ${{env.PROJECT}}.xcworkspace \
         -scheme Pickle \
         -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
