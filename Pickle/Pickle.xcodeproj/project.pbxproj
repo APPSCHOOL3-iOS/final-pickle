@@ -71,8 +71,6 @@
 		963AFF942AC33EAF00835FD8 /* MissionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963AFF932AC33EAF00835FD8 /* MissionObject.swift */; };
 		964D0A122AFCE81E00BA8FA2 /* CalendarView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D0A112AFCE81E00BA8FA2 /* CalendarView-extension.swift */; };
 		964D0A142AFCE85F00BA8FA2 /* SettingView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D0A132AFCE85F00BA8FA2 /* SettingView-extension.swift */; };
-		96570B5A2BEA30940016D6F7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 96570B592BEA30940016D6F7 /* RealmSwift */; };
-		96570B5C2BEA30940016D6F7 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 96570B592BEA30940016D6F7 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		965C9B9A2ADA866E0015ABBE /* PizzaSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9B992ADA866E0015ABBE /* PizzaSelectedView.swift */; };
 		965C9BA22ADAB2380015ABBE /* PickleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9BA12ADAB2380015ABBE /* PickleTests.swift */; };
 		965C9BEB2ADBAF7E0015ABBE /* PizzaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9BEA2ADBAF7E0015ABBE /* PizzaAlert.swift */; };
@@ -256,6 +254,8 @@
 		9688BBE12BECF3F300BA3B3B /* LiveActivityCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */; };
 		9688BBE22BECF3F400BA3B3B /* LiveActivityCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */; };
 		968EB22D2AEE63110025BEF8 /* NavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968EB22C2AEE63110025BEF8 /* NavigationStore.swift */; };
+		9693D1642BF46FA900B85F56 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9693D1632BF46FA900B85F56 /* RealmSwift */; };
+		9693D1652BF46FA900B85F56 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9693D1632BF46FA900B85F56 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		96943B262ADFFDED0026D54F /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96943B252ADFFDED0026D54F /* BackgroundModifier.swift */; };
 		969B88FA2BEB9F0000538D12 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A9DBEB2BEB957A00B40A2A /* WidgetKit.framework */; };
 		969B88FB2BEB9F0000538D12 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A9DBED2BEB957B00B40A2A /* SwiftUI.framework */; };
@@ -362,17 +362,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		96570B5B2BEA30940016D6F7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				96570B5C2BEA30940016D6F7 /* RealmSwift in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		966297052BEBAA6700588C60 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +395,17 @@
 				9686010A2BED0C560067FD36 /* TaskLiveActivityExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9693D1662BF46FA900B85F56 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9693D1652BF46FA900B85F56 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		969B890E2BEB9F0400538D12 /* Embed Foundation Extensions */ = {
@@ -526,6 +526,8 @@
 		9688ADDC2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaSliceDescriptionView.swift; sourceTree = "<group>"; };
 		9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityCircleView.swift; sourceTree = "<group>"; };
 		968EB22C2AEE63110025BEF8 /* NavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStore.swift; sourceTree = "<group>"; };
+		9693D15F2BF4683B00B85F56 /* Pickle.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Pickle.xctestplan; path = PickleTests/Pickle.xctestplan; sourceTree = "<group>"; };
+		9693D1602BF469FD00B85F56 /* PickleCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PickleCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96943B252ADFFDED0026D54F /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
 		969B88F92BEB9F0000538D12 /* TaskLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		969B88FD2BEB9F0000538D12 /* TaskLiveActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskLiveActivityBundle.swift; sourceTree = "<group>"; };
@@ -612,7 +614,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96570B5A2BEA30940016D6F7 /* RealmSwift in Frameworks */,
+				9693D1642BF46FA900B85F56 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +646,7 @@
 			children = (
 				968601162BED15C70067FD36 /* TaskLiveActivityExtension.entitlements */,
 				2137D5872AC1460F00AFE225 /* .swiftlint.yml */,
+				9693D15F2BF4683B00B85F56 /* Pickle.xctestplan */,
 				2137D5772AC1459C00AFE225 /* Pickle */,
 				965C9BA02ADAB2380015ABBE /* PickleTests */,
 				969B88FC2BEB9F0000538D12 /* TaskLiveActivity */,
@@ -960,6 +963,7 @@
 		96570B582BEA30940016D6F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9693D1602BF469FD00B85F56 /* PickleCommon.framework */,
 				9670F4022BEF68DF000C0218 /* PickleCommon.framework */,
 				96B21F5B2BEF5837007AB2D1 /* PickleCommon.framework */,
 				96B21F582BEF5828007AB2D1 /* PickleCommon.framework */,
@@ -1390,7 +1394,7 @@
 				965C9B9B2ADAB2380015ABBE /* Sources */,
 				965C9B9C2ADAB2380015ABBE /* Frameworks */,
 				965C9B9D2ADAB2380015ABBE /* Resources */,
-				96570B5B2BEA30940016D6F7 /* Embed Frameworks */,
+				9693D1662BF46FA900B85F56 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1399,7 +1403,7 @@
 			);
 			name = PickleTests;
 			packageProductDependencies = (
-				96570B592BEA30940016D6F7 /* RealmSwift */,
+				9693D1632BF46FA900B85F56 /* RealmSwift */,
 			);
 			productName = PickleTests;
 			productReference = 965C9B9F2ADAB2380015ABBE /* PickleTests.xctest */;
@@ -2429,11 +2433,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		96570B592BEA30940016D6F7 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96BF928F2AC27EAC00277131 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
 		967575C92B0CDCA4004957AD /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 967575C82B0CDCA4004957AD /* XCRemoteSwiftPackageReference "realm-swift" */;
@@ -2448,6 +2447,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 968601032BED0B150067FD36 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		9693D1632BF46FA900B85F56 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96BF928F2AC27EAC00277131 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		96BF92922AC27EAC00277131 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;

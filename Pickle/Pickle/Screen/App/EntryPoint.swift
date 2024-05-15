@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct AppLauncher {
-    @MainActor
     static func main() {
         if NSClassFromString("XCTestCase") != nil {
             PickleAppTest.main()
