@@ -50,7 +50,7 @@ jobs:
           xcode-version: ${{ matrix.xcode }}
           
       - name: Select latest Xcode
-        run: "sudo xcode-select -s /Applications/Xcode.app"
+        run: "sudo xcode-select -s /Applications/Xcode_15.3.app"
         
       - name: Checkout project
         # uses 키워드를 통해 Github Actions에서 기본으로 제공하는 액션을 사용 가능. 아래 액션은 repository 에 체크아웃하는 것
