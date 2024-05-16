@@ -26,8 +26,8 @@ jobs:
      CERT_ENCRYPTION_KEY: ${{ secrets.CERT_ENCRYPTION_PASSWORD }} # gpg로 파일 암호화할 때 사용한 암호
       
      # provisioning
-     ENCRYPTED_PROVISION_FILE_PATH: ${{ '.github/workflows/secrets/release_realDoPizza.mobileprovision.gpg' }}
-     DECRYPTED_PROVISION_FILE_PATH: ${{ '.github/workflows/secrets/release_realDoPizza.mobileprovision' }}
+     ENCRYPTED_PROVISION_FILE_PATH: ${{ '.github/workflows/secrets/release_realDoPizza1_1_0.mobileprovision.gpg' }}
+     DECRYPTED_PROVISION_FILE_PATH: ${{ '.github/workflows/secrets/release_realDoPizza1_1_0.mobileprovision' }}
      PROVISIONING_ENCRYPTION_KEY: ${{ secrets.PROVISION_ENCRYTION_PASSWORD }} # gpg로 파일 암호화할 때 사용한 암호
 
      # AppStore privateKey Path
