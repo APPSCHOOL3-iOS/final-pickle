@@ -19,7 +19,7 @@ jobs:
 
     env:
       # app archive 및 export 에 쓰일 환경 변수 설정
-     XC_WORKSPACE: ${{ '${{env.PROJECT}}.xcworkspace' }}
+     XC_WORKSPACE: ${{ env.PROJECT }}.xcworkspace
      XC_SCHEME: ${{ 'Pickle-release' }}
      XC_ARCHIVE: ${{ 'Pickle-release.xcarchive' }}
       
