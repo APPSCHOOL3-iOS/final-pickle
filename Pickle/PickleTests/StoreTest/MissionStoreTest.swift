@@ -8,14 +8,13 @@
 import XCTest
 @testable import Pickle
 
-@MainActor
 final class MissionStoreTest: XCTestCase {
     
     var sut: MissionStore!
     
     override func setUp() async throws {
         Self.setUpTodoDependency()
-        sut = MissionStore()
+        sut = await MissionStore()
     }
     
     override func tearDown() async throws {
@@ -24,7 +23,7 @@ final class MissionStoreTest: XCTestCase {
     }
     
     /// MissionStore 초기화 함수테스트
-    func test_mission_init_test() throws {
+    @MainActor func test_mission_init_test() throws {
         // Given
         var (times, behaviors): ([TimeMission], [BehaviorMission])
         
@@ -42,6 +41,7 @@ final class MissionStoreTest: XCTestCase {
     
     /// 1. 미션이 없을경우 추가
     /// 2. 미션이 있을경우 추가 x
+    @MainActor
     func test_mission_add_fetch() throws {
         // Given
         ifNotExist_added()
@@ -55,6 +55,7 @@ final class MissionStoreTest: XCTestCase {
     }
     
     /// 미션을 정확하게 업데이트 할 수 있는지 비교
+    @MainActor
     func test_mission_update() throws {
         // Given
         ifNotExist_added()
@@ -63,8 +64,8 @@ final class MissionStoreTest: XCTestCase {
         XCTAssertEqual(behaviors.count, 1)
         
         // When
-        let newTime = try times.first!.update(path: \.status, to: MissionStatus.ongoing)
-        let newBehavior = try behaviors.first!.update(path: \.status, to: MissionStatus.ongoing)
+        let newTime = times.first!.update(path: \.status, to: MissionStatus.ongoing)
+        let newBehavior = behaviors.first!.update(path: \.status, to: MissionStatus.ongoing)
         
         sut.update(mission: .time(newTime))
         sut.update(mission: .behavior(newBehavior))
@@ -79,6 +80,7 @@ final class MissionStoreTest: XCTestCase {
     }
     
     /// 미션 스토어 전체삭제 함수 테스트
+    @MainActor
     func test_deleteAllTest() throws {
         // Given
         ifNotExist_added()
@@ -94,6 +96,7 @@ final class MissionStoreTest: XCTestCase {
     }
     
     /// 미션 스토어 삭제 함수 테스트
+    @MainActor
     func test_deleteTest() throws {
         // Given
         ifNotExist_added()
@@ -110,6 +113,7 @@ final class MissionStoreTest: XCTestCase {
     }
     
     /// Observe하는 notification 테스트
+    @MainActor
     func test_mission_Notification_Token() throws {
         // Given
         ifNotExist_added()
@@ -119,21 +123,23 @@ final class MissionStoreTest: XCTestCase {
         sut.observe(mission: .time(times.first!))
         sut.observe(mission: .behavior(behaviors.first!))
         
-        let newTime = try times.first!.update(path: \.status, to: MissionStatus.ongoing)
-        let newBehavior: BehaviorMission = try behaviors.first!.update(path: \.status, to: MissionStatus.ongoing)
+        let newTime = times.first!.update(path: \.status, to: MissionStatus.ongoing)
+        let newBehavior: BehaviorMission = behaviors.first!.update(path: \.status, to: MissionStatus.ongoing)
         
         sut.update(mission: .time(newTime))
         sut.update(mission: .behavior(newBehavior))
         
-        let newBehavior2: BehaviorMission = try newBehavior.update(path: \.status, to: MissionStatus.complete)
+        let newBehavior2: BehaviorMission = newBehavior.update(path: \.status, to: MissionStatus.complete)
         
         sut.update(mission: .behavior(newBehavior2))
         
         let expectation = XCTestExpectation(description: "combine Test")
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             let newBehavior3: BehaviorMission
-            = try! newBehavior2.update(path: \.date,
-                                       to: Date())
+            = newBehavior2.update(
+                path: \.date,
+                to: Date()
+            )
             self?.sut.update(mission: .behavior(newBehavior3))
             expectation.fulfill()
         }
@@ -148,6 +154,7 @@ final class MissionStoreTest: XCTestCase {
 extension MissionStoreTest {
     
     /// 미션이 존재하지 않으면 추가하는 함수
+    @MainActor
     private func ifNotExist_added() {
         let time = TimeMission(title: "기상 미션", status: .ready, date: Date(), wakeupTime: Date())
         let behavior = BehaviorMission(title: "걷기 미션", status: .ready, status1: .ready, status2: .ready, date: Date())

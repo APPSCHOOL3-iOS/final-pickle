@@ -12,15 +12,20 @@ enum TodoError: Error {
     case id
 }
 
-struct Todo: Identifiable {
-    let id: String
-    var content: String
-    var startTime: Date     // 시작 시간 (15시부터)
-    var targetTime: TimeInterval    // 목표 소요 시간 ex) 30분
-    var spendTime: TimeInterval     // 실제 소요 시간 ex) 32분
-    var status: TodoStatus
+public struct Todo: Identifiable {
+    public let id: String
+    public var content: String
+    public var startTime: Date     // 시작 시간 (15시부터)
+    public var targetTime: TimeInterval    // 목표 소요 시간 ex) 30분
+    public var spendTime: TimeInterval     // 실제 소요 시간 ex) 32분
+    public var status: TodoStatus
     
-    init(id: String, content: String, startTime: Date, targetTime: TimeInterval, spendTime: TimeInterval, status: TodoStatus) {
+    public init(id: String,
+                content: String,
+                startTime: Date,
+                targetTime: TimeInterval,
+                spendTime: TimeInterval,
+                status: TodoStatus) {
         self.id = id
         self.content = content
         self.startTime = startTime
@@ -29,8 +34,8 @@ struct Todo: Identifiable {
         self.status = status
     }
     
-    init(todo: Todo) {
-        self.init(id: todo.id, 
+    public init(todo: Todo) {
+        self.init(id: todo.id,
                   content: todo.content,
                   startTime: todo.startTime,
                   targetTime: todo.targetTime,
@@ -38,7 +43,7 @@ struct Todo: Identifiable {
                   status: todo.status)
     }
     
-    init(dic: [String: Any]) {
+    public init(dic: [String: Any]) {
         self.id = dic["id"] as? String ?? ""
         self.content = dic["content"] as? String ?? ""
         self.startTime = dic["startTime"] as? Date ?? Date()
@@ -50,18 +55,18 @@ struct Todo: Identifiable {
 }
 
 extension Todo: Hashable {
-    func isEqualContent(todo: Self) -> Bool {
+    public func isEqualContent(todo: Self) -> Bool {
         self.content == todo.content &&
         self.startTime == todo.startTime &&
         self.targetTime == todo.targetTime
     }
     
-    var isNotPersisted: Bool {
+    public var isNotPersisted: Bool {
         self.id == "" ||
         self.id == Todo.sample.id
     }
     
-    var asDictionary: [String: Any] {
+    public var asDictionary: [String: Any] {
         let mirror = Mirror(reflecting: self)
         
         let value = mirror.children.lazy.map { (label: String?, value: Any) -> (String, Any)? in
@@ -76,7 +81,7 @@ extension Todo: Hashable {
 
 extension Todo: Codable { }
 
-extension Todo {
+public extension Todo {
     
     static var mock: Todo {
         .init(id: UUID().uuidString,
@@ -106,7 +111,7 @@ extension Todo {
     }
 }
 
-let sampleTodoList: [Todo] = [
+public let sampleTodoList: [Todo] = [
     Todo(id: UUID().uuidString,
          content: "이력서 작성하기",
          startTime: Date(),

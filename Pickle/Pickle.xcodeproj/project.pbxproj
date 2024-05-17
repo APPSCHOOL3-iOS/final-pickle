@@ -19,8 +19,6 @@
 		2137D5912AC1476700AFE225 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5902AC1476700AFE225 /* MissionView.swift */; };
 		2137D5952AC1479700AFE225 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5942AC1479700AFE225 /* SettingView.swift */; };
 		2137D5A42AC14C6A00AFE225 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A32AC14C6A00AFE225 /* CGFloat.swift */; };
-		2137D5A62AC14C7500AFE225 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A52AC14C7500AFE225 /* Color.swift */; };
-		2137D5A82AC14C7A00AFE225 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A72AC14C7A00AFE225 /* Font.swift */; };
 		2137D5AA2AC14EA500AFE225 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A92AC14EA500AFE225 /* View.swift */; };
 		2137D5AD2AC14F1100AFE225 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5AC2AC14F1100AFE225 /* NavigationBar.swift */; };
 		2137D5B02AC176DB00AFE225 /* TodoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5AF2AC176DB00AFE225 /* TodoCellView.swift */; };
@@ -57,6 +55,7 @@
 		961488792AFD24D400B87A37 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961488782AFD24D400B87A37 /* Task.swift */; };
 		9619E9392B05921E0028348C /* PizzaItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619E9382B05921E0028348C /* PizzaItemView.swift */; };
 		9619E93C2B0594210028348C /* ScrollEnableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619E93B2B0594210028348C /* ScrollEnableKey.swift */; };
+		9625B4A02BF24F8E004B7583 /* PizzaPickle.json in Resources */ = {isa = PBXBuildFile; fileRef = 9625B49F2BF24F8E004B7583 /* PizzaPickle.json */; };
 		962FFD7D2AF6443C00AE4963 /* TestStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962FFD7C2AF6443C00AE4963 /* TestStore.swift */; };
 		962FFD832AF6533900AE4963 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962FFD822AF6533900AE4963 /* EntryPoint.swift */; };
 		962FFD842AF6537D00AE4963 /* PickleTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962FFD7E2AF64A5B00AE4963 /* PickleTestApp.swift */; };
@@ -72,8 +71,6 @@
 		963AFF942AC33EAF00835FD8 /* MissionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963AFF932AC33EAF00835FD8 /* MissionObject.swift */; };
 		964D0A122AFCE81E00BA8FA2 /* CalendarView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D0A112AFCE81E00BA8FA2 /* CalendarView-extension.swift */; };
 		964D0A142AFCE85F00BA8FA2 /* SettingView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D0A132AFCE85F00BA8FA2 /* SettingView-extension.swift */; };
-		96570B5A2BEA30940016D6F7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 96570B592BEA30940016D6F7 /* RealmSwift */; };
-		96570B5C2BEA30940016D6F7 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 96570B592BEA30940016D6F7 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		965C9B9A2ADA866E0015ABBE /* PizzaSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9B992ADA866E0015ABBE /* PizzaSelectedView.swift */; };
 		965C9BA22ADAB2380015ABBE /* PickleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9BA12ADAB2380015ABBE /* PickleTests.swift */; };
 		965C9BEB2ADBAF7E0015ABBE /* PizzaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C9BEA2ADBAF7E0015ABBE /* PizzaAlert.swift */; };
@@ -86,6 +83,8 @@
 		966110872AFA7E42008A80DE /* HomeView-Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966110862AFA7E42008A80DE /* HomeView-Modifier.swift */; };
 		966110892AFA7EA2008A80DE /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966110882AFA7EA2008A80DE /* NavigationModifier.swift */; };
 		9661108B2AFA84CA008A80DE /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661108A2AFA84CA008A80DE /* PreferenceKey.swift */; };
+		966297042BEBAA6700588C60 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 96BF92922AC27EAC00277131 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		966297062BEBAA6A00588C60 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 967575C92B0CDCA4004957AD /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		96635F5C2ADF9EE60072F21E /* Todo-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96635F5B2ADF9EE60072F21E /* Todo-extension.swift */; };
 		96635F5E2ADF9EEF0072F21E /* TimeMission-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96635F5D2ADF9EEF0072F21E /* TimeMission-extension.swift */; };
 		96635F602ADF9EF50072F21E /* User-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96635F5F2ADF9EF50072F21E /* User-extension.swift */; };
@@ -99,6 +98,7 @@
 		966CD9EF2B0A6B59003AE885 /* DifferentTypeAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD9EE2B0A6B59003AE885 /* DifferentTypeAlerts.swift */; };
 		966CD9F12B0A6BA2003AE885 /* Register-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD9F02B0A6BA2003AE885 /* Register-extension.swift */; };
 		966CD9F32B0A6D09003AE885 /* TimeUnitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD9F22B0A6D09003AE885 /* TimeUnitPickerView.swift */; };
+		9670F4032BEF68DF000C0218 /* PickleCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9670F4022BEF68DF000C0218 /* PickleCommon.framework */; };
 		9670FF782BE8E19100AF5E4D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670FF772BE8E19100AF5E4D /* CalendarView.swift */; };
 		9670FF7D2BEA26DF00AF5E4D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */; };
 		9670FF7E2BEA26DF00AF5E4D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */; };
@@ -155,12 +155,10 @@
 		967575FE2B0CDCA4004957AD /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA267A2AC2ADFB00877122 /* Mission.swift */; };
 		967575FF2B0CDCA4004957AD /* HealthKitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063F5CD2ADD02DB008EF304 /* HealthKitStore.swift */; };
 		967576012B0CDCA4004957AD /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96943B252ADFFDED0026D54F /* BackgroundModifier.swift */; };
-		967576022B0CDCA4004957AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A52AC14C7500AFE225 /* Color.swift */; };
 		967576032B0CDCA4004957AD /* PrimaryButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2113158F2AE1602500FA6492 /* PrimaryButtonModifier.swift */; };
 		967576042B0CDCA4004957AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D57A2AC1459C00AFE225 /* ContentView.swift */; };
 		967576062B0CDCA4004957AD /* PickleTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962FFD7E2AF64A5B00AE4963 /* PickleTestApp.swift */; };
 		967576072B0CDCA4004957AD /* BehaviorMissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4A22ACFD97A003BC207 /* BehaviorMissionRepository.swift */; };
-		967576082B0CDCA4004957AD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D5A72AC14C7A00AFE225 /* Font.swift */; };
 		967576092B0CDCA4004957AD /* TimerReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0052FB32ACD48A3005B3263 /* TimerReportView.swift */; };
 		9675760A2B0CDCA4004957AD /* UpdateTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137D58C2AC1475800AFE225 /* UpdateTodoView.swift */; };
 		9675760B2B0CDCA4004957AD /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8312AFD509200410881 /* Mediator.swift */; };
@@ -192,7 +190,6 @@
 		967576262B0CDCA4004957AD /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8382AFD511200410881 /* NotificationService.swift */; };
 		967576282B0CDCA4004957AD /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB8C1F2B04C92E0011B973 /* Publisher.swift */; };
 		967576292B0CDCA4004957AD /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072B9472AE0460E001C3DAF /* TimerViewModel.swift */; };
-		9675762A2B0CDCA4004957AD /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C341B42AC2CA7400744EB7 /* Date+Extensions.swift */; };
 		9675762B2B0CDCA4004957AD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967575BE2B0AB9A0004957AD /* Const.swift */; };
 		9675762C2B0CDCA4004957AD /* BackColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961296952AC16FBE009A9815 /* BackColorModifier.swift */; };
 		9675762D2B0CDCA4004957AD /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA26762AC2A10800877122 /* Todo.swift */; };
@@ -225,21 +222,55 @@
 		967576482B0CDCA4004957AD /* User-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96635F5F2ADF9EF50072F21E /* User-extension.swift */; };
 		967576492B0CDCA4004957AD /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1E4B32AD5384B001B2960 /* RealmError.swift */; };
 		9675764B2B0CDCA4004957AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 967575C92B0CDCA4004957AD /* RealmSwift */; settings = {ATTRIBUTES = (Required, ); }; };
-		9675764C2B0CDCA4004957AD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 967575C72B0CDCA4004957AD /* Realm */; };
 		9675764E2B0CDCA4004957AD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2137D5872AC1460F00AFE225 /* .swiftlint.yml */; };
 		9675764F2B0CDCA4004957AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2137D57F2AC1459D00AFE225 /* Preview Assets.xcassets */; };
-		967576502B0CDCA4004957AD /* NanumSquareNeoOTF-Eb.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E02AD9098300648B59 /* NanumSquareNeoOTF-Eb.otf */; };
 		967576512B0CDCA4004957AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2160F9762AE2B98900FC9469 /* LaunchScreen.storyboard */; };
-		967576522B0CDCA4004957AD /* NanumSquareNeoOTF-Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E32AD9098400648B59 /* NanumSquareNeoOTF-Lt.otf */; };
-		967576532B0CDCA4004957AD /* NanumSquareNeoOTF-Hv.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E22AD9098400648B59 /* NanumSquareNeoOTF-Hv.otf */; };
-		967576542B0CDCA4004957AD /* Chab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E42AD9098400648B59 /* Chab.otf */; };
-		967576552B0CDCA4004957AD /* NanumSquareNeoOTF-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E52AD9098400648B59 /* NanumSquareNeoOTF-Rg.otf */; };
-		967576562B0CDCA4004957AD /* NanumSquareNeoOTF-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E12AD9098400648B59 /* NanumSquareNeoOTF-Bd.otf */; };
 		967576572B0CDCA4004957AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2137D57C2AC1459D00AFE225 /* Assets.xcassets */; };
+		968601072BED0C4C0067FD36 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 968601062BED0C4C0067FD36 /* Lottie */; };
+		968601092BED0C560067FD36 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 968601082BED0C560067FD36 /* Lottie */; };
+		9686010A2BED0C560067FD36 /* TaskLiveActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 969B88F92BEB9F0000538D12 /* TaskLiveActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9686010F2BED0FEF0067FD36 /* Car.json in Resources */ = {isa = PBXBuildFile; fileRef = 9686010E2BED0FEE0067FD36 /* Car.json */; };
+		968601172BEE42470067FD36 /* Midiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401022BE8C192004C30EC /* Midiator.swift */; };
+		968601182BEE42510067FD36 /* STORAGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9DBDF2BEB73B700B40A2A /* STORAGE.swift */; };
+		968601192BEE425C0067FD36 /* PizzaLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9DBE22BEB8F6800B40A2A /* PizzaLiveActivity.swift */; };
+		9686011A2BEE428B0067FD36 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670FF772BE8E19100AF5E4D /* CalendarView.swift */; };
+		9686011B2BEE428C0067FD36 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E6A282BE8DC0600E03356 /* TaskRowView.swift */; };
+		9686011C2BEE42900067FD36 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401092BE8CF52004C30EC /* CalendarHeaderView.swift */; };
+		9686011D2BEE42930067FD36 /* HeaderActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401112BE8D259004C30EC /* HeaderActionView.swift */; };
+		9686011E2BEE42960067FD36 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4010F2BE8D1EB004C30EC /* WeekHeaderView.swift */; };
+		9686011F2BEE429C0067FD36 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4010D2BE8D138004C30EC /* WeekView.swift */; };
+		968601202BEE429F0067FD36 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4010B2BE8D016004C30EC /* MonthView.swift */; };
+		968601212BEE42A10067FD36 /* TodayPizzaSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401132BE8D47B004C30EC /* TodayPizzaSummaryView.swift */; };
+		968601222BEE42A30067FD36 /* TodayPizzaSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401152BE8D526004C30EC /* TodayPizzaSheetView.swift */; };
+		968601232BEE42D20067FD36 /* PizzaSliceDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688ADDC2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift */; };
+		968601242BEE42F40067FD36 /* TodoEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688ADDA2B516D3B000F2B3A /* TodoEmptyView.swift */; };
+		968601252BEE43100067FD36 /* TimerTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C83B8F2B55915A00262F19 /* TimerTitleView.swift */; };
+		968601272BEE43120067FD36 /* TimerCompleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C83B932B5598F300262F19 /* TimerCompleteButton.swift */; };
+		968601282BEE43150067FD36 /* CircleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C83B912B5591BC00262F19 /* CircleTimerView.swift */; };
+		968601292BEE433A0067FD36 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E6A2A2BE8DC2100E03356 /* CalendarViewModel.swift */; };
 		9688ADDB2B516D3B000F2B3A /* TodoEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688ADDA2B516D3B000F2B3A /* TodoEmptyView.swift */; };
 		9688ADDD2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688ADDC2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift */; };
+		9688BBDC2BECEFDE00BA3B3B /* LiveActivityCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */; };
+		9688BBE12BECF3F300BA3B3B /* LiveActivityCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */; };
+		9688BBE22BECF3F400BA3B3B /* LiveActivityCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */; };
 		968EB22D2AEE63110025BEF8 /* NavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968EB22C2AEE63110025BEF8 /* NavigationStore.swift */; };
+		9693D1642BF46FA900B85F56 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9693D1632BF46FA900B85F56 /* RealmSwift */; };
+		9693D1652BF46FA900B85F56 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9693D1632BF46FA900B85F56 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		96943B262ADFFDED0026D54F /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96943B252ADFFDED0026D54F /* BackgroundModifier.swift */; };
+		969B88FA2BEB9F0000538D12 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A9DBEB2BEB957A00B40A2A /* WidgetKit.framework */; };
+		969B88FB2BEB9F0000538D12 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A9DBED2BEB957B00B40A2A /* SwiftUI.framework */; };
+		969B88FE2BEB9F0000538D12 /* TaskLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B88FD2BEB9F0000538D12 /* TaskLiveActivityBundle.swift */; };
+		969B89002BEB9F0000538D12 /* TaskLiveActivityLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B88FF2BEB9F0000538D12 /* TaskLiveActivityLiveActivity.swift */; };
+		969B89022BEB9F0000538D12 /* TaskLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B89012BEB9F0000538D12 /* TaskLiveActivity.swift */; };
+		969B89042BEB9F0000538D12 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B89032BEB9F0000538D12 /* AppIntent.swift */; };
+		969B89062BEB9F0400538D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969B89052BEB9F0400538D12 /* Assets.xcassets */; };
+		969B890A2BEB9F0400538D12 /* TaskLiveActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 969B88F92BEB9F0000538D12 /* TaskLiveActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		969B89132BEB9F2300538D12 /* TaskLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B89012BEB9F0000538D12 /* TaskLiveActivity.swift */; };
+		969B89142BEB9F2400538D12 /* TaskLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B89012BEB9F0000538D12 /* TaskLiveActivity.swift */; };
+		969B89152BEB9F2600538D12 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B89032BEB9F0000538D12 /* AppIntent.swift */; };
+		969B89162BEB9F2600538D12 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B89032BEB9F0000538D12 /* AppIntent.swift */; };
+		969B891B2BEBA29800538D12 /* TaskLiveActivityLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B88FF2BEB9F0000538D12 /* TaskLiveActivityLiveActivity.swift */; };
+		969B891D2BEBA33C00538D12 /* TaskLiveActivityLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B88FF2BEB9F0000538D12 /* TaskLiveActivityLiveActivity.swift */; };
 		96A1D4A32ACFD97A003BC207 /* BehaviorMissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4A22ACFD97A003BC207 /* BehaviorMissionRepository.swift */; };
 		96A1D4A72ACFE384003BC207 /* MissionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4A62ACFE384003BC207 /* MissionStore.swift */; };
 		96A1D4AA2AD176B6003BC207 /* Injection+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1D4A92AD176B6003BC207 /* Injection+Key.swift */; };
@@ -259,12 +290,24 @@
 		96A401142BE8D47B004C30EC /* TodayPizzaSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401132BE8D47B004C30EC /* TodayPizzaSummaryView.swift */; };
 		96A401162BE8D526004C30EC /* TodayPizzaSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A401152BE8D526004C30EC /* TodayPizzaSheetView.swift */; };
 		96A9DBE02BEB73B700B40A2A /* STORAGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9DBDF2BEB73B700B40A2A /* STORAGE.swift */; };
+		96A9DBE32BEB8F6800B40A2A /* PizzaLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9DBE22BEB8F6800B40A2A /* PizzaLiveActivity.swift */; };
+		96AA8C702BEE54ED0075CFE8 /* CircleTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AA8C6F2BEE54ED0075CFE8 /* CircleTimeLabel.swift */; };
+		96AA8C712BEE54ED0075CFE8 /* CircleTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AA8C6F2BEE54ED0075CFE8 /* CircleTimeLabel.swift */; };
+		96AA8C792BEE61060075CFE8 /* CompleteDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AA8C782BEE61060075CFE8 /* CompleteDescriptionView.swift */; };
+		96AA8C7A2BEE61060075CFE8 /* CompleteDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AA8C782BEE61060075CFE8 /* CompleteDescriptionView.swift */; };
 		96AAF8302AFD3A7B00410881 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF82F2AFD3A7B00410881 /* Dictionary.swift */; };
 		96AAF8322AFD509200410881 /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8312AFD509200410881 /* Mediator.swift */; };
 		96AAF8372AFD50F900410881 /* NotiMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8362AFD50F900410881 /* NotiMediator.swift */; };
 		96AAF8392AFD511200410881 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AAF8382AFD511200410881 /* NotificationService.swift */; };
+		96B21F6C2BEF6292007AB2D1 /* PickleCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B21F582BEF5828007AB2D1 /* PickleCommon.framework */; };
+		96B21F6D2BEF6292007AB2D1 /* PickleCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96B21F582BEF5828007AB2D1 /* PickleCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		96B21F6E2BEF6296007AB2D1 /* PickleCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B21F5B2BEF5837007AB2D1 /* PickleCommon.framework */; };
+		96B21F6F2BEF6296007AB2D1 /* PickleCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96B21F5B2BEF5837007AB2D1 /* PickleCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		96B7AE6D2B023DFC001A3987 /* CurrentPizzaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7AE6C2B023DFC001A3987 /* CurrentPizzaObject.swift */; };
 		96BF92932AC27EAC00277131 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 96BF92922AC27EAC00277131 /* RealmSwift */; settings = {ATTRIBUTES = (Required, ); }; };
+		96C3361E2BF0DCEF00A06A02 /* LiveActivityCountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3361D2BF0DA2F00A06A02 /* LiveActivityCountDownView.swift */; };
+		96C3361F2BF0DD7A00A06A02 /* LiveActivityCountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3361D2BF0DA2F00A06A02 /* LiveActivityCountDownView.swift */; };
+		96C336202BF0DD7A00A06A02 /* LiveActivityCountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3361D2BF0DA2F00A06A02 /* LiveActivityCountDownView.swift */; };
 		96C64FE32ADC2C450042204A /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C64FE22ADC2C450042204A /* CustomSheetView.swift */; };
 		96C716DB2AC1614F00B4B8E0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C716DA2AC1614F00B4B8E0 /* RegisterView.swift */; };
 		96C83B902B55915A00262F19 /* TimerTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C83B8F2B55915A00262F19 /* TimerTitleView.swift */; };
@@ -274,12 +317,6 @@
 		96CE29C52ADE66B50070EF92 /* PizzaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE29C42ADE66B50070EF92 /* PizzaRepository.swift */; };
 		96CE29C72ADEC6560070EF92 /* PizzaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE29C62ADEC6560070EF92 /* PizzaStore.swift */; };
 		96CE29C92ADED0CA0070EF92 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE29C82ADED0CA0070EF92 /* Collection.swift */; };
-		96CF08E62AD9098400648B59 /* NanumSquareNeoOTF-Eb.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E02AD9098300648B59 /* NanumSquareNeoOTF-Eb.otf */; };
-		96CF08E72AD9098400648B59 /* NanumSquareNeoOTF-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E12AD9098400648B59 /* NanumSquareNeoOTF-Bd.otf */; };
-		96CF08E82AD9098400648B59 /* NanumSquareNeoOTF-Hv.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E22AD9098400648B59 /* NanumSquareNeoOTF-Hv.otf */; };
-		96CF08E92AD9098400648B59 /* NanumSquareNeoOTF-Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E32AD9098400648B59 /* NanumSquareNeoOTF-Lt.otf */; };
-		96CF08EA2AD9098400648B59 /* Chab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E42AD9098400648B59 /* Chab.otf */; };
-		96CF08EB2AD9098400648B59 /* NanumSquareNeoOTF-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96CF08E52AD9098400648B59 /* NanumSquareNeoOTF-Rg.otf */; };
 		96CF08EE2AD933A400648B59 /* DotCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF08ED2AD933A400648B59 /* DotCircleView.swift */; };
 		96EB8C182B0251D10011B973 /* CurrentPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB8C172B0251D10011B973 /* CurrentPizza.swift */; };
 		96EB8C1A2B0251EA0011B973 /* TimeMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB8C192B0251EA0011B973 /* TimeMission.swift */; };
@@ -298,7 +335,6 @@
 		B0CB776C2AE679DA0022491A /* CompleteAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB776B2AE679DA0022491A /* CompleteAlert.swift */; };
 		B77A29A82AE6955200BB8838 /* PizzaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A29A72AE6955200BB8838 /* PizzaCollectionView.swift */; };
 		B7908DC12AE01BFC004C5221 /* PizzaSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7908DC02AE01BFC004C5221 /* PizzaSummaryView.swift */; };
-		B7C341B52AC2CA7400744EB7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C341B42AC2CA7400744EB7 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,18 +345,78 @@
 			remoteGlobalIDString = 2137D5742AC1459C00AFE225;
 			remoteInfo = Pickle;
 		};
+		9686010B2BED0C560067FD36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2137D56D2AC1459C00AFE225 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 969B88F82BEB9F0000538D12;
+			remoteInfo = TaskLiveActivityExtension;
+		};
+		969B89082BEB9F0400538D12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2137D56D2AC1459C00AFE225 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 969B88F82BEB9F0000538D12;
+			remoteInfo = TaskLiveActivityExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		96570B5B2BEA30940016D6F7 /* Embed Frameworks */ = {
+		966297052BEBAA6700588C60 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				96570B5C2BEA30940016D6F7 /* RealmSwift in Embed Frameworks */,
+				966297042BEBAA6700588C60 /* RealmSwift in Embed Frameworks */,
+				96B21F6D2BEF6292007AB2D1 /* PickleCommon.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		966297072BEBAA6A00588C60 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				966297062BEBAA6A00588C60 /* RealmSwift in Embed Frameworks */,
+				96B21F6F2BEF6296007AB2D1 /* PickleCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9686010D2BED0C560067FD36 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9686010A2BED0C560067FD36 /* TaskLiveActivityExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9693D1662BF46FA900B85F56 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9693D1652BF46FA900B85F56 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969B890E2BEB9F0400538D12 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				969B890A2BEB9F0400538D12 /* TaskLiveActivityExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -339,8 +435,6 @@
 		2137D5902AC1476700AFE225 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		2137D5942AC1479700AFE225 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		2137D5A32AC14C6A00AFE225 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
-		2137D5A52AC14C7500AFE225 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		2137D5A72AC14C7A00AFE225 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		2137D5A92AC14EA500AFE225 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		2137D5AC2AC14F1100AFE225 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		2137D5AF2AC176DB00AFE225 /* TodoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCellView.swift; sourceTree = "<group>"; };
@@ -377,6 +471,7 @@
 		961488782AFD24D400B87A37 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		9619E9382B05921E0028348C /* PizzaItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaItemView.swift; sourceTree = "<group>"; };
 		9619E93B2B0594210028348C /* ScrollEnableKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEnableKey.swift; sourceTree = "<group>"; };
+		9625B49F2BF24F8E004B7583 /* PizzaPickle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PizzaPickle.json; sourceTree = "<group>"; };
 		962FFD7C2AF6443C00AE4963 /* TestStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStore.swift; sourceTree = "<group>"; };
 		962FFD7E2AF64A5B00AE4963 /* PickleTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleTestApp.swift; sourceTree = "<group>"; };
 		962FFD822AF6533900AE4963 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
@@ -418,16 +513,29 @@
 		966CD9EE2B0A6B59003AE885 /* DifferentTypeAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentTypeAlerts.swift; sourceTree = "<group>"; };
 		966CD9F02B0A6BA2003AE885 /* Register-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Register-extension.swift"; sourceTree = "<group>"; };
 		966CD9F22B0A6D09003AE885 /* TimeUnitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnitPickerView.swift; sourceTree = "<group>"; };
+		9670F4022BEF68DF000C0218 /* PickleCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PickleCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9670FF772BE8E19100AF5E4D /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		967575BE2B0AB9A0004957AD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		967575C02B0AB9AF004957AD /* SuccessUpdateKey-PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuccessUpdateKey-PreferenceKey.swift"; sourceTree = "<group>"; };
 		9675765B2B0CDCA4004957AD /* Pickle-release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pickle-release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9675765C2B0CDCA4004957AD /* Pickle-release-info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pickle-release-info.plist"; path = "/Users/baghyeonghwan/final/final-pickle/Pickle/Pickle-release-info.plist"; sourceTree = "<absolute>"; };
+		9686010E2BED0FEE0067FD36 /* Car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Car.json; sourceTree = "<group>"; };
+		968601162BED15C70067FD36 /* TaskLiveActivityExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskLiveActivityExtension.entitlements; sourceTree = "<group>"; };
 		9688ADDA2B516D3B000F2B3A /* TodoEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEmptyView.swift; sourceTree = "<group>"; };
 		9688ADDC2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaSliceDescriptionView.swift; sourceTree = "<group>"; };
+		9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityCircleView.swift; sourceTree = "<group>"; };
 		968EB22C2AEE63110025BEF8 /* NavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStore.swift; sourceTree = "<group>"; };
+		9693D15F2BF4683B00B85F56 /* Pickle.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Pickle.xctestplan; path = PickleTests/Pickle.xctestplan; sourceTree = "<group>"; };
+		9693D1602BF469FD00B85F56 /* PickleCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PickleCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96943B252ADFFDED0026D54F /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
+		969B88F92BEB9F0000538D12 /* TaskLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		969B88FD2BEB9F0000538D12 /* TaskLiveActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskLiveActivityBundle.swift; sourceTree = "<group>"; };
+		969B88FF2BEB9F0000538D12 /* TaskLiveActivityLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskLiveActivityLiveActivity.swift; sourceTree = "<group>"; };
+		969B89012BEB9F0000538D12 /* TaskLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskLiveActivity.swift; sourceTree = "<group>"; };
+		969B89032BEB9F0000538D12 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		969B89052BEB9F0400538D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		969B89072BEB9F0400538D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A1D4A22ACFD97A003BC207 /* BehaviorMissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorMissionRepository.swift; sourceTree = "<group>"; };
 		96A1D4A62ACFE384003BC207 /* MissionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStore.swift; sourceTree = "<group>"; };
 		96A1D4A92AD176B6003BC207 /* Injection+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Injection+Key.swift"; sourceTree = "<group>"; };
@@ -447,11 +555,19 @@
 		96A401132BE8D47B004C30EC /* TodayPizzaSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPizzaSummaryView.swift; sourceTree = "<group>"; };
 		96A401152BE8D526004C30EC /* TodayPizzaSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPizzaSheetView.swift; sourceTree = "<group>"; };
 		96A9DBDF2BEB73B700B40A2A /* STORAGE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STORAGE.swift; sourceTree = "<group>"; };
+		96A9DBE22BEB8F6800B40A2A /* PizzaLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLiveActivity.swift; sourceTree = "<group>"; };
+		96A9DBEB2BEB957A00B40A2A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		96A9DBED2BEB957B00B40A2A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		96AA8C6F2BEE54ED0075CFE8 /* CircleTimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimeLabel.swift; sourceTree = "<group>"; };
+		96AA8C782BEE61060075CFE8 /* CompleteDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDescriptionView.swift; sourceTree = "<group>"; };
 		96AAF82F2AFD3A7B00410881 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		96AAF8312AFD509200410881 /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
 		96AAF8362AFD50F900410881 /* NotiMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiMediator.swift; sourceTree = "<group>"; };
 		96AAF8382AFD511200410881 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		96B21F582BEF5828007AB2D1 /* PickleCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PickleCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B21F5B2BEF5837007AB2D1 /* PickleCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PickleCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B7AE6C2B023DFC001A3987 /* CurrentPizzaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPizzaObject.swift; sourceTree = "<group>"; };
+		96C3361D2BF0DA2F00A06A02 /* LiveActivityCountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityCountDownView.swift; sourceTree = "<group>"; };
 		96C64FE22ADC2C450042204A /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		96C716DA2AC1614F00B4B8E0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		96C83B8F2B55915A00262F19 /* TimerTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTitleView.swift; sourceTree = "<group>"; };
@@ -461,12 +577,6 @@
 		96CE29C42ADE66B50070EF92 /* PizzaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaRepository.swift; sourceTree = "<group>"; };
 		96CE29C62ADEC6560070EF92 /* PizzaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaStore.swift; sourceTree = "<group>"; };
 		96CE29C82ADED0CA0070EF92 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
-		96CF08E02AD9098300648B59 /* NanumSquareNeoOTF-Eb.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Eb.otf"; sourceTree = "<group>"; };
-		96CF08E12AD9098400648B59 /* NanumSquareNeoOTF-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Bd.otf"; sourceTree = "<group>"; };
-		96CF08E22AD9098400648B59 /* NanumSquareNeoOTF-Hv.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Hv.otf"; sourceTree = "<group>"; };
-		96CF08E32AD9098400648B59 /* NanumSquareNeoOTF-Lt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Lt.otf"; sourceTree = "<group>"; };
-		96CF08E42AD9098400648B59 /* Chab.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chab.otf; sourceTree = "<group>"; };
-		96CF08E52AD9098400648B59 /* NanumSquareNeoOTF-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Rg.otf"; sourceTree = "<group>"; };
 		96CF08ED2AD933A400648B59 /* DotCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCircleView.swift; sourceTree = "<group>"; };
 		96EB8C172B0251D10011B973 /* CurrentPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPizza.swift; sourceTree = "<group>"; };
 		96EB8C192B0251EA0011B973 /* TimeMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMission.swift; sourceTree = "<group>"; };
@@ -487,7 +597,6 @@
 		B0CB776B2AE679DA0022491A /* CompleteAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteAlert.swift; sourceTree = "<group>"; };
 		B77A29A72AE6955200BB8838 /* PizzaCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaCollectionView.swift; sourceTree = "<group>"; };
 		B7908DC02AE01BFC004C5221 /* PizzaSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaSummaryView.swift; sourceTree = "<group>"; };
-		B7C341B42AC2CA7400744EB7 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "Pickle/Extension/Date+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,6 +605,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96BF92932AC27EAC00277131 /* RealmSwift in Frameworks */,
+				96B21F6C2BEF6292007AB2D1 /* PickleCommon.framework in Frameworks */,
+				968601072BED0C4C0067FD36 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +614,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96570B5A2BEA30940016D6F7 /* RealmSwift in Frameworks */,
+				9693D1642BF46FA900B85F56 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +623,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9675764B2B0CDCA4004957AD /* RealmSwift in Frameworks */,
-				9675764C2B0CDCA4004957AD /* Realm in Frameworks */,
+				96B21F6E2BEF6296007AB2D1 /* PickleCommon.framework in Frameworks */,
+				968601092BED0C560067FD36 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969B88F62BEB9F0000538D12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969B88FB2BEB9F0000538D12 /* SwiftUI.framework in Frameworks */,
+				9670F4032BEF68DF000C0218 /* PickleCommon.framework in Frameworks */,
+				969B88FA2BEB9F0000538D12 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,9 +644,12 @@
 		2137D56C2AC1459C00AFE225 = {
 			isa = PBXGroup;
 			children = (
+				968601162BED15C70067FD36 /* TaskLiveActivityExtension.entitlements */,
 				2137D5872AC1460F00AFE225 /* .swiftlint.yml */,
+				9693D15F2BF4683B00B85F56 /* Pickle.xctestplan */,
 				2137D5772AC1459C00AFE225 /* Pickle */,
 				965C9BA02ADAB2380015ABBE /* PickleTests */,
+				969B88FC2BEB9F0000538D12 /* TaskLiveActivity */,
 				2137D5762AC1459C00AFE225 /* Products */,
 				96570B582BEA30940016D6F7 /* Frameworks */,
 			);
@@ -537,6 +662,7 @@
 				2137D5752AC1459C00AFE225 /* Pickle.app */,
 				965C9B9F2ADAB2380015ABBE /* PickleTests.xctest */,
 				9675765B2B0CDCA4004957AD /* Pickle-release.app */,
+				969B88F92BEB9F0000538D12 /* TaskLiveActivityExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -565,6 +691,7 @@
 		2137D58B2AC1474500AFE225 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				96A9DBE12BEB8F5600B40A2A /* LiveActivity */,
 				2137D5AE2AC14F5900AFE225 /* App */,
 				2137D5962AC1485900AFE225 /* Model */,
 				2137D5972AC148CE00AFE225 /* Home */,
@@ -634,9 +761,6 @@
 			children = (
 				2137D5A32AC14C6A00AFE225 /* CGFloat.swift */,
 				9637AB9A2B07846100D64F46 /* UINavigationController.swift */,
-				2137D5A52AC14C7500AFE225 /* Color.swift */,
-				2137D5A72AC14C7A00AFE225 /* Font.swift */,
-				B7C341B42AC2CA7400744EB7 /* Date+Extensions.swift */,
 				96EB8C1F2B04C92E0011B973 /* Publisher.swift */,
 				96AAF82F2AFD3A7B00410881 /* Dictionary.swift */,
 				96CE29C82ADED0CA0070EF92 /* Collection.swift */,
@@ -839,6 +963,12 @@
 		96570B582BEA30940016D6F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9693D1602BF469FD00B85F56 /* PickleCommon.framework */,
+				9670F4022BEF68DF000C0218 /* PickleCommon.framework */,
+				96B21F5B2BEF5837007AB2D1 /* PickleCommon.framework */,
+				96B21F582BEF5828007AB2D1 /* PickleCommon.framework */,
+				96A9DBEB2BEB957A00B40A2A /* WidgetKit.framework */,
+				96A9DBED2BEB957B00B40A2A /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -894,7 +1024,6 @@
 			isa = PBXGroup;
 			children = (
 				2137D5892AC1473C00AFE225 /* HomeView.swift */,
-				96A401042BE8CA7F004C30EC /* Subviews */,
 				9688ADDF2B517541000F2B3A /* Todo */,
 				9688ADDE2B51753A000F2B3A /* Pizza */,
 			);
@@ -992,6 +1121,21 @@
 			path = Todo;
 			sourceTree = "<group>";
 		};
+		969B88FC2BEB9F0000538D12 /* TaskLiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				969B88FD2BEB9F0000538D12 /* TaskLiveActivityBundle.swift */,
+				969B88FF2BEB9F0000538D12 /* TaskLiveActivityLiveActivity.swift */,
+				96C3361D2BF0DA2F00A06A02 /* LiveActivityCountDownView.swift */,
+				9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */,
+				969B89012BEB9F0000538D12 /* TaskLiveActivity.swift */,
+				969B89032BEB9F0000538D12 /* AppIntent.swift */,
+				969B89052BEB9F0400538D12 /* Assets.xcassets */,
+				969B89072BEB9F0400538D12 /* Info.plist */,
+			);
+			path = TaskLiveActivity;
+			sourceTree = "<group>";
+		};
 		96A1D4A82AD176AD003BC207 /* Key */ = {
 			isa = PBXGroup;
 			children = (
@@ -1007,13 +1151,6 @@
 				96A1E4B52AD53866001B2960 /* PersistentedError.swift */,
 			);
 			path = Type;
-			sourceTree = "<group>";
-		};
-		96A401042BE8CA7F004C30EC /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Subviews;
 			sourceTree = "<group>";
 		};
 		96A401052BE8CE76004C30EC /* View */ = {
@@ -1053,6 +1190,14 @@
 				965E6A2A2BE8DC2100E03356 /* CalendarViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		96A9DBE12BEB8F5600B40A2A /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				96A9DBE22BEB8F6800B40A2A /* PizzaLiveActivity.swift */,
+			);
+			path = LiveActivity;
 			sourceTree = "<group>";
 		};
 		96AAF8332AFD50B400410881 /* Protocol */ = {
@@ -1133,12 +1278,13 @@
 		96B4B3432AE9524C006A15E3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2137D57E2AC1459D00AFE225 /* Preview Content */,
+				9686010E2BED0FEE0067FD36 /* Car.json */,
+				9625B49F2BF24F8E004B7583 /* PizzaPickle.json */,
 				B0B5E6BB2ADA5A360096F677 /* Info.plist */,
 				9675765C2B0CDCA4004957AD /* Pickle-release-info.plist */,
 				B0B5E6BC2ADA5B820096F677 /* Pickle.entitlements */,
 				2137D57C2AC1459D00AFE225 /* Assets.xcassets */,
-				96CF08DF2AD9096B00648B59 /* font */,
-				2137D57E2AC1459D00AFE225 /* Preview Content */,
 				9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */,
 			);
 			path = Resource;
@@ -1159,6 +1305,8 @@
 				96C83B8F2B55915A00262F19 /* TimerTitleView.swift */,
 				96C83B932B5598F300262F19 /* TimerCompleteButton.swift */,
 				96C83B912B5591BC00262F19 /* CircleTimerView.swift */,
+				96AA8C6F2BEE54ED0075CFE8 /* CircleTimeLabel.swift */,
+				96AA8C782BEE61060075CFE8 /* CompleteDescriptionView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1194,19 +1342,6 @@
 			path = TimerView;
 			sourceTree = "<group>";
 		};
-		96CF08DF2AD9096B00648B59 /* font */ = {
-			isa = PBXGroup;
-			children = (
-				96CF08E42AD9098400648B59 /* Chab.otf */,
-				96CF08E12AD9098400648B59 /* NanumSquareNeoOTF-Bd.otf */,
-				96CF08E02AD9098300648B59 /* NanumSquareNeoOTF-Eb.otf */,
-				96CF08E22AD9098400648B59 /* NanumSquareNeoOTF-Hv.otf */,
-				96CF08E32AD9098400648B59 /* NanumSquareNeoOTF-Lt.otf */,
-				96CF08E52AD9098400648B59 /* NanumSquareNeoOTF-Rg.otf */,
-			);
-			path = font;
-			sourceTree = "<group>";
-		};
 		96FEE2AC2AE5215A00BC0CCD /* Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1235,14 +1370,18 @@
 				2137D5712AC1459C00AFE225 /* Sources */,
 				2137D5722AC1459C00AFE225 /* Frameworks */,
 				2137D5732AC1459C00AFE225 /* Resources */,
+				969B890E2BEB9F0400538D12 /* Embed Foundation Extensions */,
+				966297052BEBAA6700588C60 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				969B89092BEB9F0400538D12 /* PBXTargetDependency */,
 			);
 			name = Pickle;
 			packageProductDependencies = (
 				96BF92922AC27EAC00277131 /* RealmSwift */,
+				968601062BED0C4C0067FD36 /* Lottie */,
 			);
 			productName = Pickle;
 			productReference = 2137D5752AC1459C00AFE225 /* Pickle.app */;
@@ -1255,7 +1394,7 @@
 				965C9B9B2ADAB2380015ABBE /* Sources */,
 				965C9B9C2ADAB2380015ABBE /* Frameworks */,
 				965C9B9D2ADAB2380015ABBE /* Resources */,
-				96570B5B2BEA30940016D6F7 /* Embed Frameworks */,
+				9693D1662BF46FA900B85F56 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1264,7 +1403,7 @@
 			);
 			name = PickleTests;
 			packageProductDependencies = (
-				96570B592BEA30940016D6F7 /* RealmSwift */,
+				9693D1632BF46FA900B85F56 /* RealmSwift */,
 			);
 			productName = PickleTests;
 			productReference = 965C9B9F2ADAB2380015ABBE /* PickleTests.xctest */;
@@ -1278,19 +1417,41 @@
 				967575CB2B0CDCA4004957AD /* Sources */,
 				9675764A2B0CDCA4004957AD /* Frameworks */,
 				9675764D2B0CDCA4004957AD /* Resources */,
+				966297072BEBAA6A00588C60 /* Embed Frameworks */,
+				9686010D2BED0C560067FD36 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9686010C2BED0C560067FD36 /* PBXTargetDependency */,
+			);
+			name = "Pickle-release";
+			packageProductDependencies = (
+				967575C92B0CDCA4004957AD /* RealmSwift */,
+				968601082BED0C560067FD36 /* Lottie */,
+			);
+			productName = Pickle;
+			productReference = 9675765B2B0CDCA4004957AD /* Pickle-release.app */;
+			productType = "com.apple.product-type.application";
+		};
+		969B88F82BEB9F0000538D12 /* TaskLiveActivityExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 969B890B2BEB9F0400538D12 /* Build configuration list for PBXNativeTarget "TaskLiveActivityExtension" */;
+			buildPhases = (
+				969B88F52BEB9F0000538D12 /* Sources */,
+				969B88F62BEB9F0000538D12 /* Frameworks */,
+				969B88F72BEB9F0000538D12 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pickle-release";
+			name = TaskLiveActivityExtension;
 			packageProductDependencies = (
-				967575C72B0CDCA4004957AD /* Realm */,
-				967575C92B0CDCA4004957AD /* RealmSwift */,
 			);
-			productName = Pickle;
-			productReference = 9675765B2B0CDCA4004957AD /* Pickle-release.app */;
-			productType = "com.apple.product-type.application";
+			productName = TaskLiveActivityExtension;
+			productReference = 969B88F92BEB9F0000538D12 /* TaskLiveActivityExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -1299,7 +1460,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					2137D5742AC1459C00AFE225 = {
@@ -1308,6 +1469,9 @@
 					965C9B9E2ADAB2380015ABBE = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 2137D5742AC1459C00AFE225;
+					};
+					969B88F82BEB9F0000538D12 = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -1322,6 +1486,7 @@
 			mainGroup = 2137D56C2AC1459C00AFE225;
 			packageReferences = (
 				96BF928F2AC27EAC00277131 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				968601032BED0B150067FD36 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 2137D5762AC1459C00AFE225 /* Products */;
 			projectDirPath = "";
@@ -1330,6 +1495,7 @@
 				2137D5742AC1459C00AFE225 /* Pickle */,
 				967575C62B0CDCA4004957AD /* Pickle-release */,
 				965C9B9E2ADAB2380015ABBE /* PickleTests */,
+				969B88F82BEB9F0000538D12 /* TaskLiveActivityExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -1342,13 +1508,9 @@
 				2137D5882AC1460F00AFE225 /* .swiftlint.yml in Resources */,
 				9670FF7E2BEA26DF00AF5E4D /* PrivacyInfo.xcprivacy in Resources */,
 				2137D5802AC1459D00AFE225 /* Preview Assets.xcassets in Resources */,
-				96CF08E62AD9098400648B59 /* NanumSquareNeoOTF-Eb.otf in Resources */,
 				2160F9772AE2B98900FC9469 /* LaunchScreen.storyboard in Resources */,
-				96CF08E92AD9098400648B59 /* NanumSquareNeoOTF-Lt.otf in Resources */,
-				96CF08E82AD9098400648B59 /* NanumSquareNeoOTF-Hv.otf in Resources */,
-				96CF08EA2AD9098400648B59 /* Chab.otf in Resources */,
-				96CF08EB2AD9098400648B59 /* NanumSquareNeoOTF-Rg.otf in Resources */,
-				96CF08E72AD9098400648B59 /* NanumSquareNeoOTF-Bd.otf in Resources */,
+				9686010F2BED0FEF0067FD36 /* Car.json in Resources */,
+				9625B4A02BF24F8E004B7583 /* PizzaPickle.json in Resources */,
 				2137D57D2AC1459D00AFE225 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1367,14 +1529,16 @@
 				9675764E2B0CDCA4004957AD /* .swiftlint.yml in Resources */,
 				9670FF7D2BEA26DF00AF5E4D /* PrivacyInfo.xcprivacy in Resources */,
 				9675764F2B0CDCA4004957AD /* Preview Assets.xcassets in Resources */,
-				967576502B0CDCA4004957AD /* NanumSquareNeoOTF-Eb.otf in Resources */,
 				967576512B0CDCA4004957AD /* LaunchScreen.storyboard in Resources */,
-				967576522B0CDCA4004957AD /* NanumSquareNeoOTF-Lt.otf in Resources */,
-				967576532B0CDCA4004957AD /* NanumSquareNeoOTF-Hv.otf in Resources */,
-				967576542B0CDCA4004957AD /* Chab.otf in Resources */,
-				967576552B0CDCA4004957AD /* NanumSquareNeoOTF-Rg.otf in Resources */,
-				967576562B0CDCA4004957AD /* NanumSquareNeoOTF-Bd.otf in Resources */,
 				967576572B0CDCA4004957AD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969B88F72BEB9F0000538D12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969B89062BEB9F0400538D12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1383,7 +1547,6 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2137D5862AC145C500AFE225 /* SwiftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1446,6 +1609,8 @@
 				96A401142BE8D47B004C30EC /* TodayPizzaSummaryView.swift in Sources */,
 				963AFF8F2AC3319D00835FD8 /* RealmMigrator.swift in Sources */,
 				960C41842ACDA42B009A0093 /* BaseRepository.swift in Sources */,
+				969B89132BEB9F2300538D12 /* TaskLiveActivity.swift in Sources */,
+				96AA8C702BEE54ED0075CFE8 /* CircleTimeLabel.swift in Sources */,
 				B0C158DA2AC1647D003B00E6 /* MissionStyleView.swift in Sources */,
 				96A401102BE8D1EB004C30EC /* WeekHeaderView.swift in Sources */,
 				96EB8C1A2B0251EA0011B973 /* TimeMission.swift in Sources */,
@@ -1468,6 +1633,7 @@
 				2137D5A42AC14C6A00AFE225 /* CGFloat.swift in Sources */,
 				B7908DC12AE01BFC004C5221 /* PizzaSummaryView.swift in Sources */,
 				21FA267D2AC2B50D00877122 /* User.swift in Sources */,
+				969B891B2BEBA29800538D12 /* TaskLiveActivityLiveActivity.swift in Sources */,
 				2137D58A2AC1473C00AFE225 /* HomeView.swift in Sources */,
 				2137D5AD2AC14F1100AFE225 /* NavigationBar.swift in Sources */,
 				960C41A02ACEF0DA009A0093 /* Container.swift in Sources */,
@@ -1479,21 +1645,22 @@
 				96A9DBE02BEB73B700B40A2A /* STORAGE.swift in Sources */,
 				966CD9F12B0A6BA2003AE885 /* Register-extension.swift in Sources */,
 				96AAF8372AFD50F900410881 /* NotiMediator.swift in Sources */,
+				96A9DBE32BEB8F6800B40A2A /* PizzaLiveActivity.swift in Sources */,
 				96EB8C1E2B029AF20011B973 /* CurrentPizza-extension.swift in Sources */,
 				961296982AC17120009A9815 /* TextFieldModifier.swift in Sources */,
 				961488732AFD21D800B87A37 /* ScrollAnchor.swift in Sources */,
+				9688BBE12BECF3F300BA3B3B /* LiveActivityCircleView.swift in Sources */,
 				21FA267B2AC2ADFB00877122 /* Mission.swift in Sources */,
 				9688ADDB2B516D3B000F2B3A /* TodoEmptyView.swift in Sources */,
 				B063F5CE2ADD02DB008EF304 /* HealthKitStore.swift in Sources */,
 				96A4010C2BE8D016004C30EC /* MonthView.swift in Sources */,
 				96943B262ADFFDED0026D54F /* BackgroundModifier.swift in Sources */,
 				96A401162BE8D526004C30EC /* TodayPizzaSheetView.swift in Sources */,
-				2137D5A62AC14C7500AFE225 /* Color.swift in Sources */,
 				211315902AE1602500FA6492 /* PrimaryButtonModifier.swift in Sources */,
 				2137D57B2AC1459C00AFE225 /* ContentView.swift in Sources */,
+				96AA8C792BEE61060075CFE8 /* CompleteDescriptionView.swift in Sources */,
 				962FFD842AF6537D00AE4963 /* PickleTestApp.swift in Sources */,
 				96A1D4A32ACFD97A003BC207 /* BehaviorMissionRepository.swift in Sources */,
-				2137D5A82AC14C7A00AFE225 /* Font.swift in Sources */,
 				96C83B902B55915A00262F19 /* TimerTitleView.swift in Sources */,
 				A0052FB42ACD48A3005B3263 /* TimerReportView.swift in Sources */,
 				2137D58D2AC1475800AFE225 /* UpdateTodoView.swift in Sources */,
@@ -1527,7 +1694,6 @@
 				96AAF8392AFD511200410881 /* NotificationService.swift in Sources */,
 				96EB8C202B04C92E0011B973 /* Publisher.swift in Sources */,
 				A072B9482AE0460E001C3DAF /* TimerViewModel.swift in Sources */,
-				B7C341B52AC2CA7400744EB7 /* Date+Extensions.swift in Sources */,
 				967575BF2B0AB9A0004957AD /* Const.swift in Sources */,
 				961296962AC16FBE009A9815 /* BackColorModifier.swift in Sources */,
 				96A4010E2BE8D138004C30EC /* WeekView.swift in Sources */,
@@ -1562,7 +1728,9 @@
 				96A1E4A92AD403BB001B2960 /* MissionType.swift in Sources */,
 				96635F6A2ADFA4A70072F21E /* KeyPathEditable.swift in Sources */,
 				96635F602ADF9EF50072F21E /* User-extension.swift in Sources */,
+				96C336202BF0DD7A00A06A02 /* LiveActivityCountDownView.swift in Sources */,
 				96A1E4B42AD5384B001B2960 /* RealmError.swift in Sources */,
+				969B89152BEB9F2600538D12 /* AppIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1589,7 +1757,10 @@
 				967575CD2B0CDCA4004957AD /* PizzaItemView.swift in Sources */,
 				967575CE2B0CDCA4004957AD /* RewardAlert.swift in Sources */,
 				967575CF2B0CDCA4004957AD /* CompleteAlert.swift in Sources */,
+				9686011D2BEE42930067FD36 /* HeaderActionView.swift in Sources */,
+				968601282BEE43150067FD36 /* CircleTimerView.swift in Sources */,
 				967575D02B0CDCA4004957AD /* PizzaAlert.swift in Sources */,
+				968601232BEE42D20067FD36 /* PizzaSliceDescriptionView.swift in Sources */,
 				967575D12B0CDCA4004957AD /* EntryPoint.swift in Sources */,
 				967575D22B0CDCA4004957AD /* Pizza.swift in Sources */,
 				967575D32B0CDCA4004957AD /* TodoRepository.swift in Sources */,
@@ -1603,9 +1774,12 @@
 				967575DB2B0CDCA4004957AD /* HomeView-Modifier.swift in Sources */,
 				967575DC2B0CDCA4004957AD /* RealmMigrator.swift in Sources */,
 				967575DD2B0CDCA4004957AD /* BaseRepository.swift in Sources */,
+				96AA8C712BEE54ED0075CFE8 /* CircleTimeLabel.swift in Sources */,
+				968601172BEE42470067FD36 /* Midiator.swift in Sources */,
 				967575DE2B0CDCA4004957AD /* MissionStyleView.swift in Sources */,
 				967575E02B0CDCA4004957AD /* TimeMission.swift in Sources */,
 				967575E12B0CDCA4004957AD /* SettingNotiicationView.swift in Sources */,
+				9686011E2BEE42960067FD36 /* WeekHeaderView.swift in Sources */,
 				967575E22B0CDCA4004957AD /* Object+Extensions.swift in Sources */,
 				967575E32B0CDCA4004957AD /* NavigationStore.swift in Sources */,
 				967575E42B0CDCA4004957AD /* TimerView.swift in Sources */,
@@ -1614,40 +1788,49 @@
 				967575E72B0CDCA4004957AD /* Status.swift in Sources */,
 				967575E82B0CDCA4004957AD /* UserObject.swift in Sources */,
 				967575E92B0CDCA4004957AD /* TimeMission-extension.swift in Sources */,
+				968601252BEE43100067FD36 /* TimerTitleView.swift in Sources */,
 				967575EA2B0CDCA4004957AD /* ClearBackgroundViewModifier.swift in Sources */,
 				967575EB2B0CDCA4004957AD /* HomeView-Routing.swift in Sources */,
 				967575ED2B0CDCA4004957AD /* ScrollEnableKey.swift in Sources */,
 				967575EE2B0CDCA4004957AD /* BehaviorMission-extension.swift in Sources */,
+				9686011A2BEE428B0067FD36 /* CalendarView.swift in Sources */,
+				9688BBE22BECF3F400BA3B3B /* LiveActivityCircleView.swift in Sources */,
 				967575EF2B0CDCA4004957AD /* CGFloat.swift in Sources */,
 				967575F02B0CDCA4004957AD /* PizzaSummaryView.swift in Sources */,
+				969B89142BEB9F2400538D12 /* TaskLiveActivity.swift in Sources */,
 				967575F12B0CDCA4004957AD /* User.swift in Sources */,
 				967575F22B0CDCA4004957AD /* HomeView.swift in Sources */,
+				969B891D2BEBA33C00538D12 /* TaskLiveActivityLiveActivity.swift in Sources */,
 				967575F32B0CDCA4004957AD /* NavigationBar.swift in Sources */,
 				967575F42B0CDCA4004957AD /* Container.swift in Sources */,
 				967575F52B0CDCA4004957AD /* PizzaPagingView.swift in Sources */,
 				967575F62B0CDCA4004957AD /* PreferenceKey.swift in Sources */,
+				9686011B2BEE428C0067FD36 /* TaskRowView.swift in Sources */,
 				967575F72B0CDCA4004957AD /* Realm+Combine.swift in Sources */,
 				967575F82B0CDCA4004957AD /* HomeViewModel.swift in Sources */,
 				967575F92B0CDCA4004957AD /* Register-extension.swift in Sources */,
+				968601272BEE43120067FD36 /* TimerCompleteButton.swift in Sources */,
 				967575FA2B0CDCA4004957AD /* NotiMediator.swift in Sources */,
+				968601182BEE42510067FD36 /* STORAGE.swift in Sources */,
+				968601192BEE425C0067FD36 /* PizzaLiveActivity.swift in Sources */,
 				967575FB2B0CDCA4004957AD /* CurrentPizza-extension.swift in Sources */,
 				967575FC2B0CDCA4004957AD /* TextFieldModifier.swift in Sources */,
 				967575FD2B0CDCA4004957AD /* ScrollAnchor.swift in Sources */,
 				967575FE2B0CDCA4004957AD /* Mission.swift in Sources */,
 				967575FF2B0CDCA4004957AD /* HealthKitStore.swift in Sources */,
 				967576012B0CDCA4004957AD /* BackgroundModifier.swift in Sources */,
-				967576022B0CDCA4004957AD /* Color.swift in Sources */,
 				967576032B0CDCA4004957AD /* PrimaryButtonModifier.swift in Sources */,
 				967576042B0CDCA4004957AD /* ContentView.swift in Sources */,
 				967576062B0CDCA4004957AD /* PickleTestApp.swift in Sources */,
+				96AA8C7A2BEE61060075CFE8 /* CompleteDescriptionView.swift in Sources */,
 				967576072B0CDCA4004957AD /* BehaviorMissionRepository.swift in Sources */,
-				967576082B0CDCA4004957AD /* Font.swift in Sources */,
 				967576092B0CDCA4004957AD /* TimerReportView.swift in Sources */,
 				9675760A2B0CDCA4004957AD /* UpdateTodoView.swift in Sources */,
 				9675760B2B0CDCA4004957AD /* Mediator.swift in Sources */,
 				9675760C2B0CDCA4004957AD /* UserStore.swift in Sources */,
 				9675760D2B0CDCA4004957AD /* SuccessUpdateKey-PreferenceKey.swift in Sources */,
 				9675760E2B0CDCA4004957AD /* PizzaCollectionView.swift in Sources */,
+				969B89162BEB9F2600538D12 /* AppIntent.swift in Sources */,
 				9675760F2B0CDCA4004957AD /* PizzaSelectedView.swift in Sources */,
 				967576102B0CDCA4004957AD /* NavigationModifier.swift in Sources */,
 				967576112B0CDCA4004957AD /* Repository+Extension.swift in Sources */,
@@ -1673,8 +1856,8 @@
 				967576262B0CDCA4004957AD /* NotificationService.swift in Sources */,
 				967576282B0CDCA4004957AD /* Publisher.swift in Sources */,
 				967576292B0CDCA4004957AD /* TimerViewModel.swift in Sources */,
-				9675762A2B0CDCA4004957AD /* Date+Extensions.swift in Sources */,
 				9675762B2B0CDCA4004957AD /* Const.swift in Sources */,
+				9686011F2BEE429C0067FD36 /* WeekView.swift in Sources */,
 				9675762C2B0CDCA4004957AD /* BackColorModifier.swift in Sources */,
 				9675762D2B0CDCA4004957AD /* Todo.swift in Sources */,
 				9675762E2B0CDCA4004957AD /* Dictionary.swift in Sources */,
@@ -1684,15 +1867,19 @@
 				967576322B0CDCA4004957AD /* RegisterView.swift in Sources */,
 				967576332B0CDCA4004957AD /* TimeMissionRepository.swift in Sources */,
 				967576342B0CDCA4004957AD /* PreviewsContainer.swift in Sources */,
+				968601202BEE429F0067FD36 /* MonthView.swift in Sources */,
 				967576352B0CDCA4004957AD /* Task.swift in Sources */,
 				967576362B0CDCA4004957AD /* LocalNotification.swift in Sources */,
 				967576372B0CDCA4004957AD /* BehaviorMissionObject.swift in Sources */,
 				967576382B0CDCA4004957AD /* PickerView.swift in Sources */,
 				967576392B0CDCA4004957AD /* PersistentedError.swift in Sources */,
+				9686011C2BEE42900067FD36 /* CalendarHeaderView.swift in Sources */,
 				9675763A2B0CDCA4004957AD /* MissionStore.swift in Sources */,
+				968601222BEE42A30067FD36 /* TodayPizzaSheetView.swift in Sources */,
 				9675763B2B0CDCA4004957AD /* PizzaRepository.swift in Sources */,
 				9675763C2B0CDCA4004957AD /* View.swift in Sources */,
 				9675763D2B0CDCA4004957AD /* TodoCellView.swift in Sources */,
+				968601212BEE42A10067FD36 /* TodayPizzaSummaryView.swift in Sources */,
 				9675763E2B0CDCA4004957AD /* MissionView.swift in Sources */,
 				9675763F2B0CDCA4004957AD /* Todo-extension.swift in Sources */,
 				967576402B0CDCA4004957AD /* NotificationManager.swift in Sources */,
@@ -1700,11 +1887,27 @@
 				967576422B0CDCA4004957AD /* Injected+Wrapper.swift in Sources */,
 				967576432B0CDCA4004957AD /* PizzaView.swift in Sources */,
 				967576442B0CDCA4004957AD /* InstanceType.swift in Sources */,
+				968601242BEE42F40067FD36 /* TodoEmptyView.swift in Sources */,
 				967576452B0CDCA4004957AD /* TimeUnitPickerView.swift in Sources */,
 				967576462B0CDCA4004957AD /* MissionType.swift in Sources */,
 				967576472B0CDCA4004957AD /* KeyPathEditable.swift in Sources */,
 				967576482B0CDCA4004957AD /* User-extension.swift in Sources */,
+				96C3361F2BF0DD7A00A06A02 /* LiveActivityCountDownView.swift in Sources */,
+				968601292BEE433A0067FD36 /* CalendarViewModel.swift in Sources */,
 				967576492B0CDCA4004957AD /* RealmError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969B88F52BEB9F0000538D12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9688BBDC2BECEFDE00BA3B3B /* LiveActivityCircleView.swift in Sources */,
+				969B89022BEB9F0000538D12 /* TaskLiveActivity.swift in Sources */,
+				969B89042BEB9F0000538D12 /* AppIntent.swift in Sources */,
+				969B89002BEB9F0000538D12 /* TaskLiveActivityLiveActivity.swift in Sources */,
+				969B88FE2BEB9F0000538D12 /* TaskLiveActivityBundle.swift in Sources */,
+				96C3361E2BF0DCEF00A06A02 /* LiveActivityCountDownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1715,6 +1918,16 @@
 			isa = PBXTargetDependency;
 			target = 2137D5742AC1459C00AFE225 /* Pickle */;
 			targetProxy = 965C9BA32ADAB2380015ABBE /* PBXContainerItemProxy */;
+		};
+		9686010C2BED0C560067FD36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 969B88F82BEB9F0000538D12 /* TaskLiveActivityExtension */;
+			targetProxy = 9686010B2BED0C560067FD36 /* PBXContainerItemProxy */;
+		};
+		969B89092BEB9F0400538D12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 969B88F82BEB9F0000538D12 /* TaskLiveActivityExtension */;
+			targetProxy = 969B89082BEB9F0400538D12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1841,13 +2054,14 @@
 		2137D5842AC1459D00AFE225 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pickle/Resource/Pickle.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Pickle/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2JZ8QNS5D4;
@@ -1870,11 +2084,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddudios.realpizza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "real-do-pizza-app-Debug";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "real-do-pizza-provisioning-deug-v2";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1887,13 +2101,14 @@
 		2137D5852AC1459D00AFE225 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pickle/Resource/Pickle.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Pickle/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2JZ8QNS5D4;
@@ -1916,11 +2131,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddudios.realpizza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "real-do-pizza-app-Debug";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "real-do-pizza-provisioning-deug-v2";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1984,7 +2199,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pickle/Resource/Pickle.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Pickle/Resource/Preview Content\"";
@@ -2012,7 +2227,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddudios.realpizza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = release_realDoPizza;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "real-do-pizza-provisioning-deug-v2";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -2029,7 +2244,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pickle/Resource/Pickle.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Pickle/Resource/Preview Content\"";
@@ -2057,7 +2272,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddudios.realpizza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = release_realDoPizza;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "real-do-pizza-provisioning-deug-v2";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -2065,6 +2280,77 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		969B890C2BEB9F0400538D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TaskLiveActivityExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JZ8QNS5D4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskLiveActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskLiveActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddudios.realpizza.TaskLiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		969B890D2BEB9F0400538D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TaskLiveActivityExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JZ8QNS5D4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskLiveActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskLiveActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddudios.realpizza.TaskLiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -2107,6 +2393,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		969B890B2BEB9F0400538D12 /* Build configuration list for PBXNativeTarget "TaskLiveActivityExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969B890C2BEB9F0400538D12 /* Debug */,
+				969B890D2BEB9F0400538D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -2116,6 +2411,14 @@
 			requirement = {
 				branch = master;
 				kind = branch;
+			};
+		};
+		968601032BED0B150067FD36 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
 			};
 		};
 		96BF928F2AC27EAC00277131 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
@@ -2129,19 +2432,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		96570B592BEA30940016D6F7 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96BF928F2AC27EAC00277131 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-		967575C72B0CDCA4004957AD /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 967575C82B0CDCA4004957AD /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
 		967575C92B0CDCA4004957AD /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 967575C82B0CDCA4004957AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		968601062BED0C4C0067FD36 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 968601032BED0B150067FD36 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		968601082BED0C560067FD36 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 968601032BED0B150067FD36 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		9693D1632BF46FA900B85F56 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96BF928F2AC27EAC00277131 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 		96BF92922AC27EAC00277131 /* RealmSwift */ = {

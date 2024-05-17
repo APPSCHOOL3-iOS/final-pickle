@@ -131,7 +131,6 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, 
                                 openSettingsFor notification: UNNotification?) {
-        // let userInfo = notification?.request.content.userInfo
     }
     
     private func notificationRouting(userInfo: [AnyHashable: Any]) async {

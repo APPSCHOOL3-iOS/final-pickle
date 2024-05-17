@@ -45,6 +45,7 @@ struct Container {
             }
             Log.error("fattalError singleton Occur")
             assert(false, "fattalError singleton Occur")
+            
         case .newSingleton:
             let service = factories[serviceName]?() as? Dependency
             if let service = service {
@@ -53,6 +54,7 @@ struct Container {
             }
             Log.error("fattalError singleton Occur")
             assert(false, "fattalError singleton Occur")
+            
         case .new, .automatic:
             if let dependency = factories[serviceName]?() as? Dependency {
                 return dependency
@@ -60,6 +62,7 @@ struct Container {
             Log.error("fattalError singleton Occur")
             assert(false, "fattalError singleton Occur")
         }
+        
         return nil
     }
 }

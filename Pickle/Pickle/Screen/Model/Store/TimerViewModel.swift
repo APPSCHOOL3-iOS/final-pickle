@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-class TimerViewModel: ObservableObject {
+final class TimerViewModel: ObservableObject {
     
     @Published var timeRemaining: TimeInterval = 0
     @Published var timeExtra: TimeInterval = 0
@@ -48,7 +48,6 @@ class TimerViewModel: ObservableObject {
                          targetTime: todo.targetTime,
                          spendTime: todo.spendTime,
                          status: todo.status)
-    
     }
     
     @MainActor func onGoingStart(_ todoStore: TodoStore) {
@@ -68,21 +67,20 @@ class TimerViewModel: ObservableObject {
                         startTime: todo.startTime,
                         targetTime: todo.targetTime,
                         spendTime: spendTime,
-                        status: status)
-       
+                        status: status)  
     }
 
-    func timerVMreset() {
+    func reset() {
         self.timeRemaining = 0
         self.timeExtra = 0
         self.spendTime = 0
         self.isDecresing = true
         self.todo = Todo(id: "",
-                             content: "",
-                             startTime: Date(),
-                             targetTime: 0.0,
-                             spendTime: 0.0,
-                             status: .ready)
+                         content: "",
+                         startTime: Date(),
+                         targetTime: 0.0,
+                         spendTime: 0.0,
+                         status: .ready)
     }
     
     @discardableResult

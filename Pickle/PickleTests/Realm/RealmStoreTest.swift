@@ -9,7 +9,7 @@ import XCTest
 @testable import Pickle
 import Combine
 
-@MainActor
+
 final class RealmStoreTest: XCTestCase {
     
     var sut: RealmStore!
@@ -47,14 +47,14 @@ final class RealmStoreTest: XCTestCase {
         // Given
         for _ in 0..<3 {
             let todo = Todo.mapFromPersistenceObject(TodoObject.todo)
-            let readyTodo = try todo.update(path: \.status, to: TodoStatus.ready)
+            let readyTodo = todo.update(path: \.status, to: TodoStatus.ready)
             let object = readyTodo.mapToPersistenceObject()
             try sut.create(TodoObject.self, item: object, completion: { _ in })
             
             // When
             let addedObject = Todo.mapFromPersistenceObject(object)
             
-            let future = try addedObject.update(path: \.status, to: TodoStatus.ongoing)
+            let future = addedObject.update(path: \.status, to: TodoStatus.ongoing)
             
             let futureObject = future.mapToPersistenceObject()
             

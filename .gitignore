@@ -94,4 +94,4 @@ iOSInjectionProject/
 
 # 프로젝트의 모든 경로에서 GoogleService-Info.plist 파일을 포함하지 않도록 함
 **/GoogleService-Info.plist
-
+**/keypath.txt

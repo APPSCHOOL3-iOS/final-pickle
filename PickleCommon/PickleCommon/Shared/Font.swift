@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Font {
+public extension Font {
     static let pizzaTitle = Font.system(size: 28, weight: .regular)
     static let pizzaTitle2 = Font.system(size: 22, weight: .regular)
     static let pizzaTitle2Bold = Font.system(size: 22, weight: .bold)
@@ -20,13 +20,17 @@ extension Font {
     
     static let pizzaBoldSmallTitle = makeFont(name: "NanumSquareNeo-cBd", size: 18, style: .title3)
     static let pizzaRegularSmallTitle = makeFont(name: "NanumSquareNeo-bRg", size: 15, style: .subheadline)
-    static let pizzaStoreSmall = makeFont(name: "NanumSquareNeo-aLt", size: 14, style: .body)
     static let pizzaStoreMiddle = makeFont(name: "NanumSquareNeo-aLt", size: 16, style: .body)
     static let pizzaTimerNum = makeFont(name: "LOTTERIACHAB", size: 44, style: .title)
     static let pizzaRegularTitle = makeFont(name: "NanumSquareNeo-cBd", size: 24, style: .title)
     static let pizzaBoldTitle = makeFont(name: "NanumSquareNeo-dEb", size: 24, style: .title)
     static let pizzaBoldButtonTitle = makeFont(name: "NanumSquareNeo-cBd", size: 14, style: .title)
     static let pizzaBoldButtonTitle15 = makeFont(name: "NanumSquareNeo-cBd", size: 15, style: .title)
+    
+    static let liveActivityTargetTime = makeFont(name: "NanumSquareNeo-bRg", size: 12, style: .subheadline)
+    static let liveActivityTitle = makeFont(name: "NanumSquareNeo-dEb", size: 28, style: .title)
+    static let liveActivityLeading = makeFont(name: "LOTTERIACHAB", size: 16, style: .title)
+    
     static let pizzaFootnote = Font.system(size: 13, weight: .regular)
     static let pizzaFootnoteBold = Font.system(size: 13, weight: .bold)
     static let pizzaCaption = Font.system(size: 11, weight: .regular)

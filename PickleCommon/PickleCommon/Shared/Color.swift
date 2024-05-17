@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Color {
+public extension Color {
     // 연한 회색
     static var lightGray: Color {
         return Color(hex: 0xFAFAFA)
@@ -42,7 +42,7 @@ extension Color {
 
 }
 
-extension Color {
+public extension Color {
     init(hex: UInt, opacity: Double = 1) {
         self.init(
             .sRGB,

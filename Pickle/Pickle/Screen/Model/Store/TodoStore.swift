@@ -27,8 +27,9 @@ final class TodoStore: ObservableObject {
         if let todo = self.todos.filter({ $0.id == id }).last {
             return todo
         } else {
-            assert(false, "getSeleted Todo Failed")
-            Log.error("getSeleted Todo Failed")
+            // TODO: ISRuntimer check 해야함
+            // assert(false, "getSeleted Todo Failed")
+            // Log.error("getSeleted Todo Failed")
         }
         return Todo.sample
     }

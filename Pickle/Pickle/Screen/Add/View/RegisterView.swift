@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PickleCommon
 
 struct RegisterView: View {
     
@@ -45,15 +46,18 @@ struct RegisterView: View {
         }
     }
     
-    private let alarmCount: [String] = ["한번", "두번", "3번"]
     private let targetTimeUnit: TimeUnit = .ten
     
     var targetTimeUnitStrs: [String] {
-        (10...180)
+        var values = (10...180)
             .filter { $0 % targetTimeUnit.value == 0 }
             .reduce(into: [String]()) { original, value in
                 original.append("\(value)분")
             }
+        #if DEBUG
+        values.insert("1분", at: 0)
+        #endif
+        return values
     }
     
     private var todoTimeResult: Date {

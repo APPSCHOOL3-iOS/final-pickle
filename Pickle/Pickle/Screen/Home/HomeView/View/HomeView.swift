@@ -19,7 +19,7 @@ struct HomeView: View {
     @EnvironmentObject var todoStore: TodoStore
     @EnvironmentObject var userStore: UserStore
     @EnvironmentObject var navigationStore: NavigationStore
-    @EnvironmentObject var timerVM: TimerViewModel
+    @EnvironmentObject var timerViewModel: TimerViewModel
     @StateObject private var viewModel: HomeViewModel = HomeViewModel()
     
     @Environment(\.scrollEnable) var scrollEnable
@@ -33,15 +33,13 @@ struct HomeView: View {
     @State private var description: String = ""
     
     @State private var ongoingTodo: Todo = Todo.onGoing
-    @AppStorage(STORAGE.isRunTimer.id) var isRunTimer: Bool = false
-    @AppStorage(STORAGE.todoId.id) var todoId: String = ""
+    @AppStorage(STORAGE.isRunTimer.id, store: .group) var isRunTimer: Bool = false
+    @AppStorage(STORAGE.todoId.id, store: .group) var todoId: String = ""
     
     var body: some View {
         content
             .task {
                 await todoStore.fetch()  // MARK: Persistent 저장소에서 Todo 데이터 가져오기
-                Log.debug("testFlight Test Log")
-                Log.debug("slack Github Action Test")
                 if isRunTimer { ongoingTodo = todoStore.getSeletedTodo(id: todoId) }
             }
             .onReceive(userStore.$user) {
@@ -82,7 +80,7 @@ struct HomeView: View {
     }
     
     private func stopTodo() {
-        var todo = Todo(todo: timerVM.todo)
+        var todo = Todo(todo: timerViewModel.todo)
         todo.spendTime = 0
         todo.status = .giveUp
         todoStore.update(todo: todo)
@@ -117,7 +115,7 @@ extension HomeView {
     }
     
     private var stopAlertContent: AlertContent {
-        .init(isPresented: $timerVM.showOngoingAlert,
+        .init(isPresented: $timerViewModel.showOngoingAlert,
               title: "타이머 중단",
               alertContent: "앱이 종료되어 피자굽기를 실패하였습니다",
               primaryButtonTitle: "확인",

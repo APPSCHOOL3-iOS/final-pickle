@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import PickleCommon
 
 struct ContentView: View {
-    @AppStorage(STORAGE.onboarding.id) var isOnboardingViewActive: Bool = true
-    @AppStorage(STORAGE.systemTheme.id) private var systemTheme: Int = SchemeType.allCases.first!.rawValue
+    @AppStorage(STORAGE.onboarding.id, store: .group) var isOnboardingViewActive: Bool = true
+    @AppStorage(STORAGE.systemTheme.id, store: .group) private var systemTheme: Int = SchemeType.allCases.first!.rawValue
     
     @EnvironmentObject var pizzaStore: PizzaStore
     @EnvironmentObject var userStore: UserStore

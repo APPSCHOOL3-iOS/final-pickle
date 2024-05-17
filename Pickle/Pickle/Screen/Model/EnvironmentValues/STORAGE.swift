@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum STORAGE: String {
     case backgroundNumber
     case isRunTimer

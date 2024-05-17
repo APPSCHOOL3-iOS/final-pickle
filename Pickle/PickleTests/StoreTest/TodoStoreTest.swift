@@ -156,7 +156,7 @@ final class TodoStoreTest: XCTestCase {
         
         // When
         let value = sut.add(todo: todo)
-        let updatedTodo = try value.update(path: \.status, to: TodoStatus.ongoing)
+        let updatedTodo = value.update(path: \.status, to: TodoStatus.ongoing)
         let memoryUpdatedTodo = sut.update(todo: updatedTodo)
         
         let fetchedTodo = await sut.fetch().first!
@@ -173,10 +173,10 @@ final class TodoStoreTest: XCTestCase {
     func test_getSeleted_todo() async throws {
         // Given
         let ready = sut.add(todo: Todo.mock)
-        let ongoing = try! Todo.mock.update(path: \.status, to: TodoStatus.ongoing)
-        let complete = try! Todo.mock.update(path: \.status, to: TodoStatus.complete)
-        let done = try! Todo.mock.update(path: \.status, to: TodoStatus.done)
-        let fail = try! Todo.mock.update(path: \.status, to: TodoStatus.fail)
+        let ongoing = Todo.mock.update(path: \.status, to: TodoStatus.ongoing)
+        let complete = Todo.mock.update(path: \.status, to: TodoStatus.complete)
+        let done = Todo.mock.update(path: \.status, to: TodoStatus.done)
+        let fail = Todo.mock.update(path: \.status, to: TodoStatus.fail)
         _ = sut.add(todo: ongoing)
         _ = sut.add(todo: complete)
         _ = sut.add(todo: done)

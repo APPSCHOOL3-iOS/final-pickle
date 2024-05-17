@@ -8,7 +8,6 @@
 import XCTest
 @testable import Pickle
 
-@MainActor
 final class UserStoreTest: XCTestCase {
     
     var sut: UserStore!
@@ -30,6 +29,7 @@ final class UserStoreTest: XCTestCase {
     /// -> (변경) -> ObjectID 삭제 완료 UUID가 일치하는지 테스트 변경
     /// 1. 유저를 추가
     /// 2. UUID 일치 하는 지 확인
+    @MainActor
     func test_생성한유저와_페치이후_유저가_일치하는지_테스트() async throws {
         // Given
         let user = User.defaultUser
@@ -54,6 +54,7 @@ final class UserStoreTest: XCTestCase {
     /// 3. 조건에 달성하지 못했으므로 lock 변수는 false를 반환합니다.
     /// 페퍼로니는 기본 피자 로 false 값이 기본값
     /// 테스트후 (변경점) -> unlockPizza Method에 이미 lock false인 값은 elary return 으로 잠금 중복 업데이트 방지 코드 추가
+    @MainActor
     func test_피자_잠금_업데이트_실패_테스트() async throws {
         // Given
         let user = User.defaultUser
@@ -94,6 +95,7 @@ final class UserStoreTest: XCTestCase {
     /// 3. fetch 호출
     /// 4. 결과 확인
     /// 현재 lock 조건이 있으므로 error 방충 올바른 error가 오는지 test
+    @MainActor
     func test_update_specific_pizza() async throws {
         // Given
         try await addingAndFetchUser()
@@ -136,14 +138,14 @@ final class UserStoreTest: XCTestCase {
     /// 피자 잠금해제 조건은 User.PizzalockCondition enum에 condition 연산 프로퍼티로 조건을 지정해 놓았습니다.
     /// User.PizzaUnlockCondition
     /// 2개의 pizzaCount를 추가합니다.
+    @MainActor
     func test_치즈피자_조건충족했을때_잠금해제할수있는지() async throws {
         // Given
         try await addingAndFetchUser()
-        try await 피자_카운트늘리는_함수()
-        try await 피자_카운트늘리는_함수()
         
         // When
-        try sut.fetchUser()
+        try await 피자_카운트늘리는_함수()
+        try await 피자_카운트늘리는_함수()
         
         let cheesPizza = sut.user.getCurrentPizza(match: .cheese)!.pizza!
         XCTAssertEqual(cheesPizza.lock, true)
@@ -209,7 +211,7 @@ final class UserStoreTest: XCTestCase {
         
         // When
         let seletedPizza = sut.user.getCurrentPizza(match: .potato)!.pizza!
-        let beforeSeletedPizza = sut.currentPizza
+        _ = sut.currentPizza
         
         for _ in 0..<4 {
             try await 피자_카운트늘리는_함수() // 포테이토 피자 잠금조건 4개 이상 획득 충족
@@ -248,6 +250,7 @@ final class UserStoreTest: XCTestCase {
     }
     
     /// Default User 추가후 fetch해오는 함수
+    @MainActor
     private func addingAndFetchUser() async throws {
         let user = User.defaultUser
         sut.addUser(default: user)

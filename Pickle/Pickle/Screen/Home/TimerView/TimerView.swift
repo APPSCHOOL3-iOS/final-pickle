@@ -10,10 +10,11 @@ import SwiftUI
 struct TimerView: View {
     @EnvironmentObject var todoStore: TodoStore
     @EnvironmentObject var userStore: UserStore
-    @EnvironmentObject var timerVM: TimerViewModel
+    @EnvironmentObject var timerViewModel: TimerViewModel
     @EnvironmentObject var notificationManager: NotificationManager
+    @EnvironmentObject var pizzaTaskActivity: PizzaLiveActivity
     
-    var todo: Todo
+    var receiveTodo: Todo
     
     struct TimerState: Equatable {
         var isStart: Bool = true
@@ -28,79 +29,129 @@ struct TimerView: View {
     }
     
     @State private var state: TimerState = TimerState()
-    @Binding var isShowingTimerView: Bool
     @State private var wiseSaying: String = ""
-    @AppStorage(STORAGE.isRunTimer.id) var isRunTimer: Bool = false
-    @AppStorage(STORAGE.backgroundNumber.id) var backgroundNumber: Int = 0
-    @AppStorage(STORAGE.todoId.id) var todoId: String = ""
+    @Binding var isShowingTimerView: Bool
+    
+    @AppStorage(STORAGE.isRunTimer.id, store: .group)
+    var isRunTimer: Bool = false
+    
+    @AppStorage(STORAGE.backgroundNumber.id, store: .group)
+    var backgroundNumber: Int = 0
+    
+    @AppStorage(STORAGE.todoId.id, store: .group)
+    var todoId: String = ""
     
     var body: some View {
         ZStack {
-            VStack {
-                TimerTitleView(isStart: $state.isStart, todo: todo)
-                    .offset(y: -(.screenWidth * 0.80))
-            }
+            TimerTitleView(
+                isStart: $state.isStart,
+                todo: receiveTodo
+            )
+            .equatable()
+            .offset(y: -(.screenWidth * 0.80))
             
             // MARK: 타이머 부분
-            CircleTimerView(todo: todo,
-                            state: $state,
-                            isRunTimer: $isRunTimer,
-                            backgroundNumber: $backgroundNumber)
-                .offset(y: -(.screenWidth * 0.18))
-        
+            CircleTimerView(
+                todo: receiveTodo,
+                state: $state,
+                isRunTimer: $isRunTimer,
+                backgroundNumber: $backgroundNumber
+            )
+            .offset(y: -(.screenWidth * 0.18))
+            
             // MARK: 완료, 포기 버튼
-            TimerCompleteButton(todo: todo,
-                                state: $state,
-                                isRunTimer: $isRunTimer,
-                                backgroundNumber: $backgroundNumber)
-                .offset(y: .screenWidth * 0.75 / 2 - 10 )
+            TimerCompleteButton(state: $state) { type in
+                endActivity(type)
+            }
+            .equatable()
+            .offset(y: .screenWidth * 0.75 / 2 - 10 )
             
             VStack {
                 Spacer()
-                if state.isDisabled && !state.isStart {
-                    completeDiscription
-                } else if !state.isDisabled && !state.isStart {
-                    wiseSayingView
-                }
+                BottomDescriptionView(
+                    isStart: state.isStart,
+                    isDisabled: state.isDisabled,
+                    wiseSaying: timerViewModel.wiseSaying
+                )
             }
             .offset(y: .screenWidth * 0.08 )
         }
         .onAppear { startTodo() }
         .navigationBarBackButtonHidden(true)
         .sheet(isPresented: $state.isShowingReportSheet) {
-            TimerReportView(isShowingReportSheet: $state.isShowingReportSheet,
-                            isShowingTimerView: $isShowingTimerView,
-                            todo: timerVM.todo)
-                .interactiveDismissDisabled()
+            TimerReportView(
+                isShowingReportSheet: $state.isShowingReportSheet,
+                isShowingTimerView: $isShowingTimerView,
+                todo: timerViewModel.todo
+            )
+            .interactiveDismissDisabled()
         }
-        .showGiveupAlert(isPresented: $state.showingAlert,
-                         title: "포기하시겠어요?",
-                         contents: "지금 포기하면 피자조각을 얻지 못해요",
-                         primaryButtonTitle: "포기하기",
-                         primaryAction: updateGiveup,
-                         primaryparameter: timerVM.spendTime,
-                         secondaryButton: "돌아가기",
-                         secondaryAction: giveupSecondary,
-                         externalTapAction: giveupSecondary)
+        .showGiveupAlert(
+            isPresented: $state.showingAlert,
+            title: "포기하시겠어요?",
+            contents: "지금 포기하면 피자조각을 얻지 못해요",
+            primaryButtonTitle: "포기하기",
+            primaryAction: updateGiveup,
+            primaryparameter: timerViewModel.spendTime,
+            secondaryButton: "돌아가기",
+            secondaryAction: giveupSecondary,
+            externalTapAction: giveupSecondary
+        )
     }
     
-    func giveupSecondary() {
+    private func giveupSecondary() {
         state.isGiveupSign = false
         state.isComplete = false
     }
     
-    // 포기시 업데이트, status giveup으로
-    func updateGiveup(spendTime: TimeInterval) {
-        let todo = Todo(id: todo.id,
-                        content: todo.content,
-                        startTime: state.realStartTime,
-                        targetTime: todo.targetTime,
-                        spendTime: spendTime,
-                        status: .giveUp)
+    private func endActivity(_ type: DoneType) {
+        if case .complete = type {
+            state.isComplete = true
+            updateDone(spendTime: timerViewModel.spendTime)
+            state.isShowingReportSheet = true
+        } else if case .giveUp = type {
+            state.isComplete = true
+            state.isGiveupSign = true
+            state.showingAlert = true
+        }
+        if #available(iOS 17.0, *) {
+            Task { await pizzaTaskActivity.stopTimerActivity() }
+        }
+    }
+    
+    /// 완료 + 피자겟챠
+    private func updateDone(spendTime: TimeInterval) {
+        let todo = receiveTodo
+            .update(path: \.startTime, to: state.realStartTime)
+            .update(path: \.spendTime, to: spendTime)
+            .update(path: \.status, to: TodoStatus.done)
+        
         todoStore.update(todo: todo)
-        timerVM.updateTodo(spendTime: spendTime, status: .giveUp)
+        timerViewModel.updateTodo(spendTime: spendTime, status: .done)
         isRunTimer = false
-
+        backgroundNumber = 0
+        
+        do {
+            try userStore.addPizzaSlice(slice: 1)
+        } catch {
+            Log.error("❌피자 조각 추가 실패❌")
+        }
+        
+        if spendTime < todo.targetTime {
+            todoStore.deleteNotificaton(todo: todo, noti: notificationManager)
+        }
+    }
+    
+    /// 포기시 업데이트, status giveup으로
+    private func updateGiveup(spendTime: TimeInterval) {
+        let todo = receiveTodo
+            .update(path: \.startTime, to: state.realStartTime)
+            .update(path: \.spendTime, to: spendTime)
+            .update(path: \.status, to: TodoStatus.giveUp)
+        
+        todoStore.update(todo: todo)
+        timerViewModel.updateTodo(spendTime: spendTime, status: .giveUp)
+        isRunTimer = false
         backgroundNumber = 0
         
         if spendTime < todo.targetTime {
@@ -109,64 +160,33 @@ struct TimerView: View {
         state.isShowingReportSheet = true
     }
     
-    func convertSecondsToTime(timeInSecond: TimeInterval) -> String {
+    private func convertSecondsToTime(timeInSecond: TimeInterval) -> String {
         Date.convertSecondsToTime(timeInSecond: timeInSecond)
     }
     
     // 목표시간 초 -> H시간 M분으로 보여주기
-    func convertTargetTimeToString(timeInSecond: TimeInterval) -> String {
+    private func convertTargetTimeToString(timeInSecond: TimeInterval) -> String {
         Date.convertTargetTimeToString(timeInSecond: timeInSecond)
     }
     
-    func startTodo() {
+    private func startTodo() {
         state.settingTime = 3
-        timerVM.timeRemaining = state.settingTime
-        timerVM.makeRandomSaying()
-        timerVM.fetchTodo(todo: todo)
-        todoId = todo.id
-    }
-}
-
-extension TimerView {
-    private var completeDiscription: some View {
-        VStack(alignment: .center, spacing: 10) {
-            Text("최소 5분 할 일을 하면\n피자 조각을 얻을 수 있어요!")
-        }
-        .multilineTextAlignment(.center)
-        .lineSpacing(10)
-        .font(.pizzaBoldButtonTitle15)
-        .foregroundColor(.secondary)
-        .frame(width: .screenWidth - 50)
-        .lineLimit(2)
-        .padding(.top, 50)
-        .padding(.bottom, .screenHeight * 0.1)
-        .padding(.horizontal, 20)
-    }
-    
-    private var wiseSayingView: some View {
-        Text("\(timerVM.wiseSaying)")
-            .multilineTextAlignment(.center)
-            .lineSpacing(10)
-            .font(.pizzaBoldButtonTitle15)
-            .foregroundColor(.secondary)
-            .frame(width: .screenWidth - 50)
-            .lineLimit(4)
-            .minimumScaleFactor(0.7)
-            .padding(.top, 50)
-            .padding(.bottom, .screenHeight * 0.1)
-            .padding(.horizontal, 20)
+        timerViewModel.timeRemaining = state.settingTime
+        timerViewModel.makeRandomSaying()
+        timerViewModel.fetchTodo(todo: receiveTodo)
+        todoId = receiveTodo.id
     }
 }
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            TimerView(todo: Todo(id: UUID().uuidString,
-                                 content: "이력서 작성하기dfs",
-                                 startTime: Date(),
-                                 targetTime: 15,
-                                 spendTime: 5400,
-                                 status: .ready), isShowingTimerView: .constant(false))
+            TimerView(receiveTodo: Todo(id: UUID().uuidString,
+                                        content: "이력서 작성하기",
+                                        startTime: Date(),
+                                        targetTime: 15,
+                                        spendTime: 5400,
+                                        status: .ready), isShowingTimerView: .constant(false))
             .environmentObject(TodoStore())
             .environmentObject(TimerViewModel())
             .environmentObject(UserStore())
