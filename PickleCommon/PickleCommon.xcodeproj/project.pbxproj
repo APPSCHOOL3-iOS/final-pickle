@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9625B49C2BF24B04004B7583 /* PickleLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 9625B49B2BF24B04004B7583 /* PickleLottie.json */; };
 		96B21F172BEF5474007AB2D1 /* PickleCommon.docc in Sources */ = {isa = PBXBuildFile; fileRef = 96B21F162BEF5474007AB2D1 /* PickleCommon.docc */; };
 		96B21F1D2BEF5474007AB2D1 /* PickleCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B21F122BEF5474007AB2D1 /* PickleCommon.framework */; };
 		96B21F222BEF5474007AB2D1 /* PickleCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B21F212BEF5474007AB2D1 /* PickleCommonTests.swift */; };
@@ -35,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9625B49B2BF24B04004B7583 /* PickleLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PickleLottie.json; sourceTree = "<group>"; };
 		96B21F122BEF5474007AB2D1 /* PickleCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PickleCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B21F152BEF5474007AB2D1 /* PickleCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickleCommon.h; sourceTree = "<group>"; };
 		96B21F162BEF5474007AB2D1 /* PickleCommon.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PickleCommon.docc; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 		96B21F552BEF562B007AB2D1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				9625B49B2BF24B04004B7583 /* PickleLottie.json */,
 				96B21F562BEF5639007AB2D1 /* R.swift */,
 				96B21F642BEF5897007AB2D1 /* Font */,
 			);
@@ -242,7 +239,6 @@
 				96B21F652BEF5897007AB2D1 /* Chab.otf in Resources */,
 				96B21F692BEF5897007AB2D1 /* NanumSquareNeoOTF-Lt.otf in Resources */,
 				96B21F662BEF5897007AB2D1 /* NanumSquareNeoOTF-Bd.otf in Resources */,
-				9625B49C2BF24B04004B7583 /* PickleLottie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
