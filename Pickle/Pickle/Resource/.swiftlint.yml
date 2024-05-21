@@ -1,0 +1,30 @@
+disabled_rules:  # 아래 룰은 검사 대상에서 제외하겠다는 뜻
+# 라인 뒤에 공백이 없어야함 - https://realm.github.io/SwiftLint/trailing_whitespace.html
+- trailing_whitespace
+
+# XCTFail Message는 설명을 포함해야함 - https://realm.github.io/SwiftLint/xctfail_message.html
+- xctfail_message
+
+# 함수 파라미터가 너무 많으면 안됨 - https://realm.github.io/SwiftLint/function_parameter_count.html
+- function_parameter_count
+
+# 오래된 C 함수보다 새로운 sturct initializer를 사용하기를 권장 - https://realm.github.io/SwiftLint/legacy_constructor.html
+- legacy_constructor
+
+# 강제 캐스팅은 피해야함 - https://realm.github.io/SwiftLint/force_cast.html
+- force_cast
+
+# 배열이나 딕셔너리에서 컴마로 끝나지 않도록 함 - https://realm.github.io/SwiftLint/trailing_comma.html
+- trailing_comma
+
+# 강제 트라이는 피해야함 - https://realm.github.io/SwiftLint/force_try.html
+- force_try
+
+# 식별자 이름 규칙 - https://realm.github.io/SwiftLint/identifier_name.html
+- identifier_name
+
+# 타입/함수/파일 등의 코드길이 제한을 변경하겠다는 뜻
+type_body_length: 250
+line_length: 150
+function_body_length: 50
+file_length: 500

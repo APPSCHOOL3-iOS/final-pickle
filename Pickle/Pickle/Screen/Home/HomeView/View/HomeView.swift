@@ -241,8 +241,10 @@ struct HomeView_Previews: PreviewProvider {
             Text("value")
 #endif
         }.onAppear {
+            #if DEBUG
             PreviewsContainer.setUpDependency()
             PreviewsContainer.dependencySetting(pizza: pizza, user: user, todo: todo, mission: mission)
+            #endif
         }
     }
 }

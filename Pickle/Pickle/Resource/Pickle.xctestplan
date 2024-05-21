@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "0C63EC1B-1A4A-42C2-A885-4882C3E1F0A8",
+      "name" : "Configuration 1",
+      "options" : {
+        "targetForVariableExpansion" : {
+          "containerPath" : "container:Pickle.xcodeproj",
+          "identifier" : "2137D5742AC1459C00AFE225",
+          "name" : "Pickle"
+        }
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Pickle.xcodeproj",
+      "identifier" : "2137D5742AC1459C00AFE225",
+      "name" : "Pickle"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Pickle.xcodeproj",
+        "identifier" : "965C9B9E2ADAB2380015ABBE",
+        "name" : "PickleTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/PickleCommon\/PickleCommon.xcodeproj",
+        "identifier" : "96B21F1B2BEF5474007AB2D1",
+        "name" : "PickleCommonTests"
+      }
+    }
+  ],
+  "version" : 1
+}

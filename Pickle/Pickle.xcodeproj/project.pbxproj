@@ -521,7 +521,7 @@
 		9675765B2B0CDCA4004957AD /* Pickle-release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pickle-release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9675765C2B0CDCA4004957AD /* Pickle-release-info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pickle-release-info.plist"; path = "/Users/baghyeonghwan/final/final-pickle/Pickle/Pickle-release-info.plist"; sourceTree = "<absolute>"; };
 		9686010E2BED0FEE0067FD36 /* Car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Car.json; sourceTree = "<group>"; };
-		968601162BED15C70067FD36 /* TaskLiveActivityExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskLiveActivityExtension.entitlements; sourceTree = "<group>"; };
+		968601162BED15C70067FD36 /* TaskLiveActivityExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = TaskLiveActivityExtension.entitlements; path = ../../TaskLiveActivityExtension.entitlements; sourceTree = "<group>"; };
 		9688ADDA2B516D3B000F2B3A /* TodoEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEmptyView.swift; sourceTree = "<group>"; };
 		9688ADDC2B5170E6000F2B3A /* PizzaSliceDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaSliceDescriptionView.swift; sourceTree = "<group>"; };
 		9688BBD92BECEF8900BA3B3B /* LiveActivityCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityCircleView.swift; sourceTree = "<group>"; };
@@ -644,7 +644,6 @@
 		2137D56C2AC1459C00AFE225 = {
 			isa = PBXGroup;
 			children = (
-				968601162BED15C70067FD36 /* TaskLiveActivityExtension.entitlements */,
 				2137D5872AC1460F00AFE225 /* .swiftlint.yml */,
 				9693D15F2BF4683B00B85F56 /* Pickle.xctestplan */,
 				2137D5772AC1459C00AFE225 /* Pickle */,
@@ -1121,6 +1120,15 @@
 			path = Todo;
 			sourceTree = "<group>";
 		};
+		9691C2302BFCD472004334DD /* _plist */ = {
+			isa = PBXGroup;
+			children = (
+				B0B5E6BB2ADA5A360096F677 /* Info.plist */,
+				9675765C2B0CDCA4004957AD /* Pickle-release-info.plist */,
+			);
+			path = _plist;
+			sourceTree = "<group>";
+		};
 		969B88FC2BEB9F0000538D12 /* TaskLiveActivity */ = {
 			isa = PBXGroup;
 			children = (
@@ -1278,11 +1286,11 @@
 		96B4B3432AE9524C006A15E3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9691C2302BFCD472004334DD /* _plist */,
 				2137D57E2AC1459D00AFE225 /* Preview Content */,
 				9686010E2BED0FEE0067FD36 /* Car.json */,
 				9625B49F2BF24F8E004B7583 /* PizzaPickle.json */,
-				B0B5E6BB2ADA5A360096F677 /* Info.plist */,
-				9675765C2B0CDCA4004957AD /* Pickle-release-info.plist */,
+				968601162BED15C70067FD36 /* TaskLiveActivityExtension.entitlements */,
 				B0B5E6BC2ADA5B820096F677 /* Pickle.entitlements */,
 				2137D57C2AC1459D00AFE225 /* Assets.xcassets */,
 				9670FF792BE8E37F00AF5E4D /* PrivacyInfo.xcprivacy */,
@@ -2223,7 +2231,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddudios.realpizza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2268,7 +2276,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddudios.realpizza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
